@@ -17,7 +17,7 @@ class NoteSharingApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         // Define your routes here, e.g.:
-        '/': (context) => LoginPage(),
+        '/': (context) => const LoginPage(),
       },
     );
   }
