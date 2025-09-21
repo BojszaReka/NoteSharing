@@ -4,6 +4,7 @@ using web_api.Lib.Database;
 using web_api.Lib.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using class_library.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -70,3 +71,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+

@@ -1,10 +1,14 @@
-﻿
-using web_api.Lib.Repositories.Interfaces;
+﻿using web_api.Lib.Repositories.Interfaces;
 
 namespace web_api.Lib.UnitOfWork
 {
-	public interface IUnitOfWork
-	{
-		IExampleRepository ExampleRepository { get; }
-	}
+    public interface IUnitOfWork
+    {
+        IUserRepository UserRepository { get; }
+        IPreferenceRepository PreferenceRepository { get; }
+        IInstitutionRepository InstitutionRepository { get; }
+        ISubjectRepository SubjectRepository { get; }
+        IUserSubjectRepository UserSubjectRepository { get; }
+        IUserFollowRepository UserFollowRepository { get; }
+    }
 }
