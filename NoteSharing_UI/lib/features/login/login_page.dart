@@ -2,6 +2,56 @@ import 'package:flutter/material.dart';
 import 'package:notesharing_ui/application/configs/app_colors.dart';
 
 class LoginPage extends StatelessWidget {
+  Widget _inputField({required String label, bool obscure = false}) {
+    return TextField(
+      obscureText: obscure,
+      decoration: InputDecoration(
+        labelText: label,
+        labelStyle: const TextStyle(
+          color: AppColors.loginMainTextColor,
+          fontFamily: 'Candal',
+          fontWeight: FontWeight.bold,
+        ),
+        filled: true,
+        fillColor: Colors.white,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+      ),
+      style: const TextStyle(
+        color: AppColors.loginMainTextColor,
+        fontFamily: 'Candal',
+        fontWeight: FontWeight.bold,
+      ),
+    );
+  }
+
+  Widget _socialButton({required String asset, required String label}) {
+    return Flexible(
+      child: SizedBox(
+        height: 40,
+        child: OutlinedButton.icon(
+          onPressed: () {},
+          icon: Image.asset(asset, height: 20, width: 20),
+          label: Text(
+            label,
+            style: const TextStyle(
+              fontFamily: 'Candal',
+              fontWeight: FontWeight.bold,
+              color: AppColors.loginMainTextColor,
+            ),
+          ),
+          style: OutlinedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 6),
+            textStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+            side: BorderSide(color: Colors.grey.shade400),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          ),
+        ),
+      ),
+    );
+  }
   const LoginPage({Key? key}) : super(key: key);
 
   @override
@@ -17,7 +67,7 @@ class LoginPage extends StatelessWidget {
         children: [
           Positioned.fill(
             child: Image(
-              image: AssetImage('assets/images/NoteShareBackground.png'),
+              image: const AssetImage('assets/images/NoteShareBackground.png'),
               fit: BoxFit.cover,
             ),
           ),
@@ -32,12 +82,11 @@ class LoginPage extends StatelessWidget {
                     clipBehavior: Clip.none,
                     alignment: Alignment.topCenter,
                     children: [
-                      // The box
                       DecoratedBox(
                         decoration: BoxDecoration(
                           color: AppColors.loginBoxBackgroundColor,
-                          borderRadius: BorderRadius.all(Radius.circular(24)),
-                          boxShadow: [
+                          borderRadius: const BorderRadius.all(Radius.circular(24)),
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 16,
@@ -46,10 +95,7 @@ class LoginPage extends StatelessWidget {
                           ],
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 24.0,
-                            vertical: 24.0,
-                          ),
+                          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -60,60 +106,9 @@ class LoginPage extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.stretch,
                                   children: [
                                     const SizedBox(height: 8),
-                                    Expanded(
-                                      child: TextField(
-                                        decoration: InputDecoration(
-                                          labelText: 'Email',
-                                          labelStyle: TextStyle(
-                                            color: AppColors.loginMainTextColor,
-                                            fontFamily: 'Candal',
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                          filled: true,
-                                          fillColor: Colors.white,
-                                          border: OutlineInputBorder(
-                                            borderRadius: BorderRadius.circular(12),
-                                          ),
-                                          contentPadding: const EdgeInsets.symmetric(
-                                            horizontal: 16,
-                                            vertical: 18,
-                                          ),
-                                        ),
-                                        style: const TextStyle(
-                                          color: AppColors.loginMainTextColor,
-                                          fontFamily: 'Candal',
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
+                                    Expanded(child: _inputField(label: 'Email')),
                                     const SizedBox(height: 8),
-                                    Expanded(
-                                      child: TextField(
-                                        obscureText: true,
-                                        decoration: InputDecoration(
-                                          labelText: 'Password',
-                                          labelStyle: TextStyle(
-                                            color: AppColors.loginMainTextColor,
-                                            fontFamily: 'Candal',
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                          filled: true,
-                                          fillColor: Colors.white,
-                                          border: OutlineInputBorder(
-                                            borderRadius: BorderRadius.circular(12),
-                                          ),
-                                          contentPadding: const EdgeInsets.symmetric(
-                                            horizontal: 16,
-                                            vertical: 18,
-                                          ),
-                                        ),
-                                        style: const TextStyle(
-                                          color: AppColors.loginMainTextColor,
-                                          fontFamily: 'Candal',
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
+                                    Expanded(child: _inputField(label: 'Password', obscure: true)),
                                     const SizedBox(height: 8),
                                     Center(
                                       child: TextButton(
@@ -142,14 +137,9 @@ class LoginPage extends StatelessWidget {
                                   width: 180,
                                   child: ElevatedButton(
                                     onPressed: () {},
-                                    child: const Text(
-                                      'Bejelentkezés',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
+                                    child: const Text('Bejelentkezés', style: TextStyle(color: Colors.white)),
                                     style: ElevatedButton.styleFrom(
-                                      padding: const EdgeInsets.symmetric(
-                                        vertical: 12,
-                                      ),
+                                      padding: const EdgeInsets.symmetric(vertical: 12),
                                       backgroundColor: AppColors.loginMainTextColor,
                                       textStyle: const TextStyle(
                                         fontSize: 15,
@@ -177,7 +167,7 @@ class LoginPage extends StatelessWidget {
                               Center(
                                 child: Text(
                                   'További bejelentkezési lehetőségek:',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 12,
                                     fontFamily: 'Candal',
                                     fontWeight: FontWeight.bold,
@@ -191,81 +181,9 @@ class LoginPage extends StatelessWidget {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Flexible(
-                                    child: SizedBox(
-                                      height: 40,
-                                      child: OutlinedButton.icon(
-                                        onPressed: () {},
-                                        icon: Image.asset(
-                                          'assets/images/google_logo.png',
-                                          height: 20,
-                                          width: 20,
-                                        ),
-                                        label: const Text(
-                                          'Google',
-                                          style: TextStyle(
-                                            fontFamily: 'Candal',
-                                            fontWeight: FontWeight.bold,
-                                            color: AppColors.loginMainTextColor,
-                                          ),
-                                        ),
-                                        style: OutlinedButton.styleFrom(
-                                          padding: const EdgeInsets.symmetric(
-                                            vertical: 6,
-                                            horizontal: 6,
-                                          ),
-                                          textStyle: const TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                          side: BorderSide(
-                                            color: Colors.grey.shade400,
-                                          ),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(10),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                  _socialButton(asset: 'assets/images/google_logo.png', label: 'Google'),
                                   const SizedBox(width: 8),
-                                  Flexible(
-                                    child: SizedBox(
-                                      height: 40,
-                                      child: OutlinedButton.icon(
-                                        onPressed: () {},
-                                        icon: Image.asset(
-                                          'assets/images/facebook_logo.png',
-                                          height: 20,
-                                          width: 20,
-                                        ),
-                                        label: const Text(
-                                          'Facebook',
-                                          style: TextStyle(
-                                            fontFamily: 'Candal',
-                                            fontWeight: FontWeight.bold,
-                                            color: AppColors.loginMainTextColor,
-                                          ),
-                                        ),
-                                        style: OutlinedButton.styleFrom(
-                                          padding: const EdgeInsets.symmetric(
-                                            vertical: 6,
-                                            horizontal: 6,
-                                          ),
-                                          textStyle: const TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                          side: BorderSide(
-                                            color: Colors.grey.shade400,
-                                          ),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(10),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                  _socialButton(asset: 'assets/images/facebook_logo.png', label: 'Facebook'),
                                 ],
                               ),
                             ],
@@ -288,7 +206,7 @@ class LoginPage extends StatelessWidget {
                                   fontSize: titleFontSize,
                                   fontWeight: FontWeight.bold,
                                   color: AppColors.loginMainTextColor,
-                                  shadows: [
+                                  shadows: const [
                                     Shadow(
                                       color: Colors.black12,
                                       blurRadius: 16,
@@ -306,14 +224,13 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 32),
-                // Registration floating box (single line)
                 SizedBox(
                   width: boxWidth,
                   child: DecoratedBox(
                     decoration: BoxDecoration(
                       color: AppColors.loginBoxBackgroundColor,
-                      borderRadius: BorderRadius.all(Radius.circular(24)),
-                      boxShadow: [
+                      borderRadius: const BorderRadius.all(Radius.circular(24)),
+                      boxShadow: const [
                         BoxShadow(
                           color: Colors.black12,
                           blurRadius: 16,
@@ -322,14 +239,11 @@ class LoginPage extends StatelessWidget {
                       ],
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 12.0,
-                        vertical: 12.0,
-                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
+                          const Text(
                             "Nincs még fiókod? ",
                             style: TextStyle(
                               fontFamily: 'Candal',
