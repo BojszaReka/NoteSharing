@@ -1,21 +1,16 @@
-## Rspeedy project
+# notesharing_ui
 
-This is a ReactLynx project bootstrapped with `create-rspeedy`.
+A new Flutter project.
 
 ## Getting Started
 
-First, install the dependencies:
+This project is a starting point for a Flutter application.
 
-```bash
-pnpm install
-```
+A few resources to get you started if this is your first Flutter project:
 
-Then, run the development server:
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-```bash
-pnpm run dev
-```
-
-Scan the QRCode in the terminal with your LynxExplorer App to see the result.
-
-You can start editing the page by modifying `src/App.tsx`. The page auto-updates as you edit the file.
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
