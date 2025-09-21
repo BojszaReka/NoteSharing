@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:notesharing_ui/application/configs/app_colors.dart';
 
 class LoginPage extends StatelessWidget {
+  const LoginPage({Key? key}) : super(key: key);
+
   Widget _inputField({required String label, bool obscure = false}) {
     return TextField(
       obscureText: obscure,
@@ -14,10 +16,11 @@ class LoginPage extends StatelessWidget {
         ),
         filled: true,
         fillColor: Colors.white,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 18,
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
       ),
       style: const TextStyle(
         color: AppColors.loginMainTextColor,
@@ -44,15 +47,19 @@ class LoginPage extends StatelessWidget {
           ),
           style: OutlinedButton.styleFrom(
             padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 6),
-            textStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+            textStyle: const TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+            ),
             side: BorderSide(color: Colors.grey.shade400),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
           ),
         ),
       ),
     );
   }
-  const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +92,9 @@ class LoginPage extends StatelessWidget {
                       DecoratedBox(
                         decoration: BoxDecoration(
                           color: AppColors.loginBoxBackgroundColor,
-                          borderRadius: const BorderRadius.all(Radius.circular(24)),
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(24),
+                          ),
                           boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
@@ -95,7 +104,10 @@ class LoginPage extends StatelessWidget {
                           ],
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 24.0,
+                            vertical: 24.0,
+                          ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -103,12 +115,20 @@ class LoginPage extends StatelessWidget {
                               Expanded(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.stretch,
                                   children: [
                                     const SizedBox(height: 8),
-                                    Expanded(child: _inputField(label: 'Email')),
+                                    Expanded(
+                                      child: _inputField(label: 'Email'),
+                                    ),
                                     const SizedBox(height: 8),
-                                    Expanded(child: _inputField(label: 'Password', obscure: true)),
+                                    Expanded(
+                                      child: _inputField(
+                                        label: 'Password',
+                                        obscure: true,
+                                      ),
+                                    ),
                                     const SizedBox(height: 8),
                                     Center(
                                       child: TextButton(
@@ -121,10 +141,12 @@ class LoginPage extends StatelessWidget {
                                           ),
                                         ),
                                         style: TextButton.styleFrom(
-                                          foregroundColor: AppColors.loginMainTextColor,
+                                          foregroundColor:
+                                              AppColors.loginMainTextColor,
                                           padding: EdgeInsets.zero,
                                           minimumSize: Size(0, 0),
-                                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                                          tapTargetSize:
+                                              MaterialTapTargetSize.shrinkWrap,
                                         ),
                                       ),
                                     ),
@@ -137,10 +159,16 @@ class LoginPage extends StatelessWidget {
                                   width: 180,
                                   child: ElevatedButton(
                                     onPressed: () {},
-                                    child: const Text('Bejelentkezés', style: TextStyle(color: Colors.white)),
+                                    child: const Text(
+                                      'Bejelentkezés',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
                                     style: ElevatedButton.styleFrom(
-                                      padding: const EdgeInsets.symmetric(vertical: 12),
-                                      backgroundColor: AppColors.loginMainTextColor,
+                                      padding: const EdgeInsets.symmetric(
+                                        vertical: 12,
+                                      ),
+                                      backgroundColor:
+                                          AppColors.loginMainTextColor,
                                       textStyle: const TextStyle(
                                         fontSize: 15,
                                         fontFamily: 'Candal',
@@ -179,11 +207,18 @@ class LoginPage extends StatelessWidget {
                               ),
                               const SizedBox(height: 8),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  _socialButton(asset: 'assets/images/google_logo.png', label: 'Google'),
+                                  _socialButton(
+                                    asset: 'assets/images/google_logo.png',
+                                    label: 'Google',
+                                  ),
                                   const SizedBox(width: 8),
-                                  _socialButton(asset: 'assets/images/facebook_logo.png', label: 'Facebook'),
+                                  _socialButton(
+                                    asset: 'assets/images/facebook_logo.png',
+                                    label: 'Facebook',
+                                  ),
                                 ],
                               ),
                             ],
@@ -239,7 +274,10 @@ class LoginPage extends StatelessWidget {
                       ],
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12.0,
+                        vertical: 12.0,
+                      ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
