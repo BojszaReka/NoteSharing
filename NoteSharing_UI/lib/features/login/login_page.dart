@@ -119,16 +119,14 @@ class LoginPage extends StatelessWidget {
                                       CrossAxisAlignment.stretch,
                                   children: [
                                     const SizedBox(height: 8),
-                                    Expanded(
-                                      child: _inputField(label: 'Email'),
+                                    _inputField(
+                                     label: 'Email',
                                     ),
                                     const SizedBox(height: 8),
-                                    Expanded(
-                                      child: _inputField(
-                                        label: 'Password',
+                                    _inputField(
+                                      label: 'Password',
                                         obscure: true,
                                       ),
-                                    ),
                                     const SizedBox(height: 8),
                                     Center(
                                       child: TextButton(
