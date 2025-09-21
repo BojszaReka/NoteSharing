@@ -142,7 +142,7 @@ class LoginPage extends StatelessWidget {
                                           foregroundColor:
                                               AppColors.loginMainTextColor,
                                           padding: EdgeInsets.zero,
-                                          minimumSize: Size(0, 0),
+                                          minimumSize: Size.zero,
                                           tapTargetSize:
                                               MaterialTapTargetSize.shrinkWrap,
                                         ),
@@ -303,7 +303,7 @@ class LoginPage extends StatelessWidget {
                             style: TextButton.styleFrom(
                               foregroundColor: Colors.blue,
                               padding: EdgeInsets.zero,
-                              minimumSize: Size(0, 0),
+                              minimumSize: Size.zero,
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             ),
                           ),
