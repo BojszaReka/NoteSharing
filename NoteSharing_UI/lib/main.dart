@@ -16,7 +16,6 @@ class NoteSharingApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        // Define your routes here, e.g.:
         '/': (context) => const LoginPage(),
       },
     );
