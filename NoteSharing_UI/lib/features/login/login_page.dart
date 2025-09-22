@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:notesharing_ui/application/configs/app_colors.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   Widget _inputField({required String label, bool obscure = false}) {
     return TextField(
@@ -131,13 +131,6 @@ class LoginPage extends StatelessWidget {
                                     Center(
                                       child: TextButton(
                                         onPressed: () {},
-                                        child: const Text(
-                                          'Elfelejtett jelszó?',
-                                          style: TextStyle(
-                                            fontFamily: 'Candal',
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
                                         style: TextButton.styleFrom(
                                           foregroundColor:
                                               AppColors.loginMainTextColor,
@@ -145,6 +138,13 @@ class LoginPage extends StatelessWidget {
                                           minimumSize: Size.zero,
                                           tapTargetSize:
                                               MaterialTapTargetSize.shrinkWrap,
+                                        ),
+                                        child: const Text(
+                                          'Elfelejtett jelszó?',
+                                          style: TextStyle(
+                                            fontFamily: 'Candal',
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -157,10 +157,6 @@ class LoginPage extends StatelessWidget {
                                   width: 180,
                                   child: ElevatedButton(
                                     onPressed: () {},
-                                    child: const Text(
-                                      'Bejelentkezés',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
                                     style: ElevatedButton.styleFrom(
                                       padding: const EdgeInsets.symmetric(
                                         vertical: 12,
@@ -176,6 +172,10 @@ class LoginPage extends StatelessWidget {
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(12),
                                       ),
+                                    ),
+                                    child: const Text(
+                                      'Bejelentkezés',
+                                      style: TextStyle(color: Colors.white),
                                     ),
                                   ),
                                 ),
@@ -290,6 +290,12 @@ class LoginPage extends StatelessWidget {
                           ),
                           TextButton(
                             onPressed: () {},
+                            style: TextButton.styleFrom(
+                              foregroundColor: Colors.blue,
+                              padding: EdgeInsets.zero,
+                              minimumSize: Size.zero,
+                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            ),
                             child: const Text(
                               'Regisztrálj itt!',
                               style: TextStyle(
@@ -299,12 +305,6 @@ class LoginPage extends StatelessWidget {
                                 color: Colors.blue,
                                 decoration: TextDecoration.underline,
                               ),
-                            ),
-                            style: TextButton.styleFrom(
-                              foregroundColor: Colors.blue,
-                              padding: EdgeInsets.zero,
-                              minimumSize: Size.zero,
-                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             ),
                           ),
                         ],
