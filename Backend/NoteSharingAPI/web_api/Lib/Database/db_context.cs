@@ -8,9 +8,8 @@ namespace web_api.Lib.Database
     {
         public db_context(DbContextOptions<db_context> options) : base(options) { }
 
-        // DbSet-ek
         public DbSet<User> Users { get; set; }
-        public DbSet<Student> Students { get; set; }   // TPH-hoz nem kötelező, de kényelmes query-hez
+        public DbSet<Student> Students { get; set; }
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Institution> Institutions { get; set; }
         public DbSet<Subject> Subjects { get; set; }
@@ -22,7 +21,6 @@ namespace web_api.Lib.Database
         {
             base.OnModelCreating(modelBuilder);
 
-            // Kulcsok
             modelBuilder.Entity<User>().HasKey(x => x.ID);
             modelBuilder.Entity<Student>().HasBaseType<User>();
             modelBuilder.Entity<Instructor>().HasBaseType<User>();
@@ -34,14 +32,27 @@ namespace web_api.Lib.Database
             modelBuilder.Entity<UserSubject>().HasKey(x => new { x.UserID, x.SubjectID });
             modelBuilder.Entity<UserFollow>().HasKey(x => new { x.FollowerUserID, x.FollowingUserID });
 
-            // TPH diszkriminátor a Users táblában
             modelBuilder.Entity<User>()
                 .HasDiscriminator<EUserType>(nameof(User.UserType))
-                .HasValue<User>(EUserType.Simple)
+                .HasValue<User>(EUserType.Default)
                 .HasValue<Student>(EUserType.Student)
                 .HasValue<Instructor>(EUserType.Instructor);
 
-            // Kapcsolatok
+            modelBuilder.Entity<UserFollow>()
+                .HasOne(uf => uf.FollowerUser)
+                .WithMany(u => u.Followings)
+                .HasForeignKey(uf => uf.FollowerUserID);
+
+            modelBuilder.Entity<UserFollow>()
+                .HasOne(uf => uf.FollowingUser)
+                .WithMany(u => u.Followers)
+                .HasForeignKey(uf => uf.FollowingUserID);
+
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.Preference)
+                .WithMany()
+                .HasForeignKey(u => u.PreferenceID);
+
             modelBuilder.Entity<UserSubject>()
                 .HasOne(us => us.User)
                 .WithMany(u => u.UserSubjects)
@@ -52,24 +63,6 @@ namespace web_api.Lib.Database
                 .WithMany(s => s.UserSubjects)
                 .HasForeignKey(us => us.SubjectID);
 
-            modelBuilder.Entity<UserFollow>()
-                .HasOne(uf => uf.FollowerUser)
-                .WithMany(u => u.Followings)
-                .HasForeignKey(uf => uf.FollowerUserID)
-                .OnDelete(DeleteBehavior.NoAction);
-
-            modelBuilder.Entity<UserFollow>()
-                .HasOne(uf => uf.FollowingUser)
-                .WithMany(u => u.Followers)
-                .HasForeignKey(uf => uf.FollowingUserID)
-                .OnDelete(DeleteBehavior.NoAction);
-
-            modelBuilder.Entity<User>()
-                .HasOne(u => u.Preference)
-                .WithMany()
-                .HasForeignKey(u => u.PreferenceID)
-                .OnDelete(DeleteBehavior.Cascade);
-
             modelBuilder.Entity<Subject>()
                 .HasOne(s => s.Institution)
                 .WithMany(i => i.Subjects)
@@ -77,11 +70,10 @@ namespace web_api.Lib.Database
 
             modelBuilder.Entity<Subject>()
                 .HasOne(s => s.Instructor)
-                .WithMany() // nincs külön gyűjtemény az Instructor oldalán
+                .WithMany()
                 .HasForeignKey(s => s.InstructorID)
                 .IsRequired(false);
 
-            // Táblanevek (BerAuto stílus)
             modelBuilder.Entity<User>().ToTable("Users");
             modelBuilder.Entity<Institution>().ToTable("Institutions");
             modelBuilder.Entity<Subject>().ToTable("Subjects");

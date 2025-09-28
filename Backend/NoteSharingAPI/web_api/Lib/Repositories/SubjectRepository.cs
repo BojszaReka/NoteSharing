@@ -6,42 +6,46 @@ namespace web_api.Lib.Repositories
 {
     public class SubjectRepository : ISubjectRepository
     {
-        private readonly IServiceScopeFactory _scopeFactory;
-        public SubjectRepository(IServiceScopeFactory scopeFactory) => _scopeFactory = scopeFactory;
+        private readonly IServiceScopeFactory _serviceScopeFactory;
+
+        public SubjectRepository(IServiceScopeFactory serviceScopeFactory)
+        {
+            _serviceScopeFactory = serviceScopeFactory;
+        }
 
         public async Task<SubjectViewDTO> Create(SubjectCreateDTO dto)
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<ISubjectManagerService>();
-            return await svc.CreateAsync(dto);
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<ISubjectManagerService>();
+            return await service.CreateAsync(dto);
         }
 
         public async Task<SubjectViewDTO> Update(SubjectViewDTO dto)
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<ISubjectManagerService>();
-            return await svc.UpdateAsync(dto);
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<ISubjectManagerService>();
+            return await service.UpdateAsync(dto);
         }
 
         public async Task<bool> Delete(Guid id)
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<ISubjectManagerService>();
-            return await svc.DeleteAsync(id);
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<ISubjectManagerService>();
+            return await service.DeleteAsync(id);
         }
 
         public async Task<SubjectViewDTO?> GetById(Guid id)
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<ISubjectManagerService>();
-            return await svc.GetByIdAsync(id);
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<ISubjectManagerService>();
+            return await service.GetByIdAsync(id);
         }
 
         public async Task<IEnumerable<SubjectViewDTO>> GetAll()
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<ISubjectManagerService>();
-            return await svc.GetAllAsync();
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<ISubjectManagerService>();
+            return await service.GetAllAsync();
         }
     }
 }

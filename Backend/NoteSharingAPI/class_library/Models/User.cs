@@ -26,7 +26,7 @@ namespace class_library.Models
         public string Password { get; set; }
 
         [Required]
-        public EUserType UserType { get; set; } = EUserType.Simple;
+        public EUserType UserType { get; set; } = EUserType.Default;
 
         [Required]
         public Guid PreferenceID { get; set; }
@@ -37,12 +37,18 @@ namespace class_library.Models
         // Kapcsolatok
         public ICollection<UserFollow> Followers { get; set; }
         public ICollection<UserFollow> Followings { get; set; }
-
         public ICollection<UserSubject> UserSubjects { get; set; }
 
         public override string ToString()
         {
-            return $"UserID:{ID}, UserName:{UserName}, Name:{Name}, Email:{Email}, Type:{UserType}";
+            var followers = Followers?.Count ?? 0;
+            var followings = Followings?.Count ?? 0;
+            var subjects = UserSubjects?.Count ?? 0;
+
+            return $"UserID:{ID}, UserName:{UserName}, Name:{Name}, Email:{Email}, " +
+                   $"UserType:{UserType}, PreferenceID:{PreferenceID}, " +
+                   $"Followers:{followers}, Followings:{followings}, Subjects:{subjects}, " +
+                   $"Password:{Password}";
         }
     }
 }

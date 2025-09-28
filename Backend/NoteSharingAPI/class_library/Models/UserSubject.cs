@@ -11,5 +11,8 @@ namespace class_library.Models
 
         public Guid SubjectID { get; set; }
         public Subject Subject { get; set; }
+
+        public override string ToString()
+            => $"UserSubject(UserID:{UserID}, SubjectID:{SubjectID})";
     }
 }

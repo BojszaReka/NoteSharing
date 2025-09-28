@@ -6,56 +6,60 @@ namespace web_api.Lib.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly IServiceScopeFactory _scopeFactory;
-        public UserRepository(IServiceScopeFactory scopeFactory) => _scopeFactory = scopeFactory;
+        private readonly IServiceScopeFactory _serviceScopeFactory;
+
+        public UserRepository(IServiceScopeFactory serviceScopeFactory)
+        {
+            _serviceScopeFactory = serviceScopeFactory;
+        }
 
         public async Task<UserViewDTO> Create(UserCreateDTO dto)
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
-            return await svc.CreateAsync(dto);
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
+            return await service.CreateAsync(dto);
         }
 
         public async Task<UserViewDTO> Update(UserUpdateDTO dto)
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
-            return await svc.UpdateAsync(dto);
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
+            return await service.UpdateAsync(dto);
         }
 
         public async Task<bool> Delete(Guid id)
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
-            return await svc.DeleteAsync(id);
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
+            return await service.DeleteAsync(id);
         }
 
         public async Task<UserViewDTO?> GetById(Guid id)
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
-            return await svc.GetByIdAsync(id);
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
+            return await service.GetByIdAsync(id);
         }
 
         public async Task<UserViewDTO?> GetByUserName(string userName)
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
-            return await svc.GetByUserNameAsync(userName);
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
+            return await service.GetByUserNameAsync(userName);
         }
 
         public async Task<IEnumerable<UserViewDTO>> GetAll()
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
-            return await svc.GetAllAsync();
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
+            return await service.GetAllAsync();
         }
 
         public async Task<bool> Follow(UserFollowDTO dto)
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
-            return await svc.FollowAsync(dto);
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
+            return await service.FollowAsync(dto);
         }
     }
 }

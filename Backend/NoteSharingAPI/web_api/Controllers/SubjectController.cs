@@ -5,50 +5,110 @@ using web_api.Lib.UnitOfWork;
 
 namespace web_api.Controllers
 {
-    [ApiController]
-    [Route("/api/[controller]")]
-    public class SubjectController(IUnitOfWork uow) : Controller
+    public class SubjectController : ControllerBase
     {
-        private readonly IUnitOfWork _uow = uow;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IConfiguration _configuration;
 
-        [HttpPost]
+        public SubjectController(IUnitOfWork unitOfWork, IConfiguration configuration)
+        {
+            _unitOfWork = unitOfWork;
+            _configuration = configuration;
+        }
+
+        [HttpPost("api/subject/create")]
         public async Task<IActionResult> Create([FromBody] SubjectCreateDTO dto)
         {
-            var r = new ApiResponse();
-            try { r.Data = await _uow.SubjectRepository.Create(dto); return Ok(r); }
-            catch (Exception e) { r.StatusCode = 400; r.Message = e.Message; return BadRequest(r); }
+            var response = new ApiResponse();
+            try
+            {
+                response.Data = await _unitOfWork.SubjectRepository.Create(dto);
+                response.StatusCode = 200;
+                response.Message = "Success";
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                response.StatusCode = 400;
+                response.Message = ex.Message;
+            }
+            return BadRequest(response);
         }
 
-        [HttpPut]
+        [HttpPut("api/subject/update")]
         public async Task<IActionResult> Update([FromBody] SubjectViewDTO dto)
         {
-            var r = new ApiResponse();
-            try { r.Data = await _uow.SubjectRepository.Update(dto); return Ok(r); }
-            catch (Exception e) { r.StatusCode = 400; r.Message = e.Message; return BadRequest(r); }
+            var response = new ApiResponse();
+            try
+            {
+                response.Data = await _unitOfWork.SubjectRepository.Update(dto);
+                response.StatusCode = 200;
+                response.Message = "Success";
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                response.StatusCode = 400;
+                response.Message = ex.Message;
+            }
+            return BadRequest(response);
         }
 
-        [HttpDelete("{id:guid}")]
-        public async Task<IActionResult> Delete(Guid id)
+        [HttpDelete("api/subject/delete/{id:guid}")]
+        public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
-            var r = new ApiResponse();
-            try { r.Data = await _uow.SubjectRepository.Delete(id); return Ok(r); }
-            catch (Exception e) { r.StatusCode = 400; r.Message = e.Message; return BadRequest(r); }
+            var response = new ApiResponse();
+            try
+            {
+                response.Data = await _unitOfWork.SubjectRepository.Delete(id);
+                response.StatusCode = 200;
+                response.Message = "Success";
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                response.StatusCode = 400;
+                response.Message = ex.Message;
+            }
+            return BadRequest(response);
         }
 
-        [HttpGet("{id:guid}")]
-        public async Task<IActionResult> Get(Guid id)
+        [HttpGet("api/subject/get/{id:guid}")]
+        public async Task<IActionResult> Get([FromRoute] Guid id)
         {
-            var r = new ApiResponse();
-            try { r.Data = await _uow.SubjectRepository.GetById(id); return Ok(r); }
-            catch (Exception e) { r.StatusCode = 400; r.Message = e.Message; return BadRequest(r); }
+            var response = new ApiResponse();
+            try
+            {
+                response.Data = await _unitOfWork.SubjectRepository.GetById(id);
+                response.StatusCode = 200;
+                response.Message = "Success";
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                response.StatusCode = 400;
+                response.Message = ex.Message;
+            }
+            return BadRequest(response);
         }
 
-        [HttpGet]
+        [HttpGet("api/subject/getAll")]
         public async Task<IActionResult> GetAll()
         {
-            var r = new ApiResponse();
-            try { r.Data = await _uow.SubjectRepository.GetAll(); return Ok(r); }
-            catch (Exception e) { r.StatusCode = 400; r.Message = e.Message; return BadRequest(r); }
+            var response = new ApiResponse();
+            try
+            {
+                response.Data = await _unitOfWork.SubjectRepository.GetAll();
+                response.StatusCode = 200;
+                response.Message = "Success";
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                response.StatusCode = 400;
+                response.Message = ex.Message;
+            }
+            return BadRequest(response);
         }
     }
 }

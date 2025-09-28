@@ -10,10 +10,18 @@ namespace class_library.Models
         [Key, Required]
         public Guid ID { get; set; } = Guid.NewGuid();
 
-        public bool PrioritiseUsersFromInstitution { get; set; }
-        public bool PrioritiseInstructorNotes { get; set; }
-        public bool PrivateMyNotes { get; set; }
-        public bool PrioritiseRatedNotes { get; set; }
-        public bool PrioritiseFollowedUsers { get; set; }
+        public bool PrioritiseUsersFromInstitution { get; set; } = false;
+        public bool PrioritiseInstructorNotes { get; set; } = false;
+        public bool PrivateMyNotes { get; set; } = false;
+        public bool PrioritiseRatedNotes { get; set; } = false;
+        public bool PrioritiseFollowedUsers { get; set; } = false;
+
+        public override string ToString()
+            => $"PreferenceID:{ID}, " +
+               $"PrioritiseUsersFromInstitution:{PrioritiseUsersFromInstitution}, " +
+               $"PrioritiseInstructorNotes:{PrioritiseInstructorNotes}, " +
+               $"PrivateMyNotes:{PrivateMyNotes}, " +
+               $"PrioritiseRatedNotes:{PrioritiseRatedNotes}, " +
+               $"PrioritiseFollowedUsers:{PrioritiseFollowedUsers}";
     }
 }

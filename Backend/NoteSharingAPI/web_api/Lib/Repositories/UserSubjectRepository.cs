@@ -6,35 +6,39 @@ namespace web_api.Lib.Repositories
 {
     public class UserSubjectRepository : IUserSubjectRepository
     {
-        private readonly IServiceScopeFactory _scopeFactory;
-        public UserSubjectRepository(IServiceScopeFactory scopeFactory) => _scopeFactory = scopeFactory;
+        private readonly IServiceScopeFactory _serviceScopeFactory;
+
+        public UserSubjectRepository(IServiceScopeFactory serviceScopeFactory)
+        {
+            _serviceScopeFactory = serviceScopeFactory;
+        }
 
         public async Task<bool> Add(UserSubjectDTO dto)
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<IUserSubjectManagerService>();
-            return await svc.AddAsync(dto);
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<IUserSubjectManagerService>();
+            return await service.AddAsync(dto);
         }
 
         public async Task<bool> Remove(UserSubjectDTO dto)
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<IUserSubjectManagerService>();
-            return await svc.RemoveAsync(dto);
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<IUserSubjectManagerService>();
+            return await service.RemoveAsync(dto);
         }
 
         public async Task<IEnumerable<UserSubjectDTO>> GetByUser(Guid userId)
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<IUserSubjectManagerService>();
-            return await svc.GetByUserAsync(userId);
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<IUserSubjectManagerService>();
+            return await service.GetByUserAsync(userId);
         }
 
         public async Task<IEnumerable<UserSubjectDTO>> GetBySubject(Guid subjectId)
         {
-            using var scope = _scopeFactory.CreateScope();
-            var svc = scope.ServiceProvider.GetRequiredService<IUserSubjectManagerService>();
-            return await svc.GetBySubjectAsync(subjectId);
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<IUserSubjectManagerService>();
+            return await service.GetBySubjectAsync(subjectId);
         }
     }
 }

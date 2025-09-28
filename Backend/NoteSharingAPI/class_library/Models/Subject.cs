@@ -16,16 +16,18 @@ namespace class_library.Models
 
         [Required]
         public Guid InstitutionID { get; set; }
+
         [ForeignKey(nameof(InstitutionID))]
         public Institution Institution { get; set; }
 
-        /// <summary>Alapértelmezett/felelős oktató (opcionális)</summary>
         public Guid? InstructorID { get; set; }
+
         [ForeignKey(nameof(InstructorID))]
         public Instructor Instructor { get; set; }
 
         public ICollection<UserSubject> UserSubjects { get; set; }
 
-        public override string ToString() => $"SubjectID:{ID}, Name:{Name}";
+        public override string ToString()
+            => $"SubjectID:{ID}, Name:{Name}, InstitutionID:{InstitutionID}, InstructorID:{InstructorID}";
     }
 }

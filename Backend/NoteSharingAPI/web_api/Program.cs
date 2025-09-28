@@ -22,7 +22,6 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 }
 );
 
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<db_context>(options =>
@@ -49,7 +48,7 @@ builder.Services.AddCors(options =>
 {
 	options.AddPolicy("AllowSpecificOrigin", policy =>
 	{
-		policy.AllowAnyOrigin() // Your frontend URL
+		policy.AllowAnyOrigin() 
 			  .AllowAnyMethod()
 			  .AllowAnyHeader();
 	});
@@ -59,7 +58,6 @@ builder.Services.AddLocalServices();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
 	app.MapOpenApi();

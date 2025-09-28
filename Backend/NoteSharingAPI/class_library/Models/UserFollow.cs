@@ -11,5 +11,8 @@ namespace class_library.Models
 
         public Guid FollowingUserID { get; set; }
         public User FollowingUser { get; set; }
+
+        public override string ToString()
+            => $"UserFollow(FollowerUserID:{FollowerUserID}, FollowingUserID:{FollowingUserID})";
     }
 }

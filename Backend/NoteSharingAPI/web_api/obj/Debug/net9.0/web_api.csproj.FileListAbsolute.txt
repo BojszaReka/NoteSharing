@@ -92,3 +92,14 @@ C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\rj
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.csproj.AssemblyReference.cache
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.AssemblyInfoInputs.cache
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.AssemblyInfo.cs
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.csproj.CoreCompileInputs.cache
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.sourcelink.json
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.dll
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\refint\web_api.dll
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.pdb

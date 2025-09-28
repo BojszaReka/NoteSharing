@@ -12,14 +12,14 @@ namespace web_api.Lib.UnitOfWork
         public IUserSubjectRepository UserSubjectRepository { get; }
         public IUserFollowRepository UserFollowRepository { get; }
 
-        public ProductionUnitOfWork(IServiceProvider sp)
+        public ProductionUnitOfWork(IServiceProvider serviceProvider)
         {
-            UserRepository = sp.GetRequiredService<IUserRepository>();
-            PreferenceRepository = sp.GetRequiredService<IPreferenceRepository>();
-            InstitutionRepository = sp.GetRequiredService<IInstitutionRepository>();
-            SubjectRepository = sp.GetRequiredService<ISubjectRepository>();
-            UserSubjectRepository = sp.GetRequiredService<IUserSubjectRepository>();
-            UserFollowRepository = sp.GetRequiredService<IUserFollowRepository>();
+            UserRepository = serviceProvider.GetRequiredService<IUserRepository>();
+            PreferenceRepository = serviceProvider.GetRequiredService<IPreferenceRepository>();
+            InstitutionRepository = serviceProvider.GetRequiredService<IInstitutionRepository>();
+            SubjectRepository = serviceProvider.GetRequiredService<ISubjectRepository>();
+            UserSubjectRepository = serviceProvider.GetRequiredService<IUserSubjectRepository>();
+            UserFollowRepository = serviceProvider.GetRequiredService<IUserFollowRepository>();
         }
     }
 }

@@ -3,92 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\preferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\preferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\unitofwork\\servicecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\unitofwork\\servicecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\institutioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\institutioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\unitofwork\\productionunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\unitofwork\\productionunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\preferencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\preferencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\userfollowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\userfollowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\usersubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\usersubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\subjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\subjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\institutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\institutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\preferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\preferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\iuserfollowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\iuserfollowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\iusersubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\iusersubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\isubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\isubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\iinstitutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\iinstitutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\ipreferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\ipreferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\dto\\institutionviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\dto\\institutionviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\preferencemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\preferencemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\profiles\\exampleprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\profiles\\exampleprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\userfollowmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -99,6 +27,10 @@
       "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\usersubjectmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\usermanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\usermanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\subjectmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\subjectmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -107,40 +39,180 @@
       "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\institutionmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\usermanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\usermanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\dto\\classdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\dto\\classdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\interfaces\\iuserfollowmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\interfaces\\iuserfollowmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\enums\\eusertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\enums\\eusertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\enums\\eclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\enums\\eclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\unitofwork\\productionunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\unitofwork\\productionunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\interfaces\\iusersubjectmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\interfaces\\iusersubjectmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\interfaces\\isubjectmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\interfaces\\isubjectmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\interfaces\\iusermanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\interfaces\\iusermanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\interfaces\\iinstitutionmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\interfaces\\iinstitutionmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\interfaces\\iuserfollowmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\interfaces\\iuserfollowmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\interfaces\\isubjectmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\interfaces\\isubjectmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\interfaces\\ipreferencemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\interfaces\\ipreferencemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\interfaces\\iusermanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\interfaces\\iusermanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\interfaces\\iinstitutionmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\interfaces\\iinstitutionmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\interfaces\\iexampleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\interfaces\\iexampleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\exampleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\exampleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\iusersubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\iusersubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\isubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\isubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\iuserfollowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\iuserfollowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\ipreferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\ipreferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\iinstitutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\iinstitutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\iexamplerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\iexamplerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\usersubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\usersubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\userfollowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\userfollowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\subjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\subjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\preferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\preferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\institutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\institutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\examplerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\examplerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\examplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\examplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\preferencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\preferencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\institutioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\institutioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\profiles\\exampleprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\profiles\\exampleprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\database\\db_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\database\\db_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\exceptions\\exampleexecption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\exceptions\\exampleexecption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\usersubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\usersubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\userfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\userfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\preferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\preferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\institution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\institution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\profiles\\subjectprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -157,10 +229,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\profiles\\preferenceprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\profiles\\preferenceprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\profiles\\institutionviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\profiles\\institutionviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\profiles\\institutionprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -199,10 +267,6 @@
       "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\dto\\userupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\lib\\database\\db_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\database\\db_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\dto\\userfollowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\dto\\userfollowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -213,42 +277,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\dto\\userviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\dto\\userviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\userfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\userfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\usersubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\usersubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\institution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\institution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\enums\\eusertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\enums\\eusertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\class_library\\dto\\classdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\dto\\classdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\users\\fgeri\\desktop\\notesharing\\backend\\notesharingapi\\web_api\\web_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -285,791 +313,154 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductionUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\ProductionUnitOfWork.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\UnitOfWork\\ProductionUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\ProductionUnitOfWork.cs",
-              "RelativeToolTip": "web_api\\Lib\\UnitOfWork\\ProductionUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T22:04:40.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\UnitOfWork\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\IUnitOfWork.cs",
-              "RelativeToolTip": "web_api\\Lib\\UnitOfWork\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T22:04:25.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InstitutionController.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\InstitutionController.cs",
-              "RelativeDocumentMoniker": "web_api\\Controllers\\InstitutionController.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\InstitutionController.cs",
-              "RelativeToolTip": "web_api\\Controllers\\InstitutionController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T22:03:29.691Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApiResponse.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\ApiResponse.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\ApiResponse.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\ApiResponse.cs",
-              "RelativeToolTip": "class_library\\Models\\ApiResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T16:56:02.545Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Preferences.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Preferences.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\Preferences.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Preferences.cs",
-              "RelativeToolTip": "class_library\\Models\\Preferences.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T18:26:39.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SubjectController.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\SubjectController.cs",
-              "RelativeDocumentMoniker": "web_api\\Controllers\\SubjectController.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\SubjectController.cs",
-              "RelativeToolTip": "web_api\\Controllers\\SubjectController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T22:03:43.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PreferenceController.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\PreferenceController.cs",
-              "RelativeDocumentMoniker": "web_api\\Controllers\\PreferenceController.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\PreferenceController.cs",
-              "RelativeToolTip": "web_api\\Controllers\\PreferenceController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T22:03:12.381Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "web_api\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\UserController.cs",
-              "RelativeToolTip": "web_api\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:56:32.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserFollowRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserFollowRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\UserFollowRepository.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserFollowRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\UserFollowRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:55:47.533Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserSubjectRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserSubjectRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\UserSubjectRepository.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserSubjectRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\UserSubjectRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:55:35.349Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SubjectRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\SubjectRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\SubjectRepository.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\SubjectRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\SubjectRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:55:08.808Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "InstitutionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\InstitutionRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\InstitutionRepository.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\InstitutionRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\InstitutionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:54:52.934Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PreferenceRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\PreferenceRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\PreferenceRepository.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\PreferenceRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\PreferenceRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:54:39.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAABkAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:54:25.836Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IUserFollowRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IUserFollowRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\IUserFollowRepository.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IUserFollowRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\IUserFollowRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:53:44.733Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IUserSubjectRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IUserSubjectRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\IUserSubjectRepository.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IUserSubjectRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\IUserSubjectRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:53:30.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ISubjectRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\ISubjectRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\ISubjectRepository.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\ISubjectRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\ISubjectRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:53:14.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IInstitutionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IInstitutionRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\IInstitutionRepository.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IInstitutionRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\IInstitutionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:52:55.808Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IPreferenceRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IPreferenceRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\IPreferenceRepository.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IPreferenceRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\IPreferenceRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:52:41.669Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IUserRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:52:28.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
               "Title": "UserFollowManagerService.cs",
               "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserFollowManagerService.cs",
               "RelativeDocumentMoniker": "web_api\\Lib\\Services\\UserFollowManagerService.cs",
               "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserFollowManagerService.cs",
               "RelativeToolTip": "web_api\\Lib\\Services\\UserFollowManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-21T21:51:23.266Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "UserSubjectManagerService.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserSubjectManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\UserSubjectManagerService.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserSubjectManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\UserSubjectManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:51:10.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ExampleProfile.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\ExampleProfile.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Profiles\\ExampleProfile.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\ExampleProfile.cs",
-              "RelativeToolTip": "web_api\\Lib\\Profiles\\ExampleProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T19:19:03.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 3,
               "Title": "PreferenceManagerService.cs",
               "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\PreferenceManagerService.cs",
               "RelativeDocumentMoniker": "web_api\\Lib\\Services\\PreferenceManagerService.cs",
               "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\PreferenceManagerService.cs",
               "RelativeToolTip": "web_api\\Lib\\Services\\PreferenceManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-21T21:50:16.269Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "SubjectManagerService.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\SubjectManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\SubjectManagerService.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\SubjectManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\SubjectManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:50:56.257Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "InstitutionManagerService.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\InstitutionManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\InstitutionManagerService.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\InstitutionManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\InstitutionManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:50:30.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "UserManagerService.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\UserManagerService.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\UserManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:50:01.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "IUserFollowManagerService.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IUserFollowManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\IUserFollowManagerService.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IUserFollowManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\IUserFollowManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:48:11.13Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "IUserSubjectManagerService.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IUserSubjectManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\IUserSubjectManagerService.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IUserSubjectManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\IUserSubjectManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:47:53.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ISubjectManagerService.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\ISubjectManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\ISubjectManagerService.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\ISubjectManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\ISubjectManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:47:35.198Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "IInstitutionManagerService.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IInstitutionManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\IInstitutionManagerService.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IInstitutionManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\IInstitutionManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:47:18.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "IPreferenceManagerService.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IPreferenceManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\IPreferenceManagerService.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IPreferenceManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\IPreferenceManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:47:00.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "IUserManagerService.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IUserManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\IUserManagerService.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IUserManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\IUserManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:46:09.206Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "ExampleService.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\ExampleService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\ExampleService.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\ExampleService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\ExampleService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:45:19.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 2,
               "Title": "InstitutionViewDTO.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\InstitutionViewDTO.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Profiles\\InstitutionViewDTO.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\InstitutionViewDTO.cs",
-              "RelativeToolTip": "web_api\\Lib\\Profiles\\InstitutionViewDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\InstitutionViewDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\InstitutionViewDTO.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\InstitutionViewDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\InstitutionViewDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:19:34.792Z",
+              "WhenOpened": "2025-09-28T19:37:48.982Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "PreferenceProfiles.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\PreferenceProfiles.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Profiles\\PreferenceProfiles.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\PreferenceProfiles.cs",
-              "RelativeToolTip": "web_api\\Lib\\Profiles\\PreferenceProfiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T19:22:45.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "RelationProfiles.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\RelationProfiles.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Profiles\\RelationProfiles.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\RelationProfiles.cs",
-              "RelativeToolTip": "web_api\\Lib\\Profiles\\RelationProfiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T19:23:10.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "UserProfiles.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\UserProfiles.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Profiles\\UserProfiles.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\UserProfiles.cs",
-              "RelativeToolTip": "web_api\\Lib\\Profiles\\UserProfiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T19:19:20.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "SubjectProfiles.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\SubjectProfiles.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Profiles\\SubjectProfiles.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\SubjectProfiles.cs",
-              "RelativeToolTip": "web_api\\Lib\\Profiles\\SubjectProfiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T19:22:08.48Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Program.cs",
               "RelativeDocumentMoniker": "web_api\\Program.cs",
               "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Program.cs",
               "RelativeToolTip": "web_api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-21T16:44:29.609Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "InstitutionProfiles.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\InstitutionProfiles.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Profiles\\InstitutionProfiles.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\InstitutionProfiles.cs",
-              "RelativeToolTip": "web_api\\Lib\\Profiles\\InstitutionProfiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ServiceCollection.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\ServiceCollection.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\UnitOfWork\\ServiceCollection.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\ServiceCollection.cs",
+              "RelativeToolTip": "web_api\\Lib\\UnitOfWork\\ServiceCollection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T19:20:33.119Z",
+              "WhenOpened": "2025-09-25T14:07:43.805Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "SubjectViewDTO.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\SubjectViewDTO.cs",
-              "RelativeDocumentMoniker": "class_library\\DTO\\SubjectViewDTO.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\SubjectViewDTO.cs",
-              "RelativeToolTip": "class_library\\DTO\\SubjectViewDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "UserSubjectManagerService.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserSubjectManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\UserSubjectManagerService.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserSubjectManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\UserSubjectManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:18:12.917Z",
+              "WhenOpened": "2025-09-21T21:51:10.221Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "SubjectCreateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\SubjectCreateDTO.cs",
-              "RelativeDocumentMoniker": "class_library\\DTO\\SubjectCreateDTO.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\SubjectCreateDTO.cs",
-              "RelativeToolTip": "class_library\\DTO\\SubjectCreateDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "UserManagerService.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\UserManagerService.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\UserManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T19:09:24.449Z",
+              "WhenOpened": "2025-09-21T21:50:01.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "StudentViewDTO.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\StudentViewDTO.cs",
-              "RelativeDocumentMoniker": "class_library\\DTO\\StudentViewDTO.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\StudentViewDTO.cs",
-              "RelativeToolTip": "class_library\\DTO\\StudentViewDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "SubjectManagerService.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\SubjectManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\SubjectManagerService.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\SubjectManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\SubjectManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T19:08:01.669Z",
+              "WhenOpened": "2025-09-21T21:50:56.257Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "InstructorViewDTO.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\InstructorViewDTO.cs",
-              "RelativeDocumentMoniker": "class_library\\DTO\\InstructorViewDTO.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\InstructorViewDTO.cs",
-              "RelativeToolTip": "class_library\\DTO\\InstructorViewDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "InstitutionManagerService.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\InstitutionManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\InstitutionManagerService.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\InstitutionManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\InstitutionManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T19:08:24.013Z",
+              "WhenOpened": "2025-09-21T21:50:30.224Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "PreferenceViewDTO.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\PreferenceViewDTO.cs",
-              "RelativeDocumentMoniker": "class_library\\DTO\\PreferenceViewDTO.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\PreferenceViewDTO.cs",
-              "RelativeToolTip": "class_library\\DTO\\PreferenceViewDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T21:13:20.908Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "InstitutionCreateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\InstitutionCreateDTO.cs",
-              "RelativeDocumentMoniker": "class_library\\DTO\\InstitutionCreateDTO.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\InstitutionCreateDTO.cs",
-              "RelativeToolTip": "class_library\\DTO\\InstitutionCreateDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T19:08:54.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "UserCreateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserCreateDTO.cs",
-              "RelativeDocumentMoniker": "class_library\\DTO\\UserCreateDTO.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserCreateDTO.cs",
-              "RelativeToolTip": "class_library\\DTO\\UserCreateDTO.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T18:30:11.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "UserUpdateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserUpdateDTO.cs",
-              "RelativeDocumentMoniker": "class_library\\DTO\\UserUpdateDTO.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserUpdateDTO.cs",
-              "RelativeToolTip": "class_library\\DTO\\UserUpdateDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T18:30:40.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "db_context.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Database\\db_context.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Database\\db_context.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Database\\db_context.cs",
-              "RelativeToolTip": "web_api\\Lib\\Database\\db_context.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAYwCkAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T19:53:17.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "UserFollowDTO.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserFollowDTO.cs",
-              "RelativeDocumentMoniker": "class_library\\DTO\\UserFollowDTO.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserFollowDTO.cs",
-              "RelativeToolTip": "class_library\\DTO\\UserFollowDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T19:09:57.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "UserSubjectDTO.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserSubjectDTO.cs",
-              "RelativeDocumentMoniker": "class_library\\DTO\\UserSubjectDTO.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserSubjectDTO.cs",
-              "RelativeToolTip": "class_library\\DTO\\UserSubjectDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T19:09:41.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "UserViewDTO.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserViewDTO.cs",
-              "RelativeDocumentMoniker": "class_library\\DTO\\UserViewDTO.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserViewDTO.cs",
-              "RelativeToolTip": "class_library\\DTO\\UserViewDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T18:29:48.078Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "UserFollow.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\UserFollow.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\UserFollow.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\UserFollow.cs",
-              "RelativeToolTip": "class_library\\Models\\UserFollow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T18:27:23.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "UserSubject.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\UserSubject.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\UserSubject.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\UserSubject.cs",
-              "RelativeToolTip": "class_library\\Models\\UserSubject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T18:27:05.412Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "Subject.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Subject.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\Subject.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Subject.cs",
-              "RelativeToolTip": "class_library\\Models\\Subject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T18:16:13.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "Institution.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Institution.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\Institution.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Institution.cs",
-              "RelativeToolTip": "class_library\\Models\\Institution.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T18:15:31.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "Instructor.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Instructor.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\Instructor.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Instructor.cs",
-              "RelativeToolTip": "class_library\\Models\\Instructor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T18:14:33.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 10,
               "Title": "Student.cs",
               "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Student.cs",
               "RelativeDocumentMoniker": "class_library\\Models\\Student.cs",
               "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Student.cs",
               "RelativeToolTip": "class_library\\Models\\Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-21T18:14:10.532Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\User.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\User.cs",
-              "RelativeToolTip": "class_library\\Models\\User.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "Instructor.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Instructor.cs",
+              "RelativeDocumentMoniker": "class_library\\Models\\Instructor.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Instructor.cs",
+              "RelativeToolTip": "class_library\\Models\\Instructor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T18:03:55.944Z",
+              "WhenOpened": "2025-09-21T18:14:33.063Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 12,
               "Title": "EUserType.cs",
               "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Enums\\EUserType.cs",
               "RelativeDocumentMoniker": "class_library\\Enums\\EUserType.cs",
@@ -1082,7 +473,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 13,
+              "Title": "EClass.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Enums\\EClass.cs",
+              "RelativeDocumentMoniker": "class_library\\Enums\\EClass.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Enums\\EClass.cs",
+              "RelativeToolTip": "class_library\\Enums\\EClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T19:35:18.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ClassDTO.cs",
               "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\ClassDTO.cs",
               "RelativeDocumentMoniker": "class_library\\DTO\\ClassDTO.cs",
@@ -1095,7 +499,705 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductionUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\ProductionUnitOfWork.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\UnitOfWork\\ProductionUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\ProductionUnitOfWork.cs",
+              "RelativeToolTip": "web_api\\Lib\\UnitOfWork\\ProductionUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T22:04:40.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IUserSubjectManagerService.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IUserSubjectManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\IUserSubjectManagerService.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IUserSubjectManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\IUserSubjectManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:47:53.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IUserManagerService.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IUserManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\IUserManagerService.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IUserManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\IUserManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:46:09.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IUserFollowManagerService.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IUserFollowManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\IUserFollowManagerService.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IUserFollowManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\IUserFollowManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:48:11.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ISubjectManagerService.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\ISubjectManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\ISubjectManagerService.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\ISubjectManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\ISubjectManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:47:35.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IPreferenceManagerService.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IPreferenceManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\IPreferenceManagerService.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IPreferenceManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\IPreferenceManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:47:00.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IInstitutionManagerService.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IInstitutionManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\IInstitutionManagerService.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IInstitutionManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\IInstitutionManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:47:18.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IExampleService.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IExampleService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\IExampleService.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IExampleService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\IExampleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T16:25:54.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ExampleService.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\ExampleService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\ExampleService.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\ExampleService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\ExampleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:45:19.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IUserSubjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IUserSubjectRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\IUserSubjectRepository.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IUserSubjectRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\IUserSubjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:53:30.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ISubjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\ISubjectRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\ISubjectRepository.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\ISubjectRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\ISubjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:53:14.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IUserFollowRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IUserFollowRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\IUserFollowRepository.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IUserFollowRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\IUserFollowRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:53:44.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:52:28.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IPreferenceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IPreferenceRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\IPreferenceRepository.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IPreferenceRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\IPreferenceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:52:41.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IInstitutionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IInstitutionRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\IInstitutionRepository.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IInstitutionRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\IInstitutionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:52:55.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IExampleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IExampleRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\IExampleRepository.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IExampleRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\IExampleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T16:25:19.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "UserSubjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserSubjectRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\UserSubjectRepository.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserSubjectRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\UserSubjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:55:35.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:54:25.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UserFollowRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserFollowRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\UserFollowRepository.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserFollowRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\UserFollowRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:55:47.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "SubjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\SubjectRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\SubjectRepository.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\SubjectRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\SubjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:55:08.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "PreferenceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\PreferenceRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\PreferenceRepository.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\PreferenceRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\PreferenceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:54:39.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "InstitutionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\InstitutionRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\InstitutionRepository.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\InstitutionRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\InstitutionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:54:52.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ExampleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\ExampleRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\ExampleRepository.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\ExampleRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\ExampleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T16:25:34.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "web_api\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\UserController.cs",
+              "RelativeToolTip": "web_api\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAqwIUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:56:32.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "SubjectController.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\SubjectController.cs",
+              "RelativeDocumentMoniker": "web_api\\Controllers\\SubjectController.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\SubjectController.cs",
+              "RelativeToolTip": "web_api\\Controllers\\SubjectController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAqwHIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T22:03:43.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ExampleController.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\ExampleController.cs",
+              "RelativeDocumentMoniker": "web_api\\Controllers\\ExampleController.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\ExampleController.cs",
+              "RelativeToolTip": "web_api\\Controllers\\ExampleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T14:03:20.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "PreferenceController.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\PreferenceController.cs",
+              "RelativeDocumentMoniker": "web_api\\Controllers\\PreferenceController.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\PreferenceController.cs",
+              "RelativeToolTip": "web_api\\Controllers\\PreferenceController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAiwF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T22:03:12.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "InstitutionController.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\InstitutionController.cs",
+              "RelativeDocumentMoniker": "web_api\\Controllers\\InstitutionController.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\InstitutionController.cs",
+              "RelativeToolTip": "web_api\\Controllers\\InstitutionController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAIwHEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T22:03:29.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ExampleProfile.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\ExampleProfile.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Profiles\\ExampleProfile.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\ExampleProfile.cs",
+              "RelativeToolTip": "web_api\\Lib\\Profiles\\ExampleProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:19:03.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "db_context.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Database\\db_context.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Database\\db_context.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Database\\db_context.cs",
+              "RelativeToolTip": "web_api\\Lib\\Database\\db_context.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:53:17.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ExampleExecption.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Exceptions\\ExampleExecption.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Exceptions\\ExampleExecption.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Exceptions\\ExampleExecption.cs",
+              "RelativeToolTip": "web_api\\Lib\\Exceptions\\ExampleExecption.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T16:22:45.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "UserSubject.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\UserSubject.cs",
+              "RelativeDocumentMoniker": "class_library\\Models\\UserSubject.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\UserSubject.cs",
+              "RelativeToolTip": "class_library\\Models\\UserSubject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T18:27:05.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UserFollow.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\UserFollow.cs",
+              "RelativeDocumentMoniker": "class_library\\Models\\UserFollow.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\UserFollow.cs",
+              "RelativeToolTip": "class_library\\Models\\UserFollow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T18:27:23.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Preferences.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Preferences.cs",
+              "RelativeDocumentMoniker": "class_library\\Models\\Preferences.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Preferences.cs",
+              "RelativeToolTip": "class_library\\Models\\Preferences.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T18:26:39.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Subject.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Subject.cs",
+              "RelativeDocumentMoniker": "class_library\\Models\\Subject.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Subject.cs",
+              "RelativeToolTip": "class_library\\Models\\Subject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T18:16:13.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Institution.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Institution.cs",
+              "RelativeDocumentMoniker": "class_library\\Models\\Institution.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Institution.cs",
+              "RelativeToolTip": "class_library\\Models\\Institution.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T18:15:31.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\User.cs",
+              "RelativeDocumentMoniker": "class_library\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\User.cs",
+              "RelativeToolTip": "class_library\\Models\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T18:03:55.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "class_library\\Models\\ApiResponse.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\ApiResponse.cs",
+              "RelativeToolTip": "class_library\\Models\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T16:56:02.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\UnitOfWork\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\IUnitOfWork.cs",
+              "RelativeToolTip": "web_api\\Lib\\UnitOfWork\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T22:04:25.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "PreferenceProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\PreferenceProfiles.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Profiles\\PreferenceProfiles.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\PreferenceProfiles.cs",
+              "RelativeToolTip": "web_api\\Lib\\Profiles\\PreferenceProfiles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:22:45.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "RelationProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\RelationProfiles.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Profiles\\RelationProfiles.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\RelationProfiles.cs",
+              "RelativeToolTip": "web_api\\Lib\\Profiles\\RelationProfiles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:23:10.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "UserProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\UserProfiles.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Profiles\\UserProfiles.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\UserProfiles.cs",
+              "RelativeToolTip": "web_api\\Lib\\Profiles\\UserProfiles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:19:20.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "SubjectProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\SubjectProfiles.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Profiles\\SubjectProfiles.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\SubjectProfiles.cs",
+              "RelativeToolTip": "web_api\\Lib\\Profiles\\SubjectProfiles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:22:08.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "InstitutionProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\InstitutionProfiles.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Profiles\\InstitutionProfiles.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Profiles\\InstitutionProfiles.cs",
+              "RelativeToolTip": "web_api\\Lib\\Profiles\\InstitutionProfiles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:20:33.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "SubjectViewDTO.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\SubjectViewDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\SubjectViewDTO.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\SubjectViewDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\SubjectViewDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:18:12.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "SubjectCreateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\SubjectCreateDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\SubjectCreateDTO.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\SubjectCreateDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\SubjectCreateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:09:24.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "StudentViewDTO.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\StudentViewDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\StudentViewDTO.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\StudentViewDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\StudentViewDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:08:01.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "InstructorViewDTO.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\InstructorViewDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\InstructorViewDTO.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\InstructorViewDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\InstructorViewDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:08:24.013Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 62,
+              "Title": "PreferenceViewDTO.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\PreferenceViewDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\PreferenceViewDTO.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\PreferenceViewDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\PreferenceViewDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T21:13:20.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "InstitutionCreateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\InstitutionCreateDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\InstitutionCreateDTO.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\InstitutionCreateDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\InstitutionCreateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:08:54.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "UserCreateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserCreateDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\UserCreateDTO.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserCreateDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\UserCreateDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T18:30:11.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "UserUpdateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserUpdateDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\UserUpdateDTO.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserUpdateDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\UserUpdateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T18:30:40.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "UserFollowDTO.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserFollowDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\UserFollowDTO.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserFollowDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\UserFollowDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:09:57.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "UserSubjectDTO.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserSubjectDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\UserSubjectDTO.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserSubjectDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\UserSubjectDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:09:41.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "UserViewDTO.cs",
+              "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserViewDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\UserViewDTO.cs",
+              "ToolTip": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserViewDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\UserViewDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T18:29:48.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
               "Title": "web_api.csproj",
               "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\web_api.csproj",
               "RelativeDocumentMoniker": "web_api\\web_api.csproj",
@@ -1103,12 +1205,11 @@
               "RelativeToolTip": "web_api\\web_api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-19T17:15:43.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T17:15:43.703Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 72,
               "Title": "web_api.http",
               "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\web_api.http",
               "RelativeDocumentMoniker": "web_api\\web_api.http",
@@ -1116,12 +1217,11 @@
               "RelativeToolTip": "web_api\\web_api.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-09-19T17:14:07.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T17:14:07.727Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 73,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\appsettings.json",
               "RelativeDocumentMoniker": "web_api\\appsettings.json",
@@ -1129,12 +1229,11 @@
               "RelativeToolTip": "web_api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-19T17:13:26.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T17:13:26.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 74,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
@@ -1142,12 +1241,11 @@
               "RelativeToolTip": "docker-compose.yml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-09-19T16:56:22.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T16:56:22.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 71,
               "Title": "docker-compose.override.yml",
               "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\docker-compose.override.yml",
               "RelativeDocumentMoniker": "docker-compose.override.yml",
@@ -1155,12 +1253,11 @@
               "RelativeToolTip": "docker-compose.override.yml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-09-19T16:53:41.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T16:53:41.705Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 70,
               "Title": "Microsoft.VisualStudio.Docker.Compose.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
@@ -1168,12 +1265,11 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
               "ViewState": "AgIAAMIAAAAAAAAAAAAAAMkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-09-19T16:49:39.241Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T16:49:39.241Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 75,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Dockerfile",
               "RelativeDocumentMoniker": "web_api\\Dockerfile",
@@ -1181,8 +1277,7 @@
               "RelativeToolTip": "web_api\\Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-09-19T09:00:41.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T09:00:41.558Z"
             }
           ]
         }

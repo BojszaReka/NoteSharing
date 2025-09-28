@@ -5,9 +5,24 @@ namespace web_api.Lib.ManagerServices
 {
     public class UserSubjectManagerService : IUserSubjectManagerService
     {
-        public Task<bool> AddAsync(UserSubjectDTO dto) => throw new NotImplementedException();
-        public Task<bool> RemoveAsync(UserSubjectDTO dto) => throw new NotImplementedException();
-        public Task<IEnumerable<UserSubjectDTO>> GetByUserAsync(Guid userId) => throw new NotImplementedException();
-        public Task<IEnumerable<UserSubjectDTO>> GetBySubjectAsync(Guid subjectId) => throw new NotImplementedException();
+        public Task<bool> AddAsync(UserSubjectDTO dto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> RemoveAsync(UserSubjectDTO dto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<UserSubjectDTO>> GetByUserAsync(Guid userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<UserSubjectDTO>> GetBySubjectAsync(Guid subjectId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
