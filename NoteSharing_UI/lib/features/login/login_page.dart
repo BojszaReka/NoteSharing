@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notesharing_ui/application/configs/app_colors.dart';
+import 'package:notesharing_ui/features/register/register_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -110,7 +111,8 @@ class LoginPage extends StatelessWidget {
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            crossAxisAlignment:
+                                CrossAxisAlignment.stretch,
                             children: [
                               Expanded(
                                 child: Column(
@@ -289,7 +291,13 @@ class LoginPage extends StatelessWidget {
                             ),
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (_) => const RegisterPage(),
+                                ),
+                              );
+                            },
                             style: TextButton.styleFrom(
                               foregroundColor: Colors.blue,
                               padding: EdgeInsets.zero,
