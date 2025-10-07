@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notesharing_ui/application/configs/app_colors.dart';
+import 'package:notesharing_ui/common/notifications/notification_service.dart';
+import 'package:notesharing_ui/common/notifications/app_notification.dart';
 import 'package:notesharing_ui/features/register/register_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -64,6 +66,15 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void showLoginNotImplemented() {
+      final svc = NotificationProvider.of(context);
+      svc.show(
+        title: 'Bejelentkezés folyamatban',
+        message: 'A bejelentkezés funkció még nincs implementálva.',
+        type: AppNotificationType.info,
+        duration: const Duration(seconds: 4),
+      );
+    }
     final size = MediaQuery.of(context).size;
     final boxWidth = size.width * 0.8 > 350 ? 350.0 : size.width * 0.8;
     final boxHeight = size.height * 0.5 > 600 ? 600.0 : size.height * 0.5;
@@ -158,7 +169,7 @@ class LoginPage extends StatelessWidget {
                                 child: SizedBox(
                                   width: 180,
                                   child: ElevatedButton(
-                                    onPressed: () {},
+                                    onPressed: showLoginNotImplemented,
                                     style: ElevatedButton.styleFrom(
                                       padding: const EdgeInsets.symmetric(
                                         vertical: 12,

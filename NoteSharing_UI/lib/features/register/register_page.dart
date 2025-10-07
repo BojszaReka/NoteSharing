@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notesharing_ui/application/configs/app_colors.dart';
+import 'package:notesharing_ui/common/notifications/notification_service.dart';
+import 'package:notesharing_ui/common/notifications/app_notification.dart';
 
 enum UserType { simple, student, instructor }
 
@@ -641,8 +643,13 @@ class _RegisterPageState extends State<RegisterPage> {
     if (_currentStep < steps.length - 1) {
       setState(() => _currentStep++);
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Regisztráció (design only)')),
+      // Show info notification for unimplemented registration logic
+      final svc = NotificationProvider.of(context);
+      svc.show(
+        title: 'Regisztráció',
+        message: 'A regisztráció funkció még nincs implementálva.',
+        type: AppNotificationType.info,
+        duration: const Duration(seconds: 4),
       );
     }
   }
