@@ -145,7 +145,7 @@ class _NotificationCardState extends State<_NotificationCard> with SingleTickerP
                               fontWeight: FontWeight.bold,
                               fontSize: 11.5,
                               height: 1.25,
-                              color: AppColors.loginMainTextColor.withOpacity(0.85),
+                              color: AppColors.loginMainTextColor.withValues(alpha: 0.85),
                             ),
                           ),
                         ],
@@ -158,7 +158,7 @@ class _NotificationCardState extends State<_NotificationCard> with SingleTickerP
                     borderRadius: BorderRadius.circular(20),
                     child: Padding(
                       padding: const EdgeInsets.all(4.0),
-                      child: Icon(Icons.close, size: 18, color: AppColors.loginMainTextColor.withOpacity(0.7)),
+                      child: Icon(Icons.close, size: 18, color: AppColors.loginMainTextColor.withValues(alpha: 0.7)),
                     ),
                   ),
                 ],

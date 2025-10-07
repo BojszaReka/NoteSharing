@@ -45,8 +45,8 @@ class NotificationProvider extends InheritedNotifier<NotificationService> {
   const NotificationProvider({
     super.key,
     required NotificationService service,
-    required Widget child,
-  }) : super(notifier: service, child: child);
+    required super.child,
+  }) : super(notifier: service);
 
   static NotificationService of(BuildContext context) {
     final provider = context.dependOnInheritedWidgetOfExactType<NotificationProvider>();
