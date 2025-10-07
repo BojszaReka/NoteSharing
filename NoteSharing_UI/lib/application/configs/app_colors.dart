@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 abstract class AppColors {
   static const Color _blue1 = Color(0xFF004AAD);
   static const Color _lightBlue1 = Color(0xFFF1FAFF);
+
   // Notification palette
   static const Color _error = Color(0xFFE53935); // Red 600-ish
   static const Color _success = Color(0xFF2E7D32); // Green 700-ish
