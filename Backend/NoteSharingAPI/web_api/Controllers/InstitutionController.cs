@@ -1,11 +1,15 @@
 ﻿using class_library.DTO;
 using class_library.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using web_api.Lib.UnitOfWork;
 
 namespace web_api.Controllers
 {
-    public class InstitutionController : ControllerBase
+	[AllowAnonymous]
+	[Route("/api/[controller]")]
+	[ApiController]
+	public class InstitutionController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IConfiguration _configuration;
@@ -16,7 +20,7 @@ namespace web_api.Controllers
             _configuration = configuration;
         }
 
-        [HttpPost("api/institution/create")]
+        [HttpPost]
         public async Task<IActionResult> Create([FromBody] InstitutionCreateDTO dto)
         {
             var response = new ApiResponse();
@@ -35,7 +39,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpPut("api/institution/update")]
+        [HttpPut]
         public async Task<IActionResult> Update([FromBody] InstitutionViewDTO dto)
         {
             var response = new ApiResponse();
@@ -54,7 +58,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpDelete("api/institution/delete/{id:guid}")]
+        [HttpDelete("{id:guid}")]
         public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
             var response = new ApiResponse();
@@ -73,7 +77,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpGet("api/institution/get/{id:guid}")]
+        [HttpGet("{id:guid}")]
         public async Task<IActionResult> Get([FromRoute] Guid id)
         {
             var response = new ApiResponse();
@@ -92,7 +96,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpGet("api/institution/getAll")]
+        [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var response = new ApiResponse();

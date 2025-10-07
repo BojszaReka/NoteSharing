@@ -1,5 +1,4 @@
 ﻿using web_api.Lib.Repositories.Interfaces;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace web_api.Lib.UnitOfWork
 {
@@ -11,8 +10,9 @@ namespace web_api.Lib.UnitOfWork
         public ISubjectRepository SubjectRepository { get; }
         public IUserSubjectRepository UserSubjectRepository { get; }
         public IUserFollowRepository UserFollowRepository { get; }
+        public IAuthRepository AuthRepository { get; }
 
-        public ProductionUnitOfWork(IServiceProvider serviceProvider)
+		public ProductionUnitOfWork(IServiceProvider serviceProvider)
         {
             UserRepository = serviceProvider.GetRequiredService<IUserRepository>();
             PreferenceRepository = serviceProvider.GetRequiredService<IPreferenceRepository>();
@@ -20,6 +20,7 @@ namespace web_api.Lib.UnitOfWork
             SubjectRepository = serviceProvider.GetRequiredService<ISubjectRepository>();
             UserSubjectRepository = serviceProvider.GetRequiredService<IUserSubjectRepository>();
             UserFollowRepository = serviceProvider.GetRequiredService<IUserFollowRepository>();
-        }
+            AuthRepository = serviceProvider.GetRequiredService<IAuthRepository>();
+		}
     }
 }

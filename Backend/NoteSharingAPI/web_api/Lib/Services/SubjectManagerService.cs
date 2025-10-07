@@ -1,7 +1,7 @@
 ﻿using class_library.DTO;
-using web_api.Lib.ManagerServices.Interfaces;
+using web_api.Lib.Services.Interfaces;
 
-namespace web_api.Lib.ManagerServices
+namespace web_api.Lib.Services
 {
     public class SubjectManagerService : ISubjectManagerService
     {

@@ -1,5 +1,5 @@
 ﻿using class_library.DTO;
-using web_api.Lib.ManagerServices.Interfaces;
+using web_api.Lib.Services.Interfaces;
 using web_api.Lib.Repositories.Interfaces;
 
 namespace web_api.Lib.Repositories

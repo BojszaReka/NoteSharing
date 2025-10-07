@@ -13,6 +13,8 @@ namespace class_library.Models
         public Subject Subject { get; set; }
 
         public override string ToString()
-            => $"UserSubject(UserID:{UserID}, SubjectID:{SubjectID})";
+        {
+			return $"UserSubject(UserID:{UserID}, SubjectID:{SubjectID})";
+		}
     }
 }

@@ -9,8 +9,6 @@ namespace web_api.Lib.Database
         public db_context(DbContextOptions<db_context> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Institution> Institutions { get; set; }
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<Preference> Preferences { get; set; }
@@ -22,8 +20,6 @@ namespace web_api.Lib.Database
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<User>().HasKey(x => x.ID);
-            modelBuilder.Entity<Student>().HasBaseType<User>();
-            modelBuilder.Entity<Instructor>().HasBaseType<User>();
 
             modelBuilder.Entity<Institution>().HasKey(x => x.ID);
             modelBuilder.Entity<Subject>().HasKey(x => x.ID);
@@ -31,12 +27,6 @@ namespace web_api.Lib.Database
 
             modelBuilder.Entity<UserSubject>().HasKey(x => new { x.UserID, x.SubjectID });
             modelBuilder.Entity<UserFollow>().HasKey(x => new { x.FollowerUserID, x.FollowingUserID });
-
-            modelBuilder.Entity<User>()
-                .HasDiscriminator<EUserType>(nameof(User.UserType))
-                .HasValue<User>(EUserType.Default)
-                .HasValue<Student>(EUserType.Student)
-                .HasValue<Instructor>(EUserType.Instructor);
 
             modelBuilder.Entity<UserFollow>()
                 .HasOne(uf => uf.FollowerUser)

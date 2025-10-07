@@ -1,11 +1,15 @@
 ﻿using class_library.DTO;
 using class_library.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using web_api.Lib.UnitOfWork;
 
 namespace web_api.Controllers
 {
-    public class SubjectController : ControllerBase
+	[AllowAnonymous]
+	[Route("/api/[controller]")]
+	[ApiController]
+	public class SubjectController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IConfiguration _configuration;
@@ -16,7 +20,7 @@ namespace web_api.Controllers
             _configuration = configuration;
         }
 
-        [HttpPost("api/subject/create")]
+        [HttpPost]
         public async Task<IActionResult> Create([FromBody] SubjectCreateDTO dto)
         {
             var response = new ApiResponse();
@@ -35,7 +39,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpPut("api/subject/update")]
+        [HttpPut]
         public async Task<IActionResult> Update([FromBody] SubjectViewDTO dto)
         {
             var response = new ApiResponse();
@@ -54,7 +58,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpDelete("api/subject/delete/{id:guid}")]
+        [HttpDelete("{id:guid}")]
         public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
             var response = new ApiResponse();
@@ -73,7 +77,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpGet("api/subject/get/{id:guid}")]
+        [HttpGet("{id:guid}")]
         public async Task<IActionResult> Get([FromRoute] Guid id)
         {
             var response = new ApiResponse();
@@ -92,7 +96,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpGet("api/subject/getAll")]
+        [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var response = new ApiResponse();

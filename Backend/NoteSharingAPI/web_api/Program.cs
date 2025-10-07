@@ -1,11 +1,11 @@
-using Mapster;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System.Reflection;
+using System.Security.Claims;
+using System.Text;
 using web_api.Lib.Database;
 using web_api.Lib.UnitOfWork;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
-using class_library.Models;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -52,6 +52,46 @@ builder.Services.AddCors(options =>
 			  .AllowAnyMethod()
 			  .AllowAnyHeader();
 	});
+});
+
+builder.Services.AddAuthentication(options =>
+{
+	options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+	options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+	.AddJwtBearer(options =>
+	{
+		options.TokenValidationParameters = new TokenValidationParameters
+		{
+			ValidateIssuer = false,
+			ValidateAudience = false,
+			ValidateLifetime = false,
+			ValidateIssuerSigningKey = true,
+			ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
+			ValidAudience = builder.Configuration["JwtSettings:Audience"],
+			NameClaimType = ClaimTypes.Name,
+			RoleClaimType = ClaimTypes.Role,
+			IssuerSigningKey = new SymmetricSecurityKey(
+			Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"]))
+		};
+	});
+
+builder.Services.AddAuthorization(options =>
+{
+	// Basic role policies
+	options.AddPolicy("RequireAdministrator", policy =>
+		policy.RequireClaim(ClaimTypes.Role, EPermissionType.Administrator.ToString()));
+
+	options.AddPolicy("RequireWorker", policy =>
+		policy.RequireClaim(ClaimTypes.Role,
+			EPermissionType.Administrator.ToString(),
+			EPermissionType.Worker.ToString()));
+
+	options.AddPolicy("RequireUser", policy =>
+		policy.RequireClaim(ClaimTypes.Role,
+			EPermissionType.Administrator.ToString(),
+			EPermissionType.Worker.ToString(),
+			EPermissionType.User.ToString()));
 });
 
 builder.Services.AddLocalServices();

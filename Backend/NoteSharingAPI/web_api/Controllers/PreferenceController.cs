@@ -1,11 +1,15 @@
 ﻿using class_library.DTO;
 using class_library.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using web_api.Lib.UnitOfWork;
 
 namespace web_api.Controllers
 {
-    public class PreferenceController : ControllerBase
+	[AllowAnonymous]
+	[Route("/api/[controller]")]
+	[ApiController]
+	public class PreferenceController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IConfiguration _configuration;
@@ -16,7 +20,7 @@ namespace web_api.Controllers
             _configuration = configuration;
         }
 
-        [HttpPost("api/preference/addUserPreference")]
+        [HttpPost]
         public async Task<IActionResult> AddUserPreference([FromBody] PreferenceViewDTO dto)
         {
             var response = new ApiResponse();
@@ -35,7 +39,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpPut("api/preference/modifyUserPreference")]
+        [HttpPut]
         public async Task<IActionResult> ModifyUserPreference([FromBody] PreferenceViewDTO dto)
         {
             var response = new ApiResponse();
@@ -54,7 +58,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpDelete("api/preference/deleteUserPreference/{id:guid}")]
+        [HttpDelete("{id:guid}")]
         public async Task<IActionResult> DeleteUserPreference([FromRoute] Guid id)
         {
             var response = new ApiResponse();
@@ -73,7 +77,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpGet("api/preference/getUserPreference/{id:guid}")]
+        [HttpGet("{id:guid}")]
         public async Task<IActionResult> GetUserPreference([FromRoute] Guid id)
         {
             var response = new ApiResponse();

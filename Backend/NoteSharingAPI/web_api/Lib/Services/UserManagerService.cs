@@ -1,11 +1,42 @@
 ﻿using class_library.DTO;
-using web_api.Lib.ManagerServices.Interfaces;
+using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
+using web_api.Lib.Database;
+using web_api.Lib.Services.Interfaces;
 
-namespace web_api.Lib.ManagerServices
+namespace web_api.Lib.Services
 {
     public class UserManagerService : IUserManagerService
     {
-        public Task<UserViewDTO> CreateAsync(UserCreateDTO dto)
+		private readonly db_context _dbContext;
+		private readonly IDistributedCache _cache;
+		public UserManagerService(db_context dbContext, IDistributedCache cache)
+		{
+			_dbContext = dbContext;
+			_cache = cache;
+		}
+
+		private async Task<IQueryable<User>> querryUsers()
+		{
+			var cachedData = await _cache.GetStringAsync("users");
+			if (!string.IsNullOrEmpty(cachedData))
+			{
+				var data = JsonConvert.DeserializeObject<List<User>>(cachedData);
+				return data.AsQueryable();
+			}
+			var dataFromDb = await _dbContext.Users.OrderBy(c => c.ID).ToListAsync();
+			var cacheOptions = new DistributedCacheEntryOptions
+			{
+				AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10),
+				SlidingExpiration = TimeSpan.FromMinutes(5)
+			};
+
+			var serializedData = JsonConvert.SerializeObject(dataFromDb);
+			await _cache.SetStringAsync("users", serializedData, cacheOptions);
+			return dataFromDb.AsQueryable();
+		}
+
+		public Task<UserViewDTO> CreateAsync(UserCreateDTO dto)
         {
             throw new NotImplementedException();
         }

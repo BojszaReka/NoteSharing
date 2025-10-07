@@ -16,7 +16,7 @@ namespace web_api.Controllers
             _configuration = configuration;
         }
 
-        [HttpPost("api/user/addUser")]
+        [HttpPost]
         public async Task<IActionResult> AddUser([FromBody] UserCreateDTO dto)
         {
             var response = new ApiResponse();
@@ -35,7 +35,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpPut("api/user/modifyUser")]
+        [HttpPut]
         public async Task<IActionResult> ModifyUser([FromBody] UserUpdateDTO dto)
         {
             var response = new ApiResponse();
@@ -54,7 +54,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpDelete("api/user/deleteUser/{id:guid}")]
+        [HttpDelete("{id:guid}")]
         public async Task<IActionResult> DeleteUser([FromRoute] Guid id)
         {
             var response = new ApiResponse();
@@ -73,7 +73,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpGet("api/user/getUser/{id:guid}")]
+        [HttpGet("id/{id:guid}")]
         public async Task<IActionResult> GetUser([FromRoute] Guid id)
         {
             var response = new ApiResponse();
@@ -92,7 +92,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpGet("api/user/getUserByUserName/{userName}")]
+        [HttpGet("username/{userName}")]
         public async Task<IActionResult> GetUserByUserName([FromRoute] string userName)
         {
             var response = new ApiResponse();
@@ -111,8 +111,8 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpPost("api/user/follow")]
-        public async Task<IActionResult> Follow([FromBody] UserFollowDTO dto)
+        [HttpPost("follow")]
+        public async Task<IActionResult> AddFollowing([FromBody] UserFollowDTO dto)
         {
             var response = new ApiResponse();
             try

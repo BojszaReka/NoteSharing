@@ -13,13 +13,13 @@ namespace class_library.DTO
         [Required, EmailAddress]
         public string Email { get; set; }
 
-        /// <summary>Nyers jelszó – a service réteg hash-eli</summary>
         [Required]
         public string Password { get; set; }
+		public bool Enabled { get; set; }
+		public string? Description { get; set; }
 
-        public EUserType UserType { get; set; } = EUserType.Simple;
-
-        /// <summary>Ha nincs, a backend hozhat létre default Preference-t</summary>
-        public Guid? PreferenceID { get; set; }
+		public EUserType UserType { get; set; } = EUserType.Default;
+        public EPermissionType PermissionType { get; set; } = EPermissionType.User;
+		public Guid? PreferenceID { get; set; }
     }
 }

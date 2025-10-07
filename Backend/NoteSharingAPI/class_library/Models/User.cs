@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using class_library.Enums;
 
@@ -27,19 +25,42 @@ namespace class_library.Models
 
         [Required]
         public EUserType UserType { get; set; } = EUserType.Default;
+        public EPermissionType PermissionType { get; set; } = EPermissionType.User;
+		public bool Enabled { get; set; }
+		public string? Description { get; set; }
+		public string? RefreshToken { get; set; }
+		public DateTime? RefreshTokenExpires { get; set; }
 
-        [Required]
+		[Required]
         public Guid PreferenceID { get; set; }
 
-        [ForeignKey(nameof(PreferenceID))]
-        public Preference Preference { get; set; }
+ 
 
-        // Kapcsolatok
-        public ICollection<UserFollow> Followers { get; set; }
+        /// <summary>
+        /// Represents the institution for the user.
+        /// - If <see cref="UserType"/> is <see cref="EUserType.Default"/>, this value is <c>null</c>.
+        /// - Otherwise, this indicates the institution where the user belongs.
+        /// </summary>
+        public Guid? InstitutionID { get; set; }        
+
+        /// <summary>
+        /// Represents the grade information for the user.
+        /// - If <see cref="UserType"/> is <see cref="EUserType.Default"/>, this value is <c>null</c>.
+        /// - If <see cref="UserType"/> is <see cref="EUserType.Student"/>, this value indicates the grade of the student.
+        /// - If <see cref="UserType"/> is <see cref="EUserType.Instructor"/>, this value indicates the grade the instructor is teaching.
+        /// </summary>
+        public string? Grade { get; set; }
+
+		// Kapcsolatok
+		[ForeignKey(nameof(PreferenceID))]
+		public Preference Preference { get; set; }
+		[ForeignKey(nameof(InstitutionID))]
+		public Institution Institution { get; set; }
+		public ICollection<UserFollow> Followers { get; set; }
         public ICollection<UserFollow> Followings { get; set; }
         public ICollection<UserSubject> UserSubjects { get; set; }
 
-        public override string ToString()
+		public override string ToString()
         {
             var followers = Followers?.Count ?? 0;
             var followings = Followings?.Count ?? 0;

@@ -17,11 +17,14 @@ namespace class_library.Models
         public bool PrioritiseFollowedUsers { get; set; } = false;
 
         public override string ToString()
-            => $"PreferenceID:{ID}, " +
-               $"PrioritiseUsersFromInstitution:{PrioritiseUsersFromInstitution}, " +
-               $"PrioritiseInstructorNotes:{PrioritiseInstructorNotes}, " +
-               $"PrivateMyNotes:{PrivateMyNotes}, " +
-               $"PrioritiseRatedNotes:{PrioritiseRatedNotes}, " +
-               $"PrioritiseFollowedUsers:{PrioritiseFollowedUsers}";
+        {
+            return $"PreferenceID:{ID}, " +
+			   $"PrioritiseUsersFromInstitution:{PrioritiseUsersFromInstitution}, " +
+			   $"PrioritiseInstructorNotes:{PrioritiseInstructorNotes}, " +
+			   $"PrivateMyNotes:{PrivateMyNotes}, " +
+			   $"PrioritiseRatedNotes:{PrioritiseRatedNotes}, " +
+			   $"PrioritiseFollowedUsers:{PrioritiseFollowedUsers}";
+		}
+            
     }
 }

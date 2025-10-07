@@ -10,5 +10,6 @@ namespace web_api.Lib.UnitOfWork
         ISubjectRepository SubjectRepository { get; }
         IUserSubjectRepository UserSubjectRepository { get; }
         IUserFollowRepository UserFollowRepository { get; }
-    }
+        IAuthRepository AuthRepository { get; }
+	}
 }

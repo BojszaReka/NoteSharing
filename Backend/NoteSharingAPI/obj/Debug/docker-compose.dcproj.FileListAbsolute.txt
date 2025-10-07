@@ -70,3 +70,12 @@ C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\bin\Debug\web_api.pdb
 C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\obj\Debug\docker-c.35A3FFBA.Up2Date
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\class_library.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\BCrypt.Net-Next.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Newtonsoft.Json.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\class_library.pdb
