@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notesharing_ui/application/configs/app_colors.dart';
+import 'package:notesharing_ui/common/notifications/notification_service.dart';
+import 'package:notesharing_ui/common/notifications/app_notification.dart';
 
 enum UserType { simple, student, instructor }
 
@@ -10,7 +12,7 @@ class _StepConfig {
 }
 
 class RegisterPage extends StatefulWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+  const RegisterPage({super.key});
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
@@ -170,7 +172,7 @@ class _RegisterPageState extends State<RegisterPage> {
         Text(
           'A választásod alapján később külön mezők jelennek meg.',
           style: TextStyle(
-            color: AppColors.loginMainTextColor.withOpacity(0.8),
+            color: AppColors.loginMainTextColor.withValues(alpha: 0.8),
             fontFamily: 'Candal',
             fontSize: 12,
             fontWeight: FontWeight.bold,
@@ -205,9 +207,9 @@ class _RegisterPageState extends State<RegisterPage> {
           duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 14),
           decoration: BoxDecoration(
-            color: selected
-                ? AppColors.loginMainTextColor.withOpacity(0.06)
-                : Colors.white,
+      color: selected
+        ? AppColors.loginMainTextColor.withValues(alpha: 0.06)
+        : Colors.white,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
               color: selected ? AppColors.loginMainTextColor : Colors.grey.shade300,
@@ -260,7 +262,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       style: TextStyle(
                         fontFamily: 'Candal',
                         fontWeight: FontWeight.bold,
-                        color: AppColors.loginMainTextColor.withOpacity(0.75),
+                        color: AppColors.loginMainTextColor.withValues(alpha: 0.75),
                         fontSize: 12,
                         height: 1.25,
                       ),
@@ -343,7 +345,7 @@ class _RegisterPageState extends State<RegisterPage> {
         _sectionTitle('Intézmény'),
         if (_userType == UserType.student || _userType == UserType.instructor) ...[
           DropdownButtonFormField<String>(
-            value: _selectedInstitution,
+            initialValue: _selectedInstitution,
             hint: const Text(
               'Válassz intézményt',
               style: TextStyle(
@@ -382,7 +384,7 @@ class _RegisterPageState extends State<RegisterPage> {
           Text(
             'Egyszerű felhasználóként nincs szükség intézmény kiválasztására.',
             style: TextStyle(
-              color: AppColors.loginMainTextColor.withOpacity(0.8),
+              color: AppColors.loginMainTextColor.withValues(alpha: 0.8),
               fontFamily: 'Candal',
               fontSize: 12,
               fontWeight: FontWeight.bold,
@@ -392,7 +394,7 @@ class _RegisterPageState extends State<RegisterPage> {
           Text(
             'Először válaszd ki a szereped a következő lépéshez.',
             style: TextStyle(
-              color: AppColors.loginMainTextColor.withOpacity(0.8),
+              color: AppColors.loginMainTextColor.withValues(alpha: 0.8),
               fontFamily: 'Candal',
               fontSize: 12,
               fontWeight: FontWeight.bold,
@@ -483,7 +485,18 @@ class _RegisterPageState extends State<RegisterPage> {
                 title: Text('Saját intézmény előnyben', style: titleStyle),
                 value: prioritiseUsersFromInstitution,
                 onChanged: (v) => setState(() => prioritiseUsersFromInstitution = v),
-                activeColor: AppColors.loginMainTextColor,
+                thumbColor: WidgetStateProperty.resolveWith((states) {
+                  if (states.contains(WidgetState.selected)) {
+                    return AppColors.loginMainTextColor;
+                  }
+                  return Colors.grey.shade400;
+                }),
+                trackColor: WidgetStateProperty.resolveWith((states) {
+                  if (states.contains(WidgetState.selected)) {
+                    return AppColors.loginMainTextColor.withValues(alpha: 0.5);
+                  }
+                  return Colors.grey.shade300;
+                }),
               ),
               Divider(height: 1, color: Colors.grey.shade300),
               SwitchListTile(
@@ -491,7 +504,18 @@ class _RegisterPageState extends State<RegisterPage> {
                 title: Text('Oktatói jegyzetek előnyben', style: titleStyle),
                 value: prioritiseInstructorNotes,
                 onChanged: (v) => setState(() => prioritiseInstructorNotes = v),
-                activeColor: AppColors.loginMainTextColor,
+                thumbColor: WidgetStateProperty.resolveWith((states) {
+                  if (states.contains(WidgetState.selected)) {
+                    return AppColors.loginMainTextColor;
+                  }
+                  return Colors.grey.shade400;
+                }),
+                trackColor: WidgetStateProperty.resolveWith((states) {
+                  if (states.contains(WidgetState.selected)) {
+                    return AppColors.loginMainTextColor.withValues(alpha: 0.5);
+                  }
+                  return Colors.grey.shade300;
+                }),
               ),
               Divider(height: 1, color: Colors.grey.shade300),
               SwitchListTile(
@@ -499,7 +523,18 @@ class _RegisterPageState extends State<RegisterPage> {
                 title: Text('Saját jegyzetek privát', style: titleStyle),
                 value: privateMyNotes,
                 onChanged: (v) => setState(() => privateMyNotes = v),
-                activeColor: AppColors.loginMainTextColor,
+                thumbColor: WidgetStateProperty.resolveWith((states) {
+                  if (states.contains(WidgetState.selected)) {
+                    return AppColors.loginMainTextColor;
+                  }
+                  return Colors.grey.shade400;
+                }),
+                trackColor: WidgetStateProperty.resolveWith((states) {
+                  if (states.contains(WidgetState.selected)) {
+                    return AppColors.loginMainTextColor.withValues(alpha: 0.5);
+                  }
+                  return Colors.grey.shade300;
+                }),
               ),
               Divider(height: 1, color: Colors.grey.shade300),
               SwitchListTile(
@@ -507,7 +542,18 @@ class _RegisterPageState extends State<RegisterPage> {
                 title: Text('Magasan értékelt jegyzetek előnyben', style: titleStyle),
                 value: prioritiseRatedNotes,
                 onChanged: (v) => setState(() => prioritiseRatedNotes = v),
-                activeColor: AppColors.loginMainTextColor,
+                thumbColor: WidgetStateProperty.resolveWith((states) {
+                  if (states.contains(WidgetState.selected)) {
+                    return AppColors.loginMainTextColor;
+                  }
+                  return Colors.grey.shade400;
+                }),
+                trackColor: WidgetStateProperty.resolveWith((states) {
+                  if (states.contains(WidgetState.selected)) {
+                    return AppColors.loginMainTextColor.withValues(alpha: 0.5);
+                  }
+                  return Colors.grey.shade300;
+                }),
               ),
               Divider(height: 1, color: Colors.grey.shade300),
               SwitchListTile(
@@ -515,7 +561,18 @@ class _RegisterPageState extends State<RegisterPage> {
                 title: Text('Követett felhasználók előnyben', style: titleStyle),
                 value: prioritiseFollowedUsers,
                 onChanged: (v) => setState(() => prioritiseFollowedUsers = v),
-                activeColor: AppColors.loginMainTextColor,
+                thumbColor: WidgetStateProperty.resolveWith((states) {
+                  if (states.contains(WidgetState.selected)) {
+                    return AppColors.loginMainTextColor;
+                  }
+                  return Colors.grey.shade400;
+                }),
+                trackColor: WidgetStateProperty.resolveWith((states) {
+                  if (states.contains(WidgetState.selected)) {
+                    return AppColors.loginMainTextColor.withValues(alpha: 0.5);
+                  }
+                  return Colors.grey.shade300;
+                }),
               ),
             ],
           ),
@@ -559,7 +616,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   fontFamily: 'Candal',
                   fontWeight: FontWeight.bold,
                   fontSize: 12,
-                  color: AppColors.loginMainTextColor.withOpacity(0.85),
+                  color: AppColors.loginMainTextColor.withValues(alpha: 0.85),
                 ),
               ),
             ),
@@ -628,7 +685,7 @@ class _RegisterPageState extends State<RegisterPage> {
             fontWeight: FontWeight.bold,
             fontSize: 11,
             height: 1.25,
-            color: AppColors.loginMainTextColor.withOpacity(0.7),
+            color: AppColors.loginMainTextColor.withValues(alpha: 0.7),
           ),
         ),
       ],
@@ -641,8 +698,13 @@ class _RegisterPageState extends State<RegisterPage> {
     if (_currentStep < steps.length - 1) {
       setState(() => _currentStep++);
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Regisztráció (design only)')),
+      // Show info notification for unimplemented registration logic
+      final svc = NotificationProvider.of(context);
+      svc.show(
+        title: 'Regisztráció',
+        message: 'A regisztráció funkció még nincs implementálva.',
+        type: AppNotificationType.info,
+        duration: const Duration(seconds: 4),
       );
     }
   }
