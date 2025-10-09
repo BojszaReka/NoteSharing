@@ -14,12 +14,14 @@ namespace web_api.Lib.Services
 		private readonly db_context _context;
 		private readonly IConfiguration _configuration;
 		private readonly IDistributedCache _cache;
+		private readonly IServiceScopeFactory _scopeFactory;
 
-		public AuthManagerService(db_context context, IConfiguration configuration, IDistributedCache cache)
+		public AuthManagerService(db_context context, IConfiguration configuration, IDistributedCache cache, IServiceScopeFactory scopeFactory)
 		{
 			_context = context;
 			_configuration = configuration;
 			_cache = cache;
+			_scopeFactory = scopeFactory;
 		}
 
 		/// <summary>
@@ -35,8 +37,18 @@ namespace web_api.Lib.Services
 
 			if (user == null || !VerifyPassword(loginDto.Password, user.Password))
 			{
+				if (user != null) {
+					await Log(message: "User login unsucsessful: Invalid credentials", UserId: user.ID.ToString());
+				}
+				else
+				{
+					await Log(message: "User login unsucsessful: No matching user");
+				}
+
 				throw new Exception("Invalid email or password");
-			}				
+			}
+
+			await Log(message: "User logged in", UserId: user.ID.ToString());
 
 			return await GenerateTokensForUser(user);
 		}
@@ -51,10 +63,12 @@ namespace web_api.Lib.Services
 		{
 			if (await _context.Users.AnyAsync(u => u.Email == registerDto.Email))
 			{
+				await Log(message: "User register unsucsessful: Email already in use");
 				throw new Exception("Email already registered");
 			}
 			if(await _context.Users.AnyAsync(u => u.UserName == registerDto.UserName))
 			{
+				await Log(message: "User register unsucsessful: Username already in use");
 				throw new Exception("Username already taken");
 			}
 
@@ -70,6 +84,8 @@ namespace web_api.Lib.Services
 			};
 
 			await CreateUser(user);
+
+			await Log(message: "User registered", UserId: user.ID.ToString());
 
 			return await GenerateTokensForUser(user);
 		}
@@ -93,6 +109,7 @@ namespace web_api.Lib.Services
 			catch (Exception ex)
 			{
 				await transaction.RollbackAsync();
+				await Log(message: "User register unsucsessful: An error occured while creating the user");
 				throw new Exception("Error creating user: " + ex.Message);
 			}
 			finally
@@ -116,8 +133,11 @@ namespace web_api.Lib.Services
 
 			if (user == null)
 			{
+				await Log(message: "Refreshing token for user unsucsessful: Invalid or expired refresh token");
 				throw new Exception("Invalid or expired refresh token");
 			}
+
+			await Log(message: "Refresh user token", UserId: user.ID.ToString());
 
 			return await GenerateTokensForUser(user);
 		}
@@ -211,6 +231,23 @@ namespace web_api.Lib.Services
 		private static bool VerifyPassword(string password, string passwordHash)
 		{
 			return BCrypt.Net.BCrypt.Verify(password, passwordHash);
+		}
+
+		private async Task Log(string UserId = "System", ESeverity severity = ESeverity.Information, string message = "")
+		{
+			var scope = _scopeFactory.CreateScope();
+			var _logManager = scope.ServiceProvider.GetRequiredService<ILogManagerService>();
+			Log log = new Log()
+			{
+				UserId = UserId,
+				Severity = severity,
+				Message = message
+			};
+			var response = await _logManager.AddLog(log);
+			scope.Dispose();
+			if (response != null) {
+				throw new Exception($"Couldn't log activity: '{message}'");
+			}
 		}
 	}
 }

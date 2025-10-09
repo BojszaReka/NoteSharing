@@ -11,6 +11,7 @@ namespace web_api.Lib.UnitOfWork
         public IUserSubjectRepository UserSubjectRepository { get; }
         public IUserFollowRepository UserFollowRepository { get; }
         public IAuthRepository AuthRepository { get; }
+        public ILogRepository LogRepository { get; }
 
 		public ProductionUnitOfWork(IServiceProvider serviceProvider)
         {
@@ -21,6 +22,7 @@ namespace web_api.Lib.UnitOfWork
             UserSubjectRepository = serviceProvider.GetRequiredService<IUserSubjectRepository>();
             UserFollowRepository = serviceProvider.GetRequiredService<IUserFollowRepository>();
             AuthRepository = serviceProvider.GetRequiredService<IAuthRepository>();
+            LogRepository = serviceProvider.GetRequiredService<ILogRepository>();
 		}
     }
 }

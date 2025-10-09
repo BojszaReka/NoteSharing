@@ -16,6 +16,7 @@ namespace web_api.Lib.UnitOfWork
             services.AddScoped<IUserSubjectManagerService, UserSubjectManagerService>();
             services.AddScoped<IUserFollowManagerService, UserFollowManagerService>();
 			services.AddScoped<IAuthManagerService, AuthManagerService>();
+            services.AddScoped<ILogManagerService, LogManagerService>();
 
 			services.AddScoped<IUnitOfWork, ProductionUnitOfWork>();
 

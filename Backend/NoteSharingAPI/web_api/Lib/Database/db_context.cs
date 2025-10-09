@@ -14,6 +14,7 @@ namespace web_api.Lib.Database
         public DbSet<Preference> Preferences { get; set; }
         public DbSet<UserSubject> UserSubjects { get; set; }
         public DbSet<UserFollow> UserFollows { get; set; }
+        public DbSet<Log> Logs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,6 +28,8 @@ namespace web_api.Lib.Database
 
             modelBuilder.Entity<UserSubject>().HasKey(x => new { x.UserID, x.SubjectID });
             modelBuilder.Entity<UserFollow>().HasKey(x => new { x.FollowerUserID, x.FollowingUserID });
+
+            modelBuilder.Entity<Log>().HasKey(x => x.ID);
 
             modelBuilder.Entity<UserFollow>()
                 .HasOne(uf => uf.FollowerUser)

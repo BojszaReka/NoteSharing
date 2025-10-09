@@ -16,24 +16,24 @@ namespace web_api.Controllers
             _configuration = configuration;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddUser([FromBody] UserCreateDTO dto)
-        {
-            var response = new ApiResponse();
-            try
-            {
-                response.Data = await _unitOfWork.UserRepository.Create(dto);
-                response.StatusCode = 200;
-                response.Message = "Success";
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                response.StatusCode = 400;
-                response.Message = ex.Message;
-            }
-            return BadRequest(response);
-        }
+        //[HttpPost]
+        //public async Task<IActionResult> AddUser([FromBody] UserCreateDTO dto)
+        //{
+        //    var response = new ApiResponse();
+        //    try
+        //    {
+        //        response.Data = await _unitOfWork.UserRepository.Create(dto);
+        //        response.StatusCode = 200;
+        //        response.Message = "Success";
+        //        return Ok(response);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        response.StatusCode = 400;
+        //        response.Message = ex.Message;
+        //    }
+        //    return BadRequest(response);
+        //}
 
         [HttpPut]
         public async Task<IActionResult> ModifyUser([FromBody] UserUpdateDTO dto)
