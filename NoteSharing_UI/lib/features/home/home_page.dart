@@ -13,6 +13,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0; // 0 = Feed, 1 = Search, 2 = Favorites, 3 = Profile
   int? _expandedIndex; // which note is expanded
+  // Initialize immediately so hot reload after adding this field doesn't cause LateInitializationError
+  final ScrollController _scrollController = ScrollController();
+  double _scrollOffset = 0;
 
   final _mockNotes = List.generate(12, (i) {
     final imageSets = <List<String>>[
@@ -47,6 +50,23 @@ class _HomePageState extends State<HomePage> {
     );
   });
 
+  @override
+  void initState() {
+    super.initState();
+    _scrollController.addListener(() {
+      final o = _scrollController.offset;
+      if ((o - _scrollOffset).abs() > 1) {
+        setState(() => _scrollOffset = o);
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
   void _showNotImplemented(String feature) {
     final svc = NotificationProvider.of(context);
     svc.show(
@@ -57,7 +77,33 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  void _onFabPressed() => _showNotImplemented('Új jegyzet');
+  void _onFabPressed() => _demoNotifications();
+
+  Future<void> _demoNotifications() async {
+    final svc = NotificationProvider.of(context);
+    svc.show(
+      title: 'Információ',
+      message: 'Ez egy példa információs értesítés.',
+      type: AppNotificationType.info,
+      duration: const Duration(seconds: 3),
+    );
+    await Future.delayed(const Duration(milliseconds: 350));
+
+    svc.show(
+      title: 'Siker',
+      message: 'A művelet sikeresen végrehajtva.',
+      type: AppNotificationType.success,
+      duration: const Duration(seconds: 3),
+    );
+    await Future.delayed(const Duration(milliseconds: 350));
+
+    svc.show(
+      title: 'Hiba',
+      message: 'Valami hiba történt (példa).',
+      type: AppNotificationType.error,
+      duration: const Duration(seconds: 4),
+    );
+  }
 
   void _onNavTap(int index) {
     setState(() => _currentIndex = index);
@@ -110,6 +156,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget _buildFeed() {
     return CustomScrollView(
+      controller: _scrollController,
       slivers: [
         SliverAppBar(
           floating: true,
@@ -224,13 +271,21 @@ class _HomePageState extends State<HomePage> {
                         onTap: () => _vote(index, 1),
                       ),
                       const SizedBox(height: 2),
-                      Text(
-                        note.score.toString(),
-                        style: const TextStyle(
-                          fontFamily: 'Candal',
-                          fontWeight: FontWeight.bold,
-                          fontSize: 12,
-                          color: AppColors.loginMainTextColor,
+                      AnimatedSwitcher(
+                        duration: const Duration(milliseconds: 180),
+                        transitionBuilder: (child, anim) => ScaleTransition(
+                          scale: CurvedAnimation(parent: anim, curve: Curves.easeOutBack),
+                          child: child,
+                        ),
+                        child: Text(
+                          note.score.toString(),
+                          key: ValueKey<int>(note.score),
+                          style: const TextStyle(
+                            fontFamily: 'Candal',
+                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                            color: AppColors.loginMainTextColor,
+                          ),
                         ),
                       ),
                       const SizedBox(height: 2),
@@ -320,18 +375,33 @@ class _HomePageState extends State<HomePage> {
                 maxLines: expanded ? null : 4,
                 overflow: expanded ? TextOverflow.visible : TextOverflow.ellipsis,
               ),
-              if (expanded) ...[
-                const SizedBox(height: 12),
-                Wrap(
-                  spacing: 8,
-                  runSpacing: 6,
-                  children: [
-                    _infoBadge(Icons.visibility, '${_derivedViews(note.score)} megtekintés'),
-                    _infoBadge(Icons.cloud_download_outlined, '${_derivedDownloads(note.score)} letöltés'),
-                    _infoBadge(Icons.comment_outlined, '${_derivedComments(note.score)} hozzászólás'),
-                  ],
+              AnimatedSwitcher(
+                duration: const Duration(milliseconds: 220),
+                switchInCurve: Curves.easeOut,
+                switchOutCurve: Curves.easeIn,
+                transitionBuilder: (child, anim) => FadeTransition(
+                  opacity: anim,
+                  child: SizeTransition(
+                    sizeFactor: anim,
+                    axisAlignment: -1,
+                    child: child,
+                  ),
                 ),
-              ]
+                child: expanded
+                    ? Padding(
+                        padding: const EdgeInsets.only(top: 12),
+                        child: Wrap(
+                          spacing: 8,
+                          runSpacing: 6,
+                          children: [
+                            _infoBadge(Icons.visibility, '${_derivedViews(note.score)} megtekintés'),
+                            _infoBadge(Icons.cloud_download_outlined, '${_derivedDownloads(note.score)} letöltés'),
+                            _infoBadge(Icons.comment_outlined, '${_derivedComments(note.score)} hozzászólás'),
+                          ],
+                        ),
+                      )
+                    : const SizedBox.shrink(),
+              )
               ],
             ),
           ),
@@ -371,7 +441,8 @@ class _HomePageState extends State<HomePage> {
   BottomAppBar _buildBottomBar() {
     return BottomAppBar(
       shape: const CircularNotchedRectangle(),
-      color: AppColors.loginBoxBackgroundColor,
+      // Darker blue variant background
+      color: AppColors.loginMainTextColor.withValues(alpha: 0.93),
       elevation: 0,
       notchMargin: 8,
       child: SafeArea(
@@ -379,6 +450,8 @@ class _HomePageState extends State<HomePage> {
         child: Container(
           // Use original intended height; internal padding & smaller nav item content prevents overflow
           height: 60,
+          // Create a subtle visual separation from content above
+          margin: const EdgeInsets.only(top: 3),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -398,7 +471,8 @@ class _HomePageState extends State<HomePage> {
 
   Widget _navItem({required IconData icon, required String label, required int index}) {
     final bool active = _currentIndex == index;
-    final Color baseColor = AppColors.loginMainTextColor;
+    // On dark bar use white for better contrast
+    final Color baseColor = Colors.white;
     return InkWell(
       borderRadius: BorderRadius.circular(12),
       onTap: () => _onNavTap(index),
@@ -616,18 +690,35 @@ extension on _HomePageState {
 extension _ExtraWidgets on _HomePageState {
   Widget _voteButton({required IconData icon, required bool active, required VoidCallback onTap}) {
     return InkWell(
-      borderRadius: BorderRadius.circular(8),
+      borderRadius: BorderRadius.circular(10),
       onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.all(4),
-        decoration: BoxDecoration(
-          color: active ? AppColors.loginMainTextColor.withValues(alpha: 0.15) : Colors.transparent,
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Icon(
-          icon,
-          size: 18,
-          color: active ? AppColors.loginMainTextColor : AppColors.loginMainTextColor.withValues(alpha: 0.55),
+      child: AnimatedScale(
+        duration: const Duration(milliseconds: 140),
+        scale: active ? 1.15 : 1.0,
+        curve: Curves.easeOutBack,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 180),
+            curve: Curves.easeOut,
+          padding: const EdgeInsets.all(4),
+          decoration: BoxDecoration(
+            color: active
+                ? AppColors.loginMainTextColor.withValues(alpha: 0.18)
+                : AppColors.loginMainTextColor.withValues(alpha: 0.03),
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(
+              color: active
+                  ? AppColors.loginMainTextColor.withValues(alpha: 0.35)
+                  : AppColors.loginMainTextColor.withValues(alpha: 0.10),
+              width: 1,
+            ),
+          ),
+          child: Icon(
+            icon,
+            size: 18,
+            color: active
+                ? AppColors.loginMainTextColor
+                : AppColors.loginMainTextColor.withValues(alpha: 0.55),
+          ),
         ),
       ),
     );
