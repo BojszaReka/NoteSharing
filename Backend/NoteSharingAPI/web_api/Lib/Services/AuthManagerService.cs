@@ -72,6 +72,8 @@ namespace web_api.Lib.Services
 				throw new Exception("Username already taken");
 			}
 
+			var preference = new Preference();
+
 			var user = new User
 			{
 				ID = Guid.NewGuid(),
@@ -80,9 +82,15 @@ namespace web_api.Lib.Services
 				Password = HashPassword(registerDto.Password),
 				UserType = EUserType.Default,
 				PermissionType = EPermissionType.User,
+				PreferenceID = preference.ID,
+				Name = null,
+				InstitutionID = null,
+				Grade = null,
+				Description = null,
 				Enabled = true
 			};
 
+			await CreatePreference(preference);
 			await CreateUser(user);
 
 			await Log(message: "User registered", UserId: user.ID.ToString());
@@ -111,6 +119,43 @@ namespace web_api.Lib.Services
 				await transaction.RollbackAsync();
 				await Log(message: "User register unsucsessful: An error occured while creating the user");
 				throw new Exception("Error creating user: " + ex.Message);
+			}
+			finally
+			{
+				await transaction.DisposeAsync();
+			}
+		}
+
+		/// <summary>
+		/// Creates a new <see cref="Preference"/> entity in the database within a transaction.
+		/// Commits the transaction if the operation is successful; otherwise, rolls back the transaction and logs the error.
+		/// Throws an exception if the creation fails.
+		/// </summary>
+		/// <param name="preference">
+		/// The <see cref="Preference"/> entity to be created and persisted in the database.
+		/// </param>
+		/// <exception cref="Exception">
+		/// Thrown when an error occurs during the creation of the <see cref="Preference"/> entity.
+		/// The exception message contains details about the error.
+		/// </exception>
+		/// <remarks>
+		/// This method ensures that the creation of the <see cref="Preference"/> entity is atomic by using a database transaction.
+		/// If an error occurs, the transaction is rolled back and a log entry is created with severity <see cref="ESeverity.Error"/>.
+		/// </remarks>
+		private async Task CreatePreference(Preference preference)
+		{
+			var transaction = await _context.Database.BeginTransactionAsync();
+			try
+			{
+				await _context.Preferences.AddAsync(preference);
+				await _context.SaveChangesAsync();
+				await transaction.CommitAsync();
+			}
+			catch (Exception ex)
+			{
+				await transaction.RollbackAsync();
+				await Log(message: "Preference create unsucsessful: An error occured while creating the user preference");
+				throw new Exception("Error creating user preference: " + ex.Message);
 			}
 			finally
 			{

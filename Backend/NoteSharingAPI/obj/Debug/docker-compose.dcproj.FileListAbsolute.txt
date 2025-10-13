@@ -79,3 +79,11 @@ C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Microsoft.Identit
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\class_library.pdb
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Microsoft.AspNetCore.JsonPatch.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Newtonsoft.Json.Bson.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\bin\Debug\web_api.xml

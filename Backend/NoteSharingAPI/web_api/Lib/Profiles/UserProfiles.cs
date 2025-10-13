@@ -9,8 +9,6 @@ namespace web_api.Lib.Profiles
         public void Register(TypeAdapterConfig config)
         {
             config.NewConfig<User, UserViewDTO>();
-            config.NewConfig<Student, StudentViewDTO>();
-            config.NewConfig<Instructor, InstructorViewDTO>();
 
             config.NewConfig<UserCreateDTO, User>();
             config.NewConfig<UserUpdateDTO, User>();

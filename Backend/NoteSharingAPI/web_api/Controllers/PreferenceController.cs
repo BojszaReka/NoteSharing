@@ -26,7 +26,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _unitOfWork.PreferenceRepository.Create(dto);
+                response.Data = await _unitOfWork.preferenceRepository.Create(dto);
                 response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);
@@ -45,7 +45,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _unitOfWork.PreferenceRepository.Update(dto);
+                response.Data = await _unitOfWork.preferenceRepository.Update(dto);
                 response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);
@@ -64,7 +64,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _unitOfWork.PreferenceRepository.Delete(id);
+                response.Data = await _unitOfWork.preferenceRepository.Delete(id);
                 response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);
@@ -83,7 +83,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _unitOfWork.PreferenceRepository.GetById(id);
+                response.Data = await _unitOfWork.preferenceRepository.GetById(id);
                 response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);

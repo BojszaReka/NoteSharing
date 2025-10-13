@@ -1,28 +1,33 @@
 ﻿using web_api.Lib.Repositories.Interfaces;
+using web_api.Lib.Repositories;
 
 namespace web_api.Lib.UnitOfWork
 {
     public class ProductionUnitOfWork : IUnitOfWork
     {
-        public IUserRepository UserRepository { get; }
-        public IPreferenceRepository PreferenceRepository { get; }
-        public IInstitutionRepository InstitutionRepository { get; }
-        public ISubjectRepository SubjectRepository { get; }
-        public IUserSubjectRepository UserSubjectRepository { get; }
-        public IUserFollowRepository UserFollowRepository { get; }
-        public IAuthRepository AuthRepository { get; }
-        public ILogRepository LogRepository { get; }
 
-		public ProductionUnitOfWork(IServiceProvider serviceProvider)
+		private readonly IServiceScopeFactory _scopeFactory;
+		public IUserRepository userRepository { get; }
+        public IPreferenceRepository preferenceRepository { get; }
+        public IInstitutionRepository institutionRepository { get; }
+        public ISubjectRepository subjectRepository { get; }
+        public IUserSubjectRepository userSubjectRepository { get; }
+        public IUserFollowRepository userFollowRepository { get; }
+        public IAuthRepository authRepository { get; }
+        public ILogRepository logRepository { get; }
+
+		public ProductionUnitOfWork(IServiceScopeFactory scopeFactory)
         {
-            UserRepository = serviceProvider.GetRequiredService<IUserRepository>();
-            PreferenceRepository = serviceProvider.GetRequiredService<IPreferenceRepository>();
-            InstitutionRepository = serviceProvider.GetRequiredService<IInstitutionRepository>();
-            SubjectRepository = serviceProvider.GetRequiredService<ISubjectRepository>();
-            UserSubjectRepository = serviceProvider.GetRequiredService<IUserSubjectRepository>();
-            UserFollowRepository = serviceProvider.GetRequiredService<IUserFollowRepository>();
-            AuthRepository = serviceProvider.GetRequiredService<IAuthRepository>();
-            LogRepository = serviceProvider.GetRequiredService<ILogRepository>();
+            _scopeFactory = scopeFactory;
+
+			userRepository = new UserRepository(_scopeFactory);
+			preferenceRepository = new PreferenceRepository(_scopeFactory);
+            institutionRepository = new InstitutionRepository(_scopeFactory);
+            subjectRepository = new SubjectRepository(_scopeFactory);
+            userSubjectRepository = new UserSubjectRepository(_scopeFactory);
+            userFollowRepository = new UserFollowRepository(_scopeFactory);
+            authRepository = new AuthRepository(_scopeFactory);
+            logRepository = new LogRepository(_scopeFactory);
 		}
     }
 }

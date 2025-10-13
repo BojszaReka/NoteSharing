@@ -13,8 +13,9 @@ namespace class_library.Models
 
         [Required]
         public string Name { get; set; }
+        public bool IsActive { get; set; } = true;
 
-        public ICollection<Subject> Subjects { get; set; }
+		public ICollection<Subject> Subjects { get; set; }
         public ICollection<User> Users { get; set; }
 
         public override string ToString()

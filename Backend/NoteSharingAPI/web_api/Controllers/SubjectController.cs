@@ -26,7 +26,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _unitOfWork.SubjectRepository.Create(dto);
+                response.Data = await _unitOfWork.subjectRepository.Create(dto);
                 response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);
@@ -45,7 +45,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _unitOfWork.SubjectRepository.Update(dto);
+                response.Data = await _unitOfWork.subjectRepository.Update(dto);
                 response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);
@@ -64,7 +64,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _unitOfWork.SubjectRepository.Delete(id);
+                response.Data = await _unitOfWork.subjectRepository.Delete(id);
                 response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);
@@ -83,7 +83,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _unitOfWork.SubjectRepository.GetById(id);
+                response.Data = await _unitOfWork.subjectRepository.GetById(id);
                 response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);
@@ -102,7 +102,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _unitOfWork.SubjectRepository.GetAll();
+                response.Data = await _unitOfWork.subjectRepository.GetAll();
                 response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);

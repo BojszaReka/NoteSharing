@@ -5,6 +5,21 @@ using web_api.Lib.UnitOfWork;
 
 namespace web_api.Controllers
 {
+	/// <summary>
+	/// Controller responsible for handling authentication-related operations such as user registration, login, token refresh, and authentication testing.
+	/// <para>
+	/// Endpoints provided:
+	/// <list type="bullet">
+	///   <item><description><b>POST /api/auth/register</b>: Registers a new user with basic credentials.</description></item>
+	///   <item><description><b>POST /api/auth/login</b>: Authenticates a user and returns JWT tokens.</description></item>
+	///   <item><description><b>POST /api/auth/refresh</b>: Refreshes authentication tokens using a valid refresh token.</description></item>
+	///   <item><description><b>GET /api/auth/test</b>: Tests authentication and returns user details from the JWT token.</description></item>
+	/// </list>
+	/// </para>
+	/// <remarks>
+	/// All endpoints except <c>GET /api/auth/test</c> are accessible without authentication.
+	/// </remarks>
+	/// </summary>
 	[AllowAnonymous]
 	[Route("api/[controller]")]
 	[ApiController]
@@ -56,7 +71,7 @@ namespace web_api.Controllers
 		{
 			try
 			{
-				var result = await _unitOfWork.AuthRepository.Register(registerDto);
+				var result = await _unitOfWork.authRepository.Register(registerDto);
 				return Ok(new { success = true, data = result });
 			}
 			catch (Exception e)
@@ -99,7 +114,7 @@ namespace web_api.Controllers
 		{
 			try
 			{
-				var result = await _unitOfWork.AuthRepository.Login(loginDto);
+				var result = await _unitOfWork.authRepository.Login(loginDto);
 				return Ok(new { success = true, data = result });
 			}
 			catch (Exception e)
@@ -141,7 +156,7 @@ namespace web_api.Controllers
 		{
 			try
 			{
-				var result = await _unitOfWork.AuthRepository.RefreshToken(refreshTokenDto.RefreshToken);
+				var result = await _unitOfWork.authRepository.RefreshToken(refreshTokenDto.RefreshToken);
 				return Ok(new { success = true, data = result });
 			}
 			catch (Exception e)
