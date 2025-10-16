@@ -27,7 +27,7 @@ namespace web_api.Lib.Database
             modelBuilder.Entity<Preference>().HasKey(x => x.ID);
 
             modelBuilder.Entity<UserSubject>().HasKey(x => new { x.UserID, x.SubjectID });
-            modelBuilder.Entity<UserFollow>().HasKey(x => new { x.FollowerUserID, x.FollowingUserID });
+            modelBuilder.Entity<UserFollow>().HasKey(x => new { x.FollowerUserID, x.FollowedUserID });
 
             modelBuilder.Entity<Log>().HasKey(x => x.ID);
 
@@ -37,9 +37,9 @@ namespace web_api.Lib.Database
                 .HasForeignKey(uf => uf.FollowerUserID);
 
             modelBuilder.Entity<UserFollow>()
-                .HasOne(uf => uf.FollowingUser)
+                .HasOne(uf => uf.FollowedUser)
                 .WithMany(u => u.Followers)
-                .HasForeignKey(uf => uf.FollowingUserID);
+                .HasForeignKey(uf => uf.FollowedUserID);
 
             modelBuilder.Entity<User>()
                 .HasOne(u => u.Preference)

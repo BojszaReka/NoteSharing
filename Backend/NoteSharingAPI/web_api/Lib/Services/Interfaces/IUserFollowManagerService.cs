@@ -6,7 +6,7 @@ namespace web_api.Lib.Services.Interfaces
     {
         Task<bool> FollowAsync(UserFollowDTO dto);
         Task<bool> UnfollowAsync(UserFollowDTO dto);
-        Task<IEnumerable<UserFollowDTO>> GetFollowersAsync(Guid userId);
-        Task<IEnumerable<UserFollowDTO>> GetFollowingAsync(Guid userId);
+        Task<FollowerReportDTO> GetFollowersAsync(Guid userId);
+        Task<FollowerReportDTO> GetFollowingAsync(Guid userId);
     }
 }
