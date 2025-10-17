@@ -83,7 +83,7 @@ namespace web_api.Lib.Services
 				UserType = EUserType.Default,
 				PermissionType = EPermissionType.User,
 				PreferenceID = preference.ID,
-				Name = null,
+				Name = registerDto.UserName,
 				InstitutionID = null,
 				Grade = null,
 				Description = null,
@@ -117,7 +117,7 @@ namespace web_api.Lib.Services
 			catch (Exception ex)
 			{
 				await transaction.RollbackAsync();
-				await Log(message: "User register unsucsessful: An error occured while creating the user");
+				await Log(message: $"User register unsucsessful: An error occured while creating the user: {ex.InnerException}");
 				throw new Exception("Error creating user: " + ex.Message);
 			}
 			finally
@@ -290,7 +290,7 @@ namespace web_api.Lib.Services
 			};
 			var response = await _logManager.AddLog(log);
 			scope.Dispose();
-			if (response != null) {
+			if (response == null) {
 				throw new Exception($"Couldn't log activity: '{message}'");
 			}
 		}

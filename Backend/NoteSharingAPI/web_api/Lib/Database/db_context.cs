@@ -18,7 +18,6 @@ namespace web_api.Lib.Database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<User>().HasKey(x => x.ID);
 
@@ -34,45 +33,54 @@ namespace web_api.Lib.Database
             modelBuilder.Entity<UserFollow>()
                 .HasOne(uf => uf.FollowerUser)
                 .WithMany(u => u.Followings)
-                .HasForeignKey(uf => uf.FollowerUserID);
+                .HasForeignKey(uf => uf.FollowerUserID)
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<UserFollow>()
                 .HasOne(uf => uf.FollowedUser)
                 .WithMany(u => u.Followers)
-                .HasForeignKey(uf => uf.FollowedUserID);
+                .HasForeignKey(uf => uf.FollowerUserID)
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<User>()
                 .HasOne(u => u.Preference)
                 .WithMany()
-                .HasForeignKey(u => u.PreferenceID);
+                .HasForeignKey(u => u.PreferenceID)
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<UserSubject>()
                 .HasOne(us => us.User)
                 .WithMany(u => u.UserSubjects)
-                .HasForeignKey(us => us.UserID);
+                .HasForeignKey(us => us.UserID)
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<UserSubject>()
                 .HasOne(us => us.Subject)
                 .WithMany(s => s.UserSubjects)
-                .HasForeignKey(us => us.SubjectID);
+                .HasForeignKey(us => us.SubjectID).OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Subject>()
+			modelBuilder.Entity<Subject>()
                 .HasOne(s => s.Institution)
                 .WithMany(i => i.Subjects)
-                .HasForeignKey(s => s.InstitutionID);
+                .HasForeignKey(s => s.InstitutionID).OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Subject>()
+			modelBuilder.Entity<Subject>()
                 .HasOne(s => s.Instructor)
                 .WithMany()
                 .HasForeignKey(s => s.InstructorID)
-                .IsRequired(false);
+                .IsRequired(false).OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<User>().ToTable("Users");
+			modelBuilder.Entity<User>().ToTable("Users");
             modelBuilder.Entity<Institution>().ToTable("Institutions");
             modelBuilder.Entity<Subject>().ToTable("Subjects");
             modelBuilder.Entity<Preference>().ToTable("Preferences");
             modelBuilder.Entity<UserSubject>().ToTable("UserSubjects");
             modelBuilder.Entity<UserFollow>().ToTable("UserFollows");
-        }
+
+			foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+			{
+				relationship.DeleteBehavior = DeleteBehavior.NoAction;
+			}
+		}
     }
 }

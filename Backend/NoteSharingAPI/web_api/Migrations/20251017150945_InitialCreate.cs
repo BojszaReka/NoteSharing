@@ -16,7 +16,8 @@ namespace web_api.Migrations
                 columns: table => new
                 {
                     ID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -85,8 +86,7 @@ namespace web_api.Migrations
                         name: "FK_Users_Preferences_PreferenceID",
                         column: x => x.PreferenceID,
                         principalTable: "Preferences",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ID");
                 });
 
             migrationBuilder.CreateTable(
@@ -105,8 +105,7 @@ namespace web_api.Migrations
                         name: "FK_Subjects_Institutions_InstitutionID",
                         column: x => x.InstitutionID,
                         principalTable: "Institutions",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ID");
                     table.ForeignKey(
                         name: "FK_Subjects_Users_InstructorID",
                         column: x => x.InstructorID,
@@ -119,23 +118,22 @@ namespace web_api.Migrations
                 columns: table => new
                 {
                     FollowerUserID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    FollowingUserID = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    FollowedUserID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    FollowerUserID1 = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserFollows", x => new { x.FollowerUserID, x.FollowingUserID });
+                    table.PrimaryKey("PK_UserFollows", x => new { x.FollowerUserID, x.FollowedUserID });
                     table.ForeignKey(
                         name: "FK_UserFollows_Users_FollowerUserID",
                         column: x => x.FollowerUserID,
                         principalTable: "Users",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ID");
                     table.ForeignKey(
-                        name: "FK_UserFollows_Users_FollowingUserID",
-                        column: x => x.FollowingUserID,
+                        name: "FK_UserFollows_Users_FollowerUserID1",
+                        column: x => x.FollowerUserID1,
                         principalTable: "Users",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ID");
                 });
 
             migrationBuilder.CreateTable(
@@ -152,14 +150,12 @@ namespace web_api.Migrations
                         name: "FK_UserSubjects_Subjects_SubjectID",
                         column: x => x.SubjectID,
                         principalTable: "Subjects",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ID");
                     table.ForeignKey(
                         name: "FK_UserSubjects_Users_UserID",
                         column: x => x.UserID,
                         principalTable: "Users",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ID");
                 });
 
             migrationBuilder.CreateIndex(
@@ -173,9 +169,9 @@ namespace web_api.Migrations
                 column: "InstructorID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserFollows_FollowingUserID",
+                name: "IX_UserFollows_FollowerUserID1",
                 table: "UserFollows",
-                column: "FollowingUserID");
+                column: "FollowerUserID1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Users_InstitutionID",

@@ -12,7 +12,7 @@ using web_api.Lib.Database;
 namespace web_api.Migrations
 {
     [DbContext(typeof(db_context))]
-    [Migration("20251013220110_InitialCreate")]
+    [Migration("20251017150945_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -30,6 +30,9 @@ namespace web_api.Migrations
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -179,12 +182,15 @@ namespace web_api.Migrations
                     b.Property<Guid>("FollowerUserID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("FollowingUserID")
+                    b.Property<Guid>("FollowedUserID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("FollowerUserID", "FollowingUserID");
+                    b.Property<Guid>("FollowerUserID1")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.HasIndex("FollowingUserID");
+                    b.HasKey("FollowerUserID", "FollowedUserID");
+
+                    b.HasIndex("FollowerUserID1");
 
                     b.ToTable("UserFollows", (string)null);
                 });
@@ -209,12 +215,13 @@ namespace web_api.Migrations
                     b.HasOne("class_library.Models.Institution", "Institution")
                         .WithMany("Subjects")
                         .HasForeignKey("InstitutionID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("class_library.Models.User", "Instructor")
                         .WithMany()
-                        .HasForeignKey("InstructorID");
+                        .HasForeignKey("InstructorID")
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("Institution");
 
@@ -225,12 +232,13 @@ namespace web_api.Migrations
                 {
                     b.HasOne("class_library.Models.Institution", "Institution")
                         .WithMany("Users")
-                        .HasForeignKey("InstitutionID");
+                        .HasForeignKey("InstitutionID")
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("class_library.Models.Preference", "Preference")
                         .WithMany()
                         .HasForeignKey("PreferenceID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Institution");
@@ -240,21 +248,21 @@ namespace web_api.Migrations
 
             modelBuilder.Entity("class_library.Models.UserFollow", b =>
                 {
+                    b.HasOne("class_library.Models.User", "FollowedUser")
+                        .WithMany("Followers")
+                        .HasForeignKey("FollowerUserID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.HasOne("class_library.Models.User", "FollowerUser")
                         .WithMany("Followings")
-                        .HasForeignKey("FollowerUserID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("FollowerUserID1")
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("class_library.Models.User", "FollowingUser")
-                        .WithMany("Followers")
-                        .HasForeignKey("FollowingUserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("FollowedUser");
 
                     b.Navigation("FollowerUser");
-
-                    b.Navigation("FollowingUser");
                 });
 
             modelBuilder.Entity("class_library.Models.UserSubject", b =>
@@ -262,13 +270,13 @@ namespace web_api.Migrations
                     b.HasOne("class_library.Models.Subject", "Subject")
                         .WithMany("UserSubjects")
                         .HasForeignKey("SubjectID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("class_library.Models.User", "User")
                         .WithMany("UserSubjects")
                         .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Subject");
