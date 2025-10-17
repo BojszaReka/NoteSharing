@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>web_api</name>
+    </assembly>
+    <members>
+        <member name="T:web_api.Controllers.AuthController">
+            <summary>
+            Controller responsible for handling authentication-related operations such as user registration, login, token refresh, and authentication testing.
+            <para>
+            Endpoints provided:
+            <list type="bullet">
+              <item><description><b>POST /api/auth/register</b>: Registers a new user with basic credentials.</description></item>
+              <item><description><b>POST /api/auth/login</b>: Authenticates a user and returns JWT tokens.</description></item>
+              <item><description><b>POST /api/auth/refresh</b>: Refreshes authentication tokens using a valid refresh token.</description></item>
+              <item><description><b>GET /api/auth/test</b>: Tests authentication and returns user details from the JWT token.</description></item>
+            </list>
+            </para>
+            <remarks>
+            All endpoints except <c>GET /api/auth/test</c> are accessible without authentication.
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:web_api.Controllers.AuthController.Register(class_library.DTO.RegisterDTO)">
+            <summary>
+            Registers a new user with basic credentials (Name, Email, Password).
+            This endpoint is intended for simple user registration and does not accept additional user data.
+            To add more user information, use a different endpoint.
+            
+            <para>Required fields in <see cref="T:class_library.DTO.RegisterDTO"/>:</para>
+            <list type="bullet">
+              <item><description><b>UserName</b>: string (required)</description></item>
+              <item><description><b>Email</b>: string, must be a valid email address (required)</description></item>
+              <item><description><b>Password</b>: string (required)</description></item>
+            </list>
+            </summary>
+            <param name="registerDto">The registration data for the new user.</param>
+            <returns>
+            200 OK with registration result if successful.<br/>
+            400 Bad Request with error message if registration fails.<br/>
+            <br/>
+            The response is an <see cref="T:class_library.DTO.AuthResponseDTO"/> object:<br/>
+            <code>
+            public class AuthResponseDTO
+            {
+                public string AccessToken { get; set; }
+                public string RefreshToken { get; set; }
+                public DateTime Expiration { get; set; }
+                public Guid UserId { get; set; }
+                public string UserName { get; set; }
+                public string Email { get; set; }
+                public string UserType { get; set; }
+                public string PermissionType { get; set; }
+            }
+            </code>
+            </returns>
+        </member>
+        <member name="M:web_api.Controllers.AuthController.Login(class_library.DTO.LoginDTO)">
+            <summary>
+            Authenticates a user using their email and password.
+            
+            <para>Required fields in <see cref="T:class_library.DTO.LoginDTO"/>:</para>
+            <list type="bullet">
+              <item><description><b>Email</b>: string, must be a valid email address (required)</description></item>
+              <item><description><b>Password</b>: string (required)</description></item>
+            </list>
+            </summary>
+            <param name="loginDto">The login credentials for the user.</param>
+            <returns>
+            200 OK with authentication result if successful.<br/>
+            400 Bad Request with error message if authentication fails.<br/>
+            <br/>
+            The response is an <see cref="T:class_library.DTO.AuthResponseDTO"/> object:<br/>
+            <code>
+            public class AuthResponseDTO
+            {
+                public string AccessToken { get; set; }
+                public string RefreshToken { get; set; }
+                public DateTime Expiration { get; set; }
+                public Guid UserId { get; set; }
+                public string Name { get; set; }
+                public string Email { get; set; }
+                public string UserType { get; set; }
+                public string PermissionType { get; set; }
+            }
+            </code>
+            </returns>
+        </member>
+        <member name="M:web_api.Controllers.AuthController.RefreshToken(class_library.DTO.RefreshTokenDTO)">
+            <summary>
+            Refreshes the user's authentication tokens using a valid refresh token.
+            
+            <para>Required field in <see cref="T:class_library.DTO.RefreshTokenDTO"/>:</para>
+            <list type="bullet">
+              <item><description><b>RefreshToken</b>: string (required)</description></item>
+            </list>
+            </summary>
+            <param name="refreshTokenDto">The refresh token data for the user.</param>
+            <returns>
+            200 OK with new authentication tokens if successful.<br/>
+            400 Bad Request with error message if the refresh token is invalid or expired.<br/>
+            <br/>
+            The response is an <see cref="T:class_library.DTO.AuthResponseDTO"/> object:<br/>
+            <code>
+            public class AuthResponseDTO
+            {
+                public string AccessToken { get; set; }
+                public string RefreshToken { get; set; }
+                public DateTime Expiration { get; set; }
+                public Guid UserId { get; set; }
+                public string Name { get; set; }
+                public string Email { get; set; }
+                public string UserType { get; set; }
+                public string PermissionType { get; set; }
+            }
+            </code>
+            </returns>
+        </member>
+        <member name="M:web_api.Controllers.AuthController.TestAuth">
+            <summary>
+            Test endpoint to confirm if the authentication mechanism is working.
+            
+            <para>
+            This endpoint requires a valid JWT access token in the Authorization header.
+            If the token is valid, it returns basic user details extracted from the token.
+            </para>
+            </summary>
+            <remarks>
+            <b>Authorization:</b> Bearer token required.<br/>
+            <b>Response:</b>
+            <list type="bullet">
+              <item><description><b>message</b>: Confirmation that authentication is successful.</description></item>
+              <item><description><b>userDetails</b>: Object containing <c>id</c>, <c>name</c>, <c>email</c>, and <c>role</c> from the token claims.</description></item>
+            </list>
+            </remarks>
+            <returns>
+            200 OK if the token is valid, with user details.<br/>
+            401 Unauthorized if the token is missing or invalid.
+            </returns>
+        </member>
+        <member name="T:web_api.Controllers.UserController">
+            <summary>
+            Controller responsible for managing user-related operations such as creation, modification, retrieval, deletion, and user relationships (following).
+            <para>
+            Endpoints provided:
+            <list type="bullet">
+              <item><description><b>PUT /api/user</b>: Modifies user information.</description></item>
+              <item><description><b>DELETE /api/user/{id}</b>: Deletes a user by their unique identifier.</description></item>
+              <item><description><b>GET /api/user/id/{id}</b>: Retrieves a user by their unique identifier.</description></item>
+              <item><description><b>GET /api/user/username/{userName}</b>: Retrieves a user by their username.</description></item>
+              <item><description><b>POST /api/user/follow</b>: Adds a following relationship between two users.</description></item>
+            </list>
+            </para>
+            <remarks>
+            All endpoints are accessible anonymously.
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:web_api.Controllers.UserController.ModifyUser(class_library.DTO.UserUpdateDTO)">
+            <summary>
+            This endpoint is for adding additional user information or modifying the existing one.
+            Only the fields in <see cref="T:class_library.DTO.UserUpdateDTO"/> that are provided (not null) will be updated; all others will remain unchanged.
+            The <c>ID</c> field is required to identify the user to update.
+            </summary>
+            <param name="dto">The user update data transfer object. Except for <c>ID</c>, all properties should be null unless they are to be changed.</param>
+            <returns>ApiResponse containing the updated user or error details.</returns>
+        </member>
+        <member name="M:web_api.Controllers.UserController.DeleteUser(System.Guid)">
+            <summary>
+            Deletes a user by their unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the user to delete.</param>
+            <returns>ApiResponse indicating success or failure.</returns>
+        </member>
+        <member name="M:web_api.Controllers.UserController.GetUser(System.Guid)">
+            <summary>
+            Retrieves a user by their unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the user.</param>
+            <returns>ApiResponse containing the user or error details.</returns>
+        </member>
+        <member name="M:web_api.Controllers.UserController.GetUserByUserName(System.String)">
+            <summary>
+            Retrieves a user by their username.
+            </summary>
+            <param name="userName">The username of the user.</param>
+            <returns>ApiResponse containing the user or error details.</returns>
+        </member>
+        <member name="M:web_api.Controllers.UserController.AddFollowing(class_library.DTO.UserFollowDTO)">
+            <summary>
+            Adds a one sided following relationship between two users.
+            </summary>
+            <param name="dto">
+            The user follow data transfer object.
+            <br/>
+            <b>Properties of <see cref="T:class_library.DTO.UserFollowDTO"/>:</b>
+            <list type="bullet">
+            <item>
+            <description><c>FollowerUserID</c> (<see cref="T:System.Guid"/>): The unique identifier of the user who is following.</description>
+            </item>
+            <item>
+            <description><c>FollowingUserID</c> (<see cref="T:System.Guid"/>): The unique identifier of the user being followed.</description>
+            </item>
+            </list>
+            </param>
+            <returns>ApiResponse indicating success or failure.</returns>
+        </member>
+        <member name="M:web_api.Lib.Services.AuthManagerService.Login(class_library.DTO.LoginDTO)">
+            <summary>
+            Authenticates a user using the provided login credentials.
+            Throws an exception if the credentials are invalid.
+            </summary>
+            <param name="loginDto">Login credentials (email and password).</param>
+            <returns>Authentication response containing tokens and user info.</returns>
+        </member>
+        <member name="M:web_api.Lib.Services.AuthManagerService.Register(class_library.DTO.RegisterDTO)">
+            <summary>
+            Registers a new user with the provided registration details.
+            Throws an exception if the email or username is already taken.
+            </summary>
+            <param name="registerDto">Registration details (username, email, password).</param>
+            <returns>Authentication response containing tokens and user info.</returns>
+        </member>
+        <member name="M:web_api.Lib.Services.AuthManagerService.CreateUser(class_library.Models.User)">
+            <summary>
+            Creates a new user in the database within a transaction.
+            Removes the "users" cache entry after creation.
+            Throws an exception if user creation fails.
+            </summary>
+            <param name="user">User entity to create.</param>
+        </member>
+        <member name="M:web_api.Lib.Services.AuthManagerService.RefreshToken(System.String)">
+            <summary>
+            Refreshes the authentication tokens using a valid refresh token.
+            Throws an exception if the token is invalid or expired.
+            </summary>
+            <param name="token">Refresh token.</param>
+            <returns>Authentication response containing new tokens and user info.</returns>
+        </member>
+        <member name="M:web_api.Lib.Services.AuthManagerService.GenerateTokensForUser(class_library.Models.User)">
+            <summary>
+            Generates new access and refresh tokens for the specified user.
+            Updates the user's refresh token and expiration in the database.
+            </summary>
+            <param name="user">User entity.</param>
+            <returns>Authentication response containing tokens and user info.</returns>
+        </member>
+        <member name="M:web_api.Lib.Services.AuthManagerService.GenerateJwtToken(class_library.Models.User)">
+            <summary>
+            Generates a JWT access token for the specified user.
+            </summary>
+            <param name="user">User entity.</param>
+            <returns>JWT access token string.</returns>
+        </member>
+        <member name="M:web_api.Lib.Services.AuthManagerService.GenerateRefreshToken">
+            <summary>
+            Generates a secure random refresh token.
+            </summary>
+            <returns>Refresh token string.</returns>
+        </member>
+        <member name="M:web_api.Lib.Services.AuthManagerService.HashPassword(System.String)">
+            <summary>
+            Hashes the provided password using BCrypt.
+            </summary>
+            <param name="password">Plain text password.</param>
+            <returns>Hashed password string.</returns>
+        </member>
+        <member name="M:web_api.Lib.Services.AuthManagerService.VerifyPassword(System.String,System.String)">
+            <summary>
+            Verifies a password against its hashed value using BCrypt.
+            </summary>
+            <param name="password">Plain text password.</param>
+            <param name="passwordHash">Hashed password.</param>
+            <returns>True if the password matches the hash; otherwise, false.</returns>
+        </member>
+    </members>
+</doc>
