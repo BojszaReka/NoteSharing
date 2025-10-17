@@ -6,7 +6,7 @@ namespace web_api.Lib.Repositories.Interfaces
     {
         Task<bool> Follow(UserFollowDTO dto);
         Task<bool> Unfollow(UserFollowDTO dto);
-        Task<IEnumerable<UserFollowDTO>> GetFollowers(Guid userId);
-        Task<IEnumerable<UserFollowDTO>> GetFollowing(Guid userId);
+        Task<FollowerReportDTO> GetFollowers(Guid userId);
+        Task<FollowerReportDTO> GetFollowing(Guid userId);
     }
 }

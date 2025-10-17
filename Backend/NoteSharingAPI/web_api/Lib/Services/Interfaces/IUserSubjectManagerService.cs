@@ -7,5 +7,6 @@ namespace web_api.Lib.Services.Interfaces
         Task<bool> AddAsync(UserSubjectDTO dto);
         Task<bool> RemoveAsync(UserSubjectDTO dto);
         Task<IEnumerable<SubjectViewDTO>> GetByUserAsync(Guid userId);
+        Task<IEnumerable<UserSubjectDTO>> GetBySubjectAsync(Guid subjectId);
     }
 }

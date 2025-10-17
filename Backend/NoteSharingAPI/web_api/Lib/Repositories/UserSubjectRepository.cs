@@ -1,4 +1,5 @@
 ﻿using class_library.DTO;
+using Microsoft.Extensions.DependencyInjection;
 using web_api.Lib.Services.Interfaces;
 using web_api.Lib.Repositories.Interfaces;
 
@@ -27,7 +28,7 @@ namespace web_api.Lib.Repositories
             return await service.RemoveAsync(dto);
         }
 
-        public async Task<IEnumerable<UserSubjectDTO>> GetByUser(Guid userId)
+        public async Task<IEnumerable<SubjectViewDTO>> GetByUser(Guid userId)
         {
             using var scope = _serviceScopeFactory.CreateScope();
             var service = scope.ServiceProvider.GetRequiredService<IUserSubjectManagerService>();

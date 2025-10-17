@@ -10,6 +10,7 @@ namespace web_api.Lib.Services
 	{
 		private readonly db_context _dbContext;
 		private readonly IDistributedCache _cache;
+
 		public UserSubjectManagerService(db_context dbContext, IDistributedCache cache)
 		{
 			_dbContext = dbContext;
@@ -24,6 +25,7 @@ namespace web_api.Lib.Services
 				var data = JsonConvert.DeserializeObject<List<UserSubject>>(cachedData);
 				return data.AsQueryable();
 			}
+
 			var dataFromDb = await _dbContext.UserSubjects.OrderBy(c => c.UserID).ToListAsync();
 			var cacheOptions = new DistributedCacheEntryOptions
 			{
@@ -39,10 +41,12 @@ namespace web_api.Lib.Services
 		public async Task<bool> AddAsync(UserSubjectDTO dto)
 		{
 			var usersubjects = await querryUserSubjects();
-			if (usersubjects != null && usersubjects.Any(us => us.UserID == dto.UserID && us.SubjectID == dto.SubjectID))
+			if (usersubjects != null &&
+			    usersubjects.Any(us => us.UserID == dto.UserID && us.SubjectID == dto.SubjectID))
 			{
 				throw new Exception("This subject is already assigned to the user");
 			}
+
 			using var dbTransaction = await _dbContext.Database.BeginTransactionAsync();
 			try
 			{
@@ -75,30 +79,58 @@ namespace web_api.Lib.Services
 			{
 				throw new Exception("No user subjects found");
 			}
+
 			var userSubjectsForUser = usersubjects.Where(us => us.UserID == userId);
 			if (!userSubjectsForUser.Any())
 			{
 				throw new Exception("No subjects found for this user");
 			}
+
 			var subjectList = new List<SubjectViewDTO>();
 			foreach (var us in userSubjectsForUser)
 			{
 				var subject = await _dbContext.Subjects.FindAsync(us.SubjectID);
-				if(subject != null)
+				if (subject != null)
 				{
 					subjectList.Add(subject.Adapt<SubjectViewDTO>());
 				}
 			}
+
 			return subjectList.AsEnumerable<SubjectViewDTO>();
+		}
+
+		public async Task<IEnumerable<UserSubjectDTO>> GetBySubjectAsync(Guid subjectId)
+		{
+			var usersubjects = await querryUserSubjects();
+			if (usersubjects == null)
+			{
+				throw new Exception("No user subjects found");
+			}
+
+			var userSubjectsForSubject = usersubjects.Where(us => us.SubjectID == subjectId);
+			if (!userSubjectsForSubject.Any())
+			{
+				return Enumerable.Empty<UserSubjectDTO>();
+			}
+
+			var result = userSubjectsForSubject.Select(us => new UserSubjectDTO
+			{
+				UserID = us.UserID,
+				SubjectID = us.SubjectID
+			}).AsEnumerable();
+
+			return result;
 		}
 
 		public async Task<bool> RemoveAsync(UserSubjectDTO dto)
 		{
 			var usersubjects = await querryUserSubjects();
-			if (usersubjects == null || !usersubjects.Any(us => us.UserID == dto.UserID && us.SubjectID == dto.SubjectID))
+			if (usersubjects == null ||
+			    !usersubjects.Any(us => us.UserID == dto.UserID && us.SubjectID == dto.SubjectID))
 			{
 				throw new Exception("This subject is not assigned to the user");
 			}
+
 			using var dbTransaction = await _dbContext.Database.BeginTransactionAsync();
 			try
 			{
@@ -118,5 +150,6 @@ namespace web_api.Lib.Services
 			{
 				await dbTransaction.DisposeAsync();
 			}
+		}
 	}
 }

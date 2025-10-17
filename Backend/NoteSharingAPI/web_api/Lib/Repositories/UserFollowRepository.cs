@@ -1,4 +1,5 @@
 ﻿using class_library.DTO;
+using Microsoft.Extensions.DependencyInjection;
 using web_api.Lib.Services.Interfaces;
 using web_api.Lib.Repositories.Interfaces;
 
@@ -27,14 +28,14 @@ namespace web_api.Lib.Repositories
             return await service.UnfollowAsync(dto);
         }
 
-        public async Task<IEnumerable<UserFollowDTO>> GetFollowers(Guid userId)
+        public async Task<FollowerReportDTO> GetFollowers(Guid userId)
         {
             using var scope = _serviceScopeFactory.CreateScope();
             var service = scope.ServiceProvider.GetRequiredService<IUserFollowManagerService>();
             return await service.GetFollowersAsync(userId);
         }
 
-        public async Task<IEnumerable<UserFollowDTO>> GetFollowing(Guid userId)
+        public async Task<FollowerReportDTO> GetFollowing(Guid userId)
         {
             using var scope = _serviceScopeFactory.CreateScope();
             var service = scope.ServiceProvider.GetRequiredService<IUserFollowManagerService>();

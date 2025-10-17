@@ -18,6 +18,16 @@ namespace web_api
 		{
 			var builder = WebApplication.CreateBuilder(args);
 
+			// When running in Development on a machine without the ASP.NET Core developer
+			// certificate (or when running outside of the Visual Studio container setup),
+			// Kestrel may try to configure HTTPS endpoints and fail. Force the app to
+			// listen only on HTTP in Development to avoid the startup exception.
+			if (builder.Environment.IsDevelopment())
+			{
+				// Match the http profile in Properties/launchSettings.json
+				builder.WebHost.UseUrls("http://localhost:5000");
+			}
+
 			builder.Services.AddMapster();
 			TypeAdapterConfig.GlobalSettings.Scan(Assembly.GetExecutingAssembly());
 
