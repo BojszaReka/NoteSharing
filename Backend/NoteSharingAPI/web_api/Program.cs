@@ -128,8 +128,14 @@ namespace web_api
 				app.UseSwaggerUI();
 			}
 
-			app.UseAuthorization();
+			// Enable CORS so browser clients (including Flutter web) receive the
+			// Access-Control-Allow-* response headers. Use the named policy added
+			// above. Also ensure authentication middleware runs before
+			// authorization.
+			app.UseCors("AllowSpecificOrigin");
 
+			app.UseAuthentication();
+			app.UseAuthorization();
 
 			app.MapControllers();
 

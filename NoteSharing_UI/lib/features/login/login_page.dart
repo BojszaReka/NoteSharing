@@ -3,12 +3,35 @@ import 'package:notesharing_ui/application/configs/app_colors.dart';
 import 'package:notesharing_ui/common/notifications/notification_service.dart';
 import 'package:notesharing_ui/common/notifications/app_notification.dart';
 import 'package:notesharing_ui/features/register/register_page.dart';
+import 'package:openapi/openapi.dart';
+import 'package:dio/dio.dart';
+import 'package:built_value/serializer.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'dart:convert';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
-  Widget _inputField({required String label, bool obscure = false}) {
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _storage = const FlutterSecureStorage();
+  final _api = Openapi(basePathOverride: 'http://localhost:5000');
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
+  Widget _inputField({required String label, bool obscure = false, TextEditingController? controller}) {
     return TextField(
+      controller: controller,
       obscureText: obscure,
       decoration: InputDecoration(
         labelText: label,
@@ -66,14 +89,75 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    void showLoginNotImplemented() {
+    Future<void> doLogin() async {
       final svc = NotificationProvider.of(context);
-      svc.show(
-        title: 'Bejelentkezés folyamatban',
-        message: 'A bejelentkezés funkció még nincs implementálva.',
-        type: AppNotificationType.info,
-        duration: const Duration(seconds: 4),
-      );
+      final email = _emailController.text.trim();
+      final password = _passwordController.text;
+      if (email.isEmpty || password.isEmpty) {
+        svc.show(title: 'Hiányzó mezők', message: 'Kérem adja meg az emailt és jelszót', type: AppNotificationType.error);
+        return;
+      }
+
+        try {
+          final loginDto = LoginDTO((b) => b
+            ..email = email
+            ..password = password
+          );
+
+          // Serialize login DTO using generated serializers and post with raw Dio to receive JSON body
+          final serialized = _api.serializers.serialize(loginDto, specifiedType: const FullType(LoginDTO));
+          final response = await _api.dio.request('/api/Auth/login', data: serialized, options: Options(method: 'POST', contentType: 'application/json'));
+
+          final map = response.data is String ? json.decode(response.data as String) : response.data as Map<String, dynamic>?;
+          if (map == null) {
+            svc.show(title: 'Hiba', message: 'Helytelen válasz a szervertől', type: AppNotificationType.error);
+            return;
+          }
+
+        final success = map['success'] == true;
+        final data = map['data'];
+        if (!success || data == null) {
+          svc.show(title: 'Bejelentkezés sikertelen', message: map['message']?.toString() ?? 'Ismeretlen hiba', type: AppNotificationType.error);
+          return;
+        }
+
+        final accessToken = data['accessToken'] as String?;
+        final refreshToken = data['refreshToken'] as String?;
+
+        if (accessToken == null) {
+          svc.show(title: 'Hiba', message: 'A szerver nem adott vissza hozzáférési tokent', type: AppNotificationType.error);
+          return;
+        }
+
+        // Store tokens securely
+        await _storage.write(key: 'accessToken', value: accessToken);
+        if (refreshToken != null) await _storage.write(key: 'refreshToken', value: refreshToken);
+
+        // Set authorization header for future requests
+        _api.setBearerAuth('default', accessToken);
+        _api.dio.options.headers['Authorization'] = 'Bearer $accessToken';
+
+        svc.show(title: 'Sikeres bejelentkezés', message: 'Üdvözöljük, ${data['name'] ?? ''}', type: AppNotificationType.success);
+
+        // Navigate to home
+        Navigator.of(context).pushReplacementNamed('/');
+      } catch (e) {
+        final svc = NotificationProvider.of(context);
+        // Provide richer diagnostics for Dio errors (useful for XMLHttpRequest onerror)
+        if (e is DioError) {
+          final req = e.requestOptions;
+          final uri = req.uri.toString();
+          final dioType = e.type.toString();
+          final status = e.response?.statusCode?.toString() ?? 'no-status';
+          final respBody = e.response?.data?.toString() ?? 'no-body';
+          final respHeaders = e.response?.headers.map.map((k, v) => MapEntry(k, v.join(','))) ?? {};
+
+          final details = 'DioError: $dioType\nURI: $uri\nStatus: $status\nHeaders: $respHeaders\nBody: $respBody\nMessage: ${e.message}';
+          svc.show(title: 'Hiba (HTTP)', message: details, type: AppNotificationType.error);
+        } else {
+          svc.show(title: 'Hiba', message: e.toString(), type: AppNotificationType.error);
+        }
+      }
     }
     final size = MediaQuery.of(context).size;
     final boxWidth = size.width * 0.8 > 350 ? 350.0 : size.width * 0.8;
@@ -134,11 +218,13 @@ class LoginPage extends StatelessWidget {
                                     const SizedBox(height: 8),
                                     _inputField(
                                      label: 'Email',
+                                     controller: _emailController,
                                     ),
                                     const SizedBox(height: 8),
                                     _inputField(
                                       label: 'Password',
                                         obscure: true,
+                                        controller: _passwordController,
                                       ),
                                     const SizedBox(height: 8),
                                     Center(
@@ -169,7 +255,7 @@ class LoginPage extends StatelessWidget {
                                 child: SizedBox(
                                   width: 180,
                                   child: ElevatedButton(
-                                    onPressed: showLoginNotImplemented,
+                                    onPressed: () => doLogin(),
                                     style: ElevatedButton.styleFrom(
                                       padding: const EdgeInsets.symmetric(
                                         vertical: 12,
