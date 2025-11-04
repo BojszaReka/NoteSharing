@@ -30,3 +30,7 @@ C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\class_lib
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\class_library\obj\Debug\net9.0\refint\class_library.dll
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\class_library\obj\Debug\net9.0\class_library.pdb
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\class_library\obj\Debug\net9.0\ref\class_library.dll
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\class_library\bin\Debug\net9.0\class_library.deps.json
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\class_library\bin\Debug\net9.0\class_library.dll
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\class_library\bin\Debug\net9.0\class_library.pdb
+C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\class_library\obj\Debug\net9.0\ref\class_library.dll

@@ -1,4 +1,5 @@
 ﻿using web_api.Lib.Repositories.Interfaces;
+using web_api.Lib.Services.Interfaces;  
 
 namespace web_api.Lib.UnitOfWork
 {
@@ -12,5 +13,8 @@ namespace web_api.Lib.UnitOfWork
         IUserFollowRepository userFollowRepository { get; }
         IAuthRepository authRepository { get; }
         ILogRepository logRepository { get; }
-	}
+        INoteRepository noteRepository { get; }
+        ICollectionRepository collectionRepository { get; }
+        INoteRequestRepository noteRequestRepository { get; }
+    }
 }
