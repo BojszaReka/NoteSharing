@@ -25,6 +25,8 @@ namespace web_api.Lib.UnitOfWork
             services.AddScoped<INoteManagerService, NoteManagerService>();
             services.AddScoped<ICollectionManagerService, CollectionManagerService>();
             services.AddScoped<INoteRequestManagerService, NoteRequestManagerService>();
+            services.AddScoped<IRatingsManagerService, RatingsManagerService>();
+            services.AddScoped<IAnswerManagerService, AnswerManagerService>();
 
             services.AddScoped<INoteRepository, NoteRepository>();
             services.AddScoped<ICollectionRepository, CollectionRepository>();

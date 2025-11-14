@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'features/login/login_page.dart';
 import 'features/home/home_page.dart';
+import 'features/main/main_page.dart';
 import 'common/notifications/notification_service.dart';
 import 'common/notifications/notification_host.dart';
 
@@ -23,7 +24,8 @@ class NoteSharingApp extends StatelessWidget {
         builder: (context, child) => NotificationHost(child: child ?? const SizedBox()),
         initialRoute: '/login',
         routes: {
-          '/': (context) => const HomePage(),
+          '/': (context) => const MainPage(),
+          '/home': (context) => const HomePage(),
           '/login': (context) => const LoginPage(),
         },
       ),

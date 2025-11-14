@@ -25,11 +25,11 @@ Method | HTTP request | Description
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getSubjectApi();
+final api_instance = SubjectApi();
 
 try {
-    api.apiSubjectGet();
-} catch on DioException (e) {
+    api_instance.apiSubjectGet();
+} catch (e) {
     print('Exception when calling SubjectApi->apiSubjectGet: $e\n');
 }
 ```
@@ -61,12 +61,12 @@ No authorization required
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getSubjectApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final api_instance = SubjectApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    api.apiSubjectIdDelete(id);
-} catch on DioException (e) {
+    api_instance.apiSubjectIdDelete(id);
+} catch (e) {
     print('Exception when calling SubjectApi->apiSubjectIdDelete: $e\n');
 }
 ```
@@ -101,12 +101,12 @@ No authorization required
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getSubjectApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final api_instance = SubjectApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    api.apiSubjectIdGet(id);
-} catch on DioException (e) {
+    api_instance.apiSubjectIdGet(id);
+} catch (e) {
     print('Exception when calling SubjectApi->apiSubjectIdGet: $e\n');
 }
 ```
@@ -141,12 +141,12 @@ No authorization required
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getSubjectApi();
-final SubjectCreateDTO subjectCreateDTO = ; // SubjectCreateDTO | 
+final api_instance = SubjectApi();
+final subjectCreateDTO = SubjectCreateDTO(); // SubjectCreateDTO | 
 
 try {
-    api.apiSubjectPost(subjectCreateDTO);
-} catch on DioException (e) {
+    api_instance.apiSubjectPost(subjectCreateDTO);
+} catch (e) {
     print('Exception when calling SubjectApi->apiSubjectPost: $e\n');
 }
 ```
@@ -181,12 +181,12 @@ No authorization required
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getSubjectApi();
-final SubjectViewDTO subjectViewDTO = ; // SubjectViewDTO | 
+final api_instance = SubjectApi();
+final subjectViewDTO = SubjectViewDTO(); // SubjectViewDTO | 
 
 try {
-    api.apiSubjectPut(subjectViewDTO);
-} catch on DioException (e) {
+    api_instance.apiSubjectPut(subjectViewDTO);
+} catch (e) {
     print('Exception when calling SubjectApi->apiSubjectPut: $e\n');
 }
 ```

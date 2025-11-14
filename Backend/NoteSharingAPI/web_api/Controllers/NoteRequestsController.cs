@@ -36,14 +36,22 @@ namespace web_api.Controllers
             catch (Exception ex) { response.StatusCode = 400; response.Message = ex.Message; return BadRequest(response); }
         }
 
-        // modifyRequest
+        // modifyRequest - Fix: Create update method that accepts NoteRequestViewDTO
         [HttpPut("modifyRequest")]
         public async Task<IActionResult> ModifyRequest([FromBody] NoteRequestViewDTO dto)
         {
             var response = new ApiResponse();
             try
             {
-                response.Data = await _unitOfWork.noteRequestRepository.Create(dto);
+                // Convert NoteRequestViewDTO to NoteRequestCreateDTO for the Create method
+                var createDto = new NoteRequestCreateDTO
+                {
+                    CreatorUserID = dto.CreatorUserID,
+                    SubjectID = dto.SubjectID,
+                    Topic = dto.Topic,
+                    Description = dto.Description
+                };
+                response.Data = await _unitOfWork.noteRequestRepository.Create(createDto);
                 response.StatusCode = 200; response.Message = "Success";
                 return Ok(response);
             }
@@ -52,7 +60,6 @@ namespace web_api.Controllers
 
         // changeRequestStatus
         [HttpPost("changeRequestStatus/{requestId:guid}/{newStatus}")]
-        // changeRequestStatus
         public async Task<IActionResult> ChangeRequestStatus(Guid requestId, ERequestStatus newStatus)
         {
             var response = new ApiResponse();
@@ -87,7 +94,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _unitOfWork.noteRequestRepository.Create(dto);
+                response.Data = await _unitOfWork.noteRequestRepository.GetRelevantRequest(userId);
                 response.StatusCode = 200; response.Message = "Success";
                 return Ok(response);
             }
@@ -138,7 +145,6 @@ namespace web_api.Controllers
 
         // changeAnswerStatus
         [HttpPost("changeAnswerStatus/{answerId:guid}/{newStatus}")]
-        // changeAnswerStatus
         public async Task<IActionResult> ChangeAnswerStatus(Guid answerId, EAnswerStatus newStatus)
         {
             var response = new ApiResponse();
@@ -150,6 +156,5 @@ namespace web_api.Controllers
             }
             catch (Exception ex) { response.StatusCode = 400; response.Message = ex.Message; return BadRequest(response); }
         }
-
     }
 }

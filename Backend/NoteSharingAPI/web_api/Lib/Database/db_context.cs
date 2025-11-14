@@ -35,7 +35,15 @@ namespace web_api.Lib.Database
             modelBuilder.Entity<UserSubject>().HasKey(x => new { x.UserID, x.SubjectID });
             modelBuilder.Entity<UserFollow>().HasKey(x => new { x.FollowerUserID, x.FollowedUserID });
 
+            // Configure CollectionNote composite key
+            modelBuilder.Entity<CollectionNote>().HasKey(x => new { x.NoteID, x.CollectionID });
+
             modelBuilder.Entity<Log>().HasKey(x => x.ID);
+            modelBuilder.Entity<Note>().HasKey(x => x.ID);
+            modelBuilder.Entity<NoteRating>().HasKey(x => x.ID);
+            modelBuilder.Entity<Collection>().HasKey(x => x.ID);
+            modelBuilder.Entity<NoteRequest>().HasKey(x => x.ID);
+            modelBuilder.Entity<NoteRequestAnswer>().HasKey(x => x.ID);
 
             modelBuilder.Entity<UserFollow>()
                 .HasOne(uf => uf.FollowerUser)
@@ -65,6 +73,19 @@ namespace web_api.Lib.Database
                 .HasOne(us => us.Subject)
                 .WithMany(s => s.UserSubjects)
                 .HasForeignKey(us => us.SubjectID).OnDelete(DeleteBehavior.NoAction);
+
+            // Configure CollectionNote relationships
+            modelBuilder.Entity<CollectionNote>()
+                .HasOne(cn => cn.Note)
+                .WithMany()
+                .HasForeignKey(cn => cn.NoteID)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<CollectionNote>()
+                .HasOne(cn => cn.Collection)
+                .WithMany()
+                .HasForeignKey(cn => cn.CollectionID)
+                .OnDelete(DeleteBehavior.NoAction);
 
 			modelBuilder.Entity<Subject>()
                 .HasOne(s => s.Institution)

@@ -9,6 +9,7 @@ using System.Security.Claims;
 using System.Text;
 using web_api.Lib.Database;
 using web_api.Lib.UnitOfWork;
+using class_library.Enums;
 
 namespace web_api
 {
@@ -143,5 +144,6 @@ namespace web_api
 		}
 	}
 }
+
 
 

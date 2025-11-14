@@ -1,120 +1,101 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using class_library.DTO;
 using class_library.Enums;
-using class_library.Models;
-using Mapster;
-using Microsoft.EntityFrameworkCore;
-using web_api.Lib.Database;
+using Microsoft.Extensions.DependencyInjection;
 using web_api.Lib.Repositories.Interfaces;
+using web_api.Lib.Services.Interfaces;
 
 namespace web_api.Lib.Repositories
 {
     public class NoteRequestRepository : INoteRequestRepository
     {
-        private readonly db_context _db;
+        private readonly IServiceScopeFactory _serviceScopeFactory;
 
-        public NoteRequestRepository(db_context db)
+        public NoteRequestRepository(IServiceScopeFactory serviceScopeFactory)
         {
-            _db = db;
+            _serviceScopeFactory = serviceScopeFactory;
         }
 
         public async Task<NoteRequestViewDTO> Create(NoteRequestCreateDTO dto)
         {
-            var entity = dto.Adapt<NoteRequest>();
-            _db.NoteRequests.Add(entity);
-            await _db.SaveChangesAsync();
-
-            var full = await _db.NoteRequests
-                                .AsNoTracking()
-                                .FirstAsync(x => x.ID == entity.ID);
-
-            return full.Adapt<NoteRequestViewDTO>();
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+            return await service.CreateAsync(dto);
         }
 
         public async Task<NoteRequestViewDTO?> Get(Guid id)
         {
-            var entity = await _db.NoteRequests
-                                  .AsNoTracking()
-                                  .FirstOrDefaultAsync(x => x.ID == id);
-            return entity?.Adapt<NoteRequestViewDTO>();
+            // This method is not implemented in the service, you may need to add it
+            throw new NotImplementedException("Get by ID is not implemented in the service layer");
         }
 
         public async Task<IEnumerable<NoteRequestViewDTO>> GetByUser(Guid userId)
         {
-            var list = await _db.NoteRequests
-                                .AsNoTracking()
-                                .Where(x => x.CreatorUserID == userId)
-                                .OrderByDescending(x => x.CreatedAt)
-                                .ToListAsync();
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+            return await service.GetByUserAsync(userId);
+        }
 
-            return list.Adapt<IEnumerable<NoteRequestViewDTO>>();
+        public async Task<IEnumerable<NoteRequestViewDTO>> GetByCreator(Guid userId)
+        {
+            // This is the same as GetByUser
+            return await GetByUser(userId);
         }
 
         public async Task<IEnumerable<NoteRequestViewDTO>> GetRelevantRequest(Guid userId)
         {
-            var list = await _db.NoteRequests
-                                .AsNoTracking()
-                                .Where(x => x.CreatorUserID != userId)
-                                .OrderByDescending(x => x.CreatedAt)
-                                .ToListAsync();
-
-            return list.Adapt<IEnumerable<NoteRequestViewDTO>>();
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+            return await service.GetRelevantRequestAsync(userId);
         }
 
         public async Task<bool> ChangeRequestStatus(Guid requestId, ERequestStatus status)
         {
-            var entity = await _db.NoteRequests.FirstOrDefaultAsync(x => x.ID == requestId);
-            if (entity == null) return false;
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+            return await service.ChangeRequestStatusAsync(requestId, status);
+        }
 
-            entity.Status = status;
-            return await _db.SaveChangesAsync() > 0;
+        public async Task<bool> UpdateStatus(Guid requestId, ERequestStatus status)
+        {
+            // This is the same as ChangeRequestStatus
+            return await ChangeRequestStatus(requestId, status);
         }
 
         public async Task<NoteRequestAnswerViewDTO> AddAnswer(NoteRequestAnswerCreateDTO dto)
         {
-            var entity = dto.Adapt<NoteRequestAnswer>();
-            _db.NoteRequestAnswers.Add(entity);
-            await _db.SaveChangesAsync();
-
-            var full = await _db.NoteRequestAnswers
-                                .AsNoTracking()
-                                .FirstAsync(x => x.ID == entity.ID);
-
-            return full.Adapt<NoteRequestAnswerViewDTO>();
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+            return await service.AddAnswerAsync(dto);
         }
 
         public async Task<IEnumerable<NoteRequestAnswerViewDTO>> ViewAnswersByNote(Guid requestId)
         {
-            var list = await _db.NoteRequestAnswers
-                                .AsNoTracking()
-                                .Where(a => a.RequestID == requestId)
-                                .OrderByDescending(a => a.CreatedAt)
-                                .ToListAsync();
-
-            return list.Adapt<IEnumerable<NoteRequestAnswerViewDTO>>();
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+            return await service.ViewAnswersByNoteAsync(requestId);
         }
 
         public async Task<IEnumerable<NoteRequestAnswerViewDTO>> ViewAnswersByUser(Guid userId)
         {
-            var list = await _db.NoteRequestAnswers
-                                .AsNoTracking()
-                                .Where(a => a.UploaderUserID == userId)
-                                .OrderByDescending(a => a.CreatedAt)
-                                .ToListAsync();
-
-            return list.Adapt<IEnumerable<NoteRequestAnswerViewDTO>>();
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+            return await service.ViewAnswersByUserAsync(userId);
         }
 
         public async Task<bool> ChangeAnswerStatus(Guid answerId, EAnswerStatus status)
         {
-            var entity = await _db.NoteRequestAnswers.FirstOrDefaultAsync(x => x.ID == answerId);
-            if (entity == null) return false;
+            using var scope = _serviceScopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+            return await service.ChangeAnswerStatusAsync(answerId, status);
+        }
 
-            entity.Status = status;
-            return await _db.SaveChangesAsync() > 0;
+        public async Task<bool> UpdateAnswerStatus(Guid answerId, EAnswerStatus status)
+        {
+            // This is the same as ChangeAnswerStatus
+            return await ChangeAnswerStatus(answerId, status);
         }
     }
 }

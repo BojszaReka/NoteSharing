@@ -25,11 +25,11 @@ Retrieves all active institutions.
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getInstitutionApi();
+final api_instance = InstitutionApi();
 
 try {
-    api.apiInstitutionGet();
-} catch on DioException (e) {
+    api_instance.apiInstitutionGet();
+} catch (e) {
     print('Exception when calling InstitutionApi->apiInstitutionGet: $e\n');
 }
 ```
@@ -61,12 +61,12 @@ Deletes (sets inactive) an institution record by its unique identifier.
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getInstitutionApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | The unique identifier of the institution to delete.
+final api_instance = InstitutionApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | The unique identifier of the institution to delete.
 
 try {
-    api.apiInstitutionIdDelete(id);
-} catch on DioException (e) {
+    api_instance.apiInstitutionIdDelete(id);
+} catch (e) {
     print('Exception when calling InstitutionApi->apiInstitutionIdDelete: $e\n');
 }
 ```
@@ -101,12 +101,12 @@ Retrieves a specific institution by its unique identifier.
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getInstitutionApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | The unique identifier of the institution to retrieve.
+final api_instance = InstitutionApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | The unique identifier of the institution to retrieve.
 
 try {
-    api.apiInstitutionIdGet(id);
-} catch on DioException (e) {
+    api_instance.apiInstitutionIdGet(id);
+} catch (e) {
     print('Exception when calling InstitutionApi->apiInstitutionIdGet: $e\n');
 }
 ```
@@ -141,12 +141,12 @@ Creates a new institution record.
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getInstitutionApi();
-final InstitutionCreateDTO institutionCreateDTO = ; // InstitutionCreateDTO | The data transfer object containing details of the institution to be created.
+final api_instance = InstitutionApi();
+final institutionCreateDTO = InstitutionCreateDTO(); // InstitutionCreateDTO | The data transfer object containing details of the institution to be created.
 
 try {
-    api.apiInstitutionPost(institutionCreateDTO);
-} catch on DioException (e) {
+    api_instance.apiInstitutionPost(institutionCreateDTO);
+} catch (e) {
     print('Exception when calling InstitutionApi->apiInstitutionPost: $e\n');
 }
 ```
@@ -181,12 +181,12 @@ Updates an existing institution record.
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getInstitutionApi();
-final InstitutionViewDTO institutionViewDTO = ; // InstitutionViewDTO | The institution data transfer object containing updated values.
+final api_instance = InstitutionApi();
+final institutionViewDTO = InstitutionViewDTO(); // InstitutionViewDTO | The institution data transfer object containing updated values.
 
 try {
-    api.apiInstitutionPut(institutionViewDTO);
-} catch on DioException (e) {
+    api_instance.apiInstitutionPut(institutionViewDTO);
+} catch (e) {
     print('Exception when calling InstitutionApi->apiInstitutionPut: $e\n');
 }
 ```

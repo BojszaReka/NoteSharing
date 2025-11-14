@@ -24,12 +24,12 @@ Method | HTTP request | Description
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getPreferenceApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final api_instance = PreferenceApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    api.apiPreferenceIdDelete(id);
-} catch on DioException (e) {
+    api_instance.apiPreferenceIdDelete(id);
+} catch (e) {
     print('Exception when calling PreferenceApi->apiPreferenceIdDelete: $e\n');
 }
 ```
@@ -64,12 +64,12 @@ No authorization required
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getPreferenceApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final api_instance = PreferenceApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    api.apiPreferenceIdGet(id);
-} catch on DioException (e) {
+    api_instance.apiPreferenceIdGet(id);
+} catch (e) {
     print('Exception when calling PreferenceApi->apiPreferenceIdGet: $e\n');
 }
 ```
@@ -104,12 +104,12 @@ No authorization required
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getPreferenceApi();
-final PreferenceViewDTO preferenceViewDTO = ; // PreferenceViewDTO | 
+final api_instance = PreferenceApi();
+final preferenceViewDTO = PreferenceViewDTO(); // PreferenceViewDTO | 
 
 try {
-    api.apiPreferencePost(preferenceViewDTO);
-} catch on DioException (e) {
+    api_instance.apiPreferencePost(preferenceViewDTO);
+} catch (e) {
     print('Exception when calling PreferenceApi->apiPreferencePost: $e\n');
 }
 ```
@@ -144,12 +144,12 @@ No authorization required
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getPreferenceApi();
-final PreferenceViewDTO preferenceViewDTO = ; // PreferenceViewDTO | 
+final api_instance = PreferenceApi();
+final preferenceViewDTO = PreferenceViewDTO(); // PreferenceViewDTO | 
 
 try {
-    api.apiPreferencePut(preferenceViewDTO);
-} catch on DioException (e) {
+    api_instance.apiPreferencePut(preferenceViewDTO);
+} catch (e) {
     print('Exception when calling PreferenceApi->apiPreferencePut: $e\n');
 }
 ```

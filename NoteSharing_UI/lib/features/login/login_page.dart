@@ -3,11 +3,7 @@ import 'package:notesharing_ui/application/configs/app_colors.dart';
 import 'package:notesharing_ui/common/notifications/notification_service.dart';
 import 'package:notesharing_ui/common/notifications/app_notification.dart';
 import 'package:notesharing_ui/features/register/register_page.dart';
-import 'package:openapi/openapi.dart';
-import 'package:dio/dio.dart';
-import 'package:built_value/serializer.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'dart:convert';
+import 'package:notesharing_ui/common/services/mock_auth_service.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -19,8 +15,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
-  final _storage = const FlutterSecureStorage();
-  final _api = Openapi(basePathOverride: 'http://localhost:5000');
+  final _authService = MockAuthService();
+  bool _isLoading = false;
 
   @override
   void dispose() {
@@ -98,67 +94,31 @@ class _LoginPageState extends State<LoginPage> {
         return;
       }
 
-        try {
-          final loginDto = LoginDTO((b) => b
-            ..email = email
-            ..password = password
-          );
+      try {
+        setState(() => _isLoading = true);
+        
+        final userData = await _authService.login(email, password);
 
-          // Serialize login DTO using generated serializers and post with raw Dio to receive JSON body
-          final serialized = _api.serializers.serialize(loginDto, specifiedType: const FullType(LoginDTO));
-          final response = await _api.dio.request('/api/Auth/login', data: serialized, options: Options(method: 'POST', contentType: 'application/json'));
-
-          final map = response.data is String ? json.decode(response.data as String) : response.data as Map<String, dynamic>?;
-          if (map == null) {
-            svc.show(title: 'Hiba', message: 'Helytelen válasz a szervertől', type: AppNotificationType.error);
-            return;
-          }
-
-        final success = map['success'] == true;
-        final data = map['data'];
-        if (!success || data == null) {
-          svc.show(title: 'Bejelentkezés sikertelen', message: map['message']?.toString() ?? 'Ismeretlen hiba', type: AppNotificationType.error);
+        if (userData == null) {
+          if (!mounted) return;
+          svc.show(title: 'Bejelentkezés sikertelen', message: 'Helytelen email vagy jelszó', type: AppNotificationType.error);
+          setState(() => _isLoading = false);
           return;
         }
 
-        final accessToken = data['accessToken'] as String?;
-        final refreshToken = data['refreshToken'] as String?;
-
-        if (accessToken == null) {
-          svc.show(title: 'Hiba', message: 'A szerver nem adott vissza hozzáférési tokent', type: AppNotificationType.error);
-          return;
-        }
-
-        // Store tokens securely
-        await _storage.write(key: 'accessToken', value: accessToken);
-        if (refreshToken != null) await _storage.write(key: 'refreshToken', value: refreshToken);
-
-        // Set authorization header for future requests
-        _api.setBearerAuth('default', accessToken);
-        _api.dio.options.headers['Authorization'] = 'Bearer $accessToken';
-
-        svc.show(title: 'Sikeres bejelentkezés', message: 'Üdvözöljük, ${data['name'] ?? ''}', type: AppNotificationType.success);
+        if (!mounted) return;
+        svc.show(title: 'Sikeres bejelentkezés', message: 'Üdvözöljük, ${userData['name'] ?? ''}', type: AppNotificationType.success);
 
         // Navigate to home
         Navigator.of(context).pushReplacementNamed('/');
       } catch (e) {
-        final svc = NotificationProvider.of(context);
-        // Provide richer diagnostics for Dio errors (useful for XMLHttpRequest onerror)
-        if (e is DioError) {
-          final req = e.requestOptions;
-          final uri = req.uri.toString();
-          final dioType = e.type.toString();
-          final status = e.response?.statusCode?.toString() ?? 'no-status';
-          final respBody = e.response?.data?.toString() ?? 'no-body';
-          final respHeaders = e.response?.headers.map.map((k, v) => MapEntry(k, v.join(','))) ?? {};
-
-          final details = 'DioError: $dioType\nURI: $uri\nStatus: $status\nHeaders: $respHeaders\nBody: $respBody\nMessage: ${e.message}';
-          svc.show(title: 'Hiba (HTTP)', message: details, type: AppNotificationType.error);
-        } else {
-          svc.show(title: 'Hiba', message: e.toString(), type: AppNotificationType.error);
-        }
+        if (!mounted) return;
+        svc.show(title: 'Hiba', message: e.toString(), type: AppNotificationType.error);
+      } finally {
+        if (mounted) setState(() => _isLoading = false);
       }
     }
+
     final size = MediaQuery.of(context).size;
     final boxWidth = size.width * 0.8 > 350 ? 350.0 : size.width * 0.8;
     final boxHeight = size.height * 0.5 > 600 ? 600.0 : size.height * 0.5;
@@ -255,7 +215,7 @@ class _LoginPageState extends State<LoginPage> {
                                 child: SizedBox(
                                   width: 180,
                                   child: ElevatedButton(
-                                    onPressed: () => doLogin(),
+                                    onPressed: _isLoading ? null : () => doLogin(),
                                     style: ElevatedButton.styleFrom(
                                       padding: const EdgeInsets.symmetric(
                                         vertical: 12,
@@ -272,10 +232,19 @@ class _LoginPageState extends State<LoginPage> {
                                         borderRadius: BorderRadius.circular(12),
                                       ),
                                     ),
-                                    child: const Text(
-                                      'Bejelentkezés',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
+                                    child: _isLoading
+                                        ? const SizedBox(
+                                            height: 20,
+                                            width: 20,
+                                            child: CircularProgressIndicator(
+                                              strokeWidth: 2,
+                                              valueColor: AlwaysStoppedAnimation(Colors.white),
+                                            ),
+                                          )
+                                        : const Text(
+                                            'Bejelentkezés',
+                                            style: TextStyle(color: Colors.white),
+                                          ),
                                   ),
                                 ),
                               ),

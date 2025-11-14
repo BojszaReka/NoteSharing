@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Kjb3u0cbCWI=",
+  "dgSpecHash": "9OdVo2UP5jU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\class_library.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\lxndr\\Documents\\_develop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\class_library.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lxndr\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.11\\microsoft.windowsdesktop.app.ref.9.0.11.nupkg.sha512",
+    "C:\\Users\\lxndr\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.11\\microsoft.netcore.app.ref.9.0.11.nupkg.sha512",
+    "C:\\Users\\lxndr\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.11\\microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512"
+  ],
   "logs": []
 }
