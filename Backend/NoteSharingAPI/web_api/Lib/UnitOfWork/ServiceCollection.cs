@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using web_api.Lib.Repositories.Interfaces;
+using web_api.Lib.Repositories;
 using web_api.Lib.Services;
 using web_api.Lib.Services.Interfaces;
 
@@ -19,6 +21,14 @@ namespace web_api.Lib.UnitOfWork
             services.AddScoped<ILogManagerService, LogManagerService>();
 
 			services.AddScoped<IUnitOfWork, ProductionUnitOfWork>();
+
+            services.AddScoped<INoteManagerService, NoteManagerService>();
+            services.AddScoped<ICollectionManagerService, CollectionManagerService>();
+            services.AddScoped<INoteRequestManagerService, NoteRequestManagerService>();
+
+            services.AddScoped<INoteRepository, NoteRepository>();
+            services.AddScoped<ICollectionRepository, CollectionRepository>();
+            services.AddScoped<INoteRequestRepository, NoteRequestRepository>();
 
             return services;
         }

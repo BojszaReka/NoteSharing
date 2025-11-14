@@ -15,6 +15,13 @@ namespace web_api.Lib.Database
         public DbSet<UserSubject> UserSubjects { get; set; }
         public DbSet<UserFollow> UserFollows { get; set; }
         public DbSet<Log> Logs { get; set; }
+        public DbSet<Note> Notes { get; set; }
+        public DbSet<NoteRating> NoteRatings { get; set; }
+        public DbSet<Collection> Collections { get; set; }
+        public DbSet<CollectionNote> CollectionNotes { get; set; }
+        public DbSet<NoteRequest> NoteRequests { get; set; }
+        public DbSet<NoteRequestAnswer> NoteRequestAnswers { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
