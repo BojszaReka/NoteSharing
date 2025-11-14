@@ -29,10 +29,10 @@ jobs:
         dotnet-version: '9.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore NoteSharingAPI.sln
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build NoteSharingAPI.sln --configuration Release --no-restore
 
     - name: Publish
       run: dotnet publish web_api/web_api.csproj --configuration Release --output ./publish --no-build

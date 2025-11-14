@@ -1,34 +1,147 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System.Reflection;
+using System.Security.Claims;
+using System.Text;
+using web_api.Lib.Database;
+using web_api.Lib.UnitOfWork;
 
 namespace web_api
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+	public class Program
+	{
+		public static async Task Main(string[] args)
+		{
+			var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+			// When running in Development on a machine without the ASP.NET Core developer
+			// certificate (or when running outside of the Visual Studio container setup),
+			// Kestrel may try to configure HTTPS endpoints and fail. Force the app to
+			// listen only on HTTP in Development to avoid the startup exception.
+			if (builder.Environment.IsDevelopment())
+			{
+				// Match the http profile in Properties/launchSettings.json
+				builder.WebHost.UseUrls("http://localhost:5000");
+			}
 
-            builder.Services.AddControllers();
-            // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-            builder.Services.AddOpenApi();
+			builder.Services.AddMapster();
+			TypeAdapterConfig.GlobalSettings.Scan(Assembly.GetExecutingAssembly());
 
-            var app = builder.Build();
+			builder.Services.AddControllers(
+				options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true
+			).AddNewtonsoftJson(options =>
+			{
+				options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+			
+			}); ;
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.MapOpenApi();
-            }
+			builder.Services.AddControllers().AddJsonOptions(options =>
+			{
+				options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+			}
+			);
 
-            app.UseHttpsRedirection();
+			builder.Services.AddOpenApi();
 
-            app.UseAuthorization();
+			builder.Services.AddDbContext<db_context>(options =>
+				options.UseSqlServer(builder.Configuration.GetConnectionString("Database")));
 
+			builder.Services.AddStackExchangeRedisCache(options =>
+				options.Configuration = builder.Configuration.GetConnectionString("Cache"));
 
-            app.MapControllers();
+			builder.Services.AddEndpointsApiExplorer();
+			builder.Services.AddSwaggerGen(options =>
+			{
+				var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+				options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 
-            app.Run();
-        }
-    }
+				options.SwaggerDoc("v1", new OpenApiInfo
+				{
+					Version = "v1",
+					Title = "Note Sharing API",
+					Description = "An ASP.NET Core Web API for the sharing of notes"
+				});
+			});
+			builder.Services.AddMapster();
+
+			builder.Services.AddCors(options =>
+			{
+				options.AddPolicy("AllowSpecificOrigin", policy =>
+				{
+					policy.AllowAnyOrigin()
+						  .AllowAnyMethod()
+						  .AllowAnyHeader();
+				});
+			});
+
+			builder.Services.AddAuthentication(options =>
+			{
+				options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+				options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+			})
+				.AddJwtBearer(options =>
+				{
+					options.TokenValidationParameters = new TokenValidationParameters
+					{
+						ValidateIssuer = false,
+						ValidateAudience = false,
+						ValidateLifetime = false,
+						ValidateIssuerSigningKey = true,
+						ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
+						ValidAudience = builder.Configuration["JwtSettings:Audience"],
+						NameClaimType = ClaimTypes.Name,
+						RoleClaimType = ClaimTypes.Role,
+						IssuerSigningKey = new SymmetricSecurityKey(
+						Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"]))
+					};
+				});
+
+			builder.Services.AddAuthorization(options =>
+			{
+				// Basic role policies
+				options.AddPolicy("RequireAdministrator", policy =>
+					policy.RequireClaim(ClaimTypes.Role, EPermissionType.Administrator.ToString()));
+
+				options.AddPolicy("RequireWorker", policy =>
+					policy.RequireClaim(ClaimTypes.Role,
+						EPermissionType.Administrator.ToString(),
+						EPermissionType.Worker.ToString()));
+
+				options.AddPolicy("RequireUser", policy =>
+					policy.RequireClaim(ClaimTypes.Role,
+						EPermissionType.Administrator.ToString(),
+						EPermissionType.Worker.ToString(),
+						EPermissionType.User.ToString()));
+			});
+
+			builder.Services.AddLocalServices();
+
+			var app = builder.Build();
+
+			if (app.Environment.IsDevelopment())
+			{
+				app.UseSwagger();
+				app.UseSwaggerUI();
+			}
+
+			// Enable CORS so browser clients (including Flutter web) receive the
+			// Access-Control-Allow-* response headers. Use the named policy added
+			// above. Also ensure authentication middleware runs before
+			// authorization.
+			app.UseCors("AllowSpecificOrigin");
+
+			app.UseAuthentication();
+			app.UseAuthorization();
+
+			app.MapControllers();
+
+			app.Run();
+		}
+	}
 }
+
+

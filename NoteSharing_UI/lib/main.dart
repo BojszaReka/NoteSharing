@@ -21,7 +21,7 @@ class NoteSharingApp extends StatelessWidget {
         title: 'Note Sharing',
         debugShowCheckedModeBanner: false,
         builder: (context, child) => NotificationHost(child: child ?? const SizedBox()),
-        initialRoute: '/',
+        initialRoute: '/login',
         routes: {
           '/': (context) => const HomePage(),
           '/login': (context) => const LoginPage(),

@@ -1,0 +1,29 @@
+services:
+  notesharing_api:
+    image: ${DOCKER_REGISTRY-}notesharing_api
+    build:
+      context: .
+      dockerfile: web_api/Dockerfile
+    ports:
+      - "5000:5000"  # HTTP port
+      - "5001:5001"  # HTTPS port
+      
+    user: root
+    
+  notesharing.database:
+    image: mcr.microsoft.com/mssql/server
+    container_name: notesharing.database
+    environment:
+      - MSSQL_SA_PASSWORD=P@ssw0rd
+      - ACCEPT_EULA=Y
+      - MSSQL_DB=NoteSharingDatabase
+    volumes:
+      - ./web_api/DB:/var/opt/mssql/data
+    user: root
+    ports:
+      - "1433:1433"
+  notesharing.cache:
+    image: redis:latest
+    restart: always
+    ports:
+      - '6379:6379'
