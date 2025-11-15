@@ -12,6 +12,8 @@ namespace web_api.Lib.Profiles
 
             config.NewConfig<UserCreateDTO, User>();
             config.NewConfig<UserUpdateDTO, User>();
+
+            config.NewConfig<User, StudentViewDTO>();
         }
     }
 }
