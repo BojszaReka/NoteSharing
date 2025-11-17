@@ -12,5 +12,6 @@ namespace web_api.Lib.UnitOfWork
         IUserFollowRepository userFollowRepository { get; }
         IAuthRepository authRepository { get; }
         ILogRepository logRepository { get; }
-	}
+        IStudentRepository studentRepository { get; }
+    }
 }

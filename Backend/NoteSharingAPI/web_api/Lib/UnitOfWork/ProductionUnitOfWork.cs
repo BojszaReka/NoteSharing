@@ -15,8 +15,9 @@ namespace web_api.Lib.UnitOfWork
         public IUserFollowRepository userFollowRepository { get; }
         public IAuthRepository authRepository { get; }
         public ILogRepository logRepository { get; }
+        public IStudentRepository studentRepository { get; }
 
-		public ProductionUnitOfWork(IServiceScopeFactory scopeFactory)
+        public ProductionUnitOfWork(IServiceScopeFactory scopeFactory)
         {
             _scopeFactory = scopeFactory;
 
@@ -28,6 +29,7 @@ namespace web_api.Lib.UnitOfWork
             userFollowRepository = new UserFollowRepository(_scopeFactory);
             authRepository = new AuthRepository(_scopeFactory);
             logRepository = new LogRepository(_scopeFactory);
-		}
+            studentRepository = new StudentRepository(_scopeFactory);
+        }
     }
 }

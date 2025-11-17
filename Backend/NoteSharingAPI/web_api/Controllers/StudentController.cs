@@ -1,8 +1,6 @@
-﻿using class_library.DTO;
-using class_library.Models;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using web_api.Lib.Services.Interfaces;
+using web_api.Lib.UnitOfWork;
 
 namespace web_api.Controllers
 {
@@ -11,12 +9,12 @@ namespace web_api.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-        private readonly IStudentManagerService _studentService;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IConfiguration _configuration;
 
-        public StudentController(IStudentManagerService studentService, IConfiguration configuration)
+        public StudentController(IUnitOfWork unitOfWork, IConfiguration configuration)
         {
-            _studentService = studentService;
+            _unitOfWork = unitOfWork;
             _configuration = configuration;
         }
 
@@ -26,7 +24,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _studentService.GetAllAsync();
+                response.Data = await _unitOfWork.studentRepository.GetAll();
                 response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);
@@ -35,8 +33,8 @@ namespace web_api.Controllers
             {
                 response.StatusCode = 400;
                 response.Message = ex.Message;
-                return BadRequest(response);
             }
+            return BadRequest(response);
         }
 
         [HttpGet("id/{id:guid}")]
@@ -45,7 +43,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _studentService.GetByIdAsync(id);
+                response.Data = await _unitOfWork.studentRepository.GetById(id);
                 response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);
@@ -54,8 +52,8 @@ namespace web_api.Controllers
             {
                 response.StatusCode = 400;
                 response.Message = ex.Message;
-                return BadRequest(response);
             }
+            return BadRequest(response);
         }
 
         [HttpGet("institution/{institutionId:guid}")]
@@ -64,7 +62,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _studentService.GetByInstitutionAsync(institutionId);
+                response.Data = await _unitOfWork.studentRepository.GetByInstitution(institutionId);
                 response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);
@@ -73,8 +71,8 @@ namespace web_api.Controllers
             {
                 response.StatusCode = 400;
                 response.Message = ex.Message;
-                return BadRequest(response);
             }
+            return BadRequest(response);
         }
 
         [HttpGet("subject/{subjectId:guid}")]
@@ -83,7 +81,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _studentService.GetBySubjectAsync(subjectId);
+                response.Data = await _unitOfWork.studentRepository.GetBySubject(subjectId);
                 response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);
@@ -92,8 +90,8 @@ namespace web_api.Controllers
             {
                 response.StatusCode = 400;
                 response.Message = ex.Message;
-                return BadRequest(response);
             }
+            return BadRequest(response);
         }
     }
 }
