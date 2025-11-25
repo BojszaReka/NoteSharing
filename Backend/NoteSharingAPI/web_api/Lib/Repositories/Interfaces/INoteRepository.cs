@@ -4,15 +4,13 @@ namespace web_api.Lib.Repositories.Interfaces
 {
     public interface INoteRepository
     {
-        Task<NoteViewDTO> Create(NoteCreateDTO dto);
-        Task<bool> Update(NoteUpdateDTO dto);
-        Task<bool> SoftDelete(Guid id);
-        Task<NoteViewDTO> Get(Guid id);
-        Task<IEnumerable<NoteViewDTO>> GetByAuthor(Guid userId);
-        Task<IEnumerable<NoteViewDTO>> GetBySubject(Guid subjectId);
-        Task<IEnumerable<NoteViewDTO>> Search(Guid? institutionId, Guid? subjectId, string? text);
-        Task<NoteRatingViewDTO> Rate(NoteRatingCreateDTO dto);
-        Task<IEnumerable<NoteRatingViewDTO>> GetRatings(Guid noteId);
-        Task<bool> DeleteRating(Guid ratingId);
-    }
+		Task<object?> Add(NoteCreateDTO dto);
+		Task<object?> AddReview(NoteRatingCreateDTO dto);
+		Task<object?> Delete(Guid id);
+		Task<object?> Dislike(NoteLikeDTO dto);
+		Task<NoteViewDTO> Get(Guid id);
+		Task<ICollection<NoteViewDTO>> GetAll();
+		Task<object?> Like(NoteLikeDTO dto);
+		Task<object?> Update(NoteUpdateDTO dto);
+	}
 }

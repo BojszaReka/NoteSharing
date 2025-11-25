@@ -43,7 +43,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _unitOfWork.noteRequestRepository.Create(dto);
+                response.Data = await _unitOfWork.noteRequestRepository.ModifyRequest(dto);
                 response.StatusCode = 200; response.Message = "Success";
                 return Ok(response);
             }
@@ -87,7 +87,7 @@ namespace web_api.Controllers
             var response = new ApiResponse();
             try
             {
-                response.Data = await _unitOfWork.noteRequestRepository.Create(dto);
+                response.Data = await _unitOfWork.noteRequestRepository.GetRelevantRequestByUser(userId);
                 response.StatusCode = 200; response.Message = "Success";
                 return Ok(response);
             }

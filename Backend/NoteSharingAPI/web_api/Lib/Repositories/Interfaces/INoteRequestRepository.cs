@@ -18,5 +18,10 @@ namespace web_api.Lib.Repositories.Interfaces
         Task<IEnumerable<NoteRequestAnswerViewDTO>> ViewAnswersByNote(Guid requestId);
         Task<IEnumerable<NoteRequestAnswerViewDTO>> ViewAnswersByUser(Guid userId);
         Task<bool> ChangeAnswerStatus(Guid answerId, EAnswerStatus status);
-    }
+		Task<object?> GetByCreator(Guid userId);
+		Task<object?> ModifyRequest(NoteRequestViewDTO dto);
+		Task<object?> UpdateAnswerStatus(Guid answerId, EAnswerStatus newStatus);
+		Task<object?> UpdateStatus(Guid requestId, ERequestStatus newStatus);
+		Task<object?> GetRelevantRequestByUser(Guid userId);
+	}
 }

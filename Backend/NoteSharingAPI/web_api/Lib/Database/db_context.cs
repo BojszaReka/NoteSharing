@@ -36,20 +36,29 @@ namespace web_api.Lib.Database
             modelBuilder.Entity<UserFollow>().HasKey(x => new { x.FollowerUserID, x.FollowedUserID });
 
             modelBuilder.Entity<Log>().HasKey(x => x.ID);
+            modelBuilder.Entity<Note>().HasKey(x => x.ID);
+            modelBuilder.Entity<NoteRating>().HasKey(x => x.ID);
+            modelBuilder.Entity<Collection>().HasKey(x => x.ID);
+            modelBuilder.Entity<CollectionNote>().HasKey(x => new { x.CollectionID, x.NoteID });
+            modelBuilder.Entity<NoteRequest>().HasKey(x => x.ID);
+            modelBuilder.Entity<NoteRequestAnswer>().HasKey(x => x.ID);
 
-            modelBuilder.Entity<UserFollow>()
-                .HasOne(uf => uf.FollowerUser)
-                .WithMany(u => u.Followings)
-                .HasForeignKey(uf => uf.FollowerUserID)
-                .OnDelete(DeleteBehavior.NoAction);
+			modelBuilder.Entity<UserFollow>(entity =>
+			{
+				entity.HasKey(uf => new { uf.FollowerUserID, uf.FollowedUserID });
 
-            modelBuilder.Entity<UserFollow>()
-                .HasOne(uf => uf.FollowedUser)
-                .WithMany(u => u.Followers)
-                .HasForeignKey(uf => uf.FollowerUserID)
-                .OnDelete(DeleteBehavior.NoAction);
+				entity.HasOne(uf => uf.FollowerUser)
+					.WithMany(u => u.Followings)
+					.HasForeignKey(uf => uf.FollowerUserID)
+					.OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<User>()
+				entity.HasOne(uf => uf.FollowedUser)
+					.WithMany(u => u.Followers)
+					.HasForeignKey(uf => uf.FollowedUserID)
+					.OnDelete(DeleteBehavior.Restrict);
+			});
+
+			modelBuilder.Entity<User>()
                 .HasOne(u => u.Preference)
                 .WithMany()
                 .HasForeignKey(u => u.PreferenceID)
@@ -77,12 +86,67 @@ namespace web_api.Lib.Database
                 .HasForeignKey(s => s.InstructorID)
                 .IsRequired(false).OnDelete(DeleteBehavior.NoAction);
 
+            modelBuilder.Entity<Note>().HasOne(n => n.Author)
+                .WithMany(u => u.Notes)
+                .HasForeignKey(n => n.AuthorUserID).OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Note>().HasOne(n => n.Subject)
+                .WithMany(s => s.Notes)
+                .HasForeignKey(n => n.SubjectID).OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Note>().HasOne(n => n.Institution)
+                .WithMany(i => i.Notes)
+                .HasForeignKey(n => n.InstitutionID).OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<NoteRating>().HasOne(nr => nr.Note)
+                .WithMany(n => n.Ratings)
+                .HasForeignKey(nr => nr.NoteID).OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<NoteRating>().HasOne(nr => nr.User).WithMany(u => u.NoteRatings)
+                .HasForeignKey(nr => nr.UserID).OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Collection>().HasOne(c => c.User)
+                .WithMany(u => u.Collections)
+                .HasForeignKey(c => c.UserID).OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<CollectionNote>()
+                .HasOne(cn => cn.Collection)
+                .WithMany(c => c.CollectionNotes)
+                .HasForeignKey(cn => cn.CollectionID).OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<CollectionNote>().HasOne(cn => cn.Note)
+                .WithMany(n => n.CollectionNotes)
+                .HasForeignKey(cn => cn.NoteID).OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<NoteRequest>().HasOne(nr => nr.Creator)
+                .WithMany(u => u.NoteRequests)
+                .HasForeignKey(nr => nr.CreatorUserID).OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<NoteRequest>().HasOne(nr => nr.Subject)
+                .WithMany(s => s.NoteRequests)
+                .HasForeignKey(nr => nr.SubjectID).OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<NoteRequest>().HasMany(nr => nr.Answers)
+                .WithOne(nra => nra.Request)
+                .HasForeignKey(nra => nra.RequestID).OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<NoteRequestAnswer>().HasOne(nra => nra.Uploader)
+                .WithMany(u => u.NoteRequestAnswers)
+                .HasForeignKey(nra => nra.UploaderUserID).OnDelete(DeleteBehavior.NoAction);
+
 			modelBuilder.Entity<User>().ToTable("Users");
             modelBuilder.Entity<Institution>().ToTable("Institutions");
             modelBuilder.Entity<Subject>().ToTable("Subjects");
             modelBuilder.Entity<Preference>().ToTable("Preferences");
             modelBuilder.Entity<UserSubject>().ToTable("UserSubjects");
             modelBuilder.Entity<UserFollow>().ToTable("UserFollows");
+            modelBuilder.Entity<Log>().ToTable("Logs");
+            modelBuilder.Entity<Note>().ToTable("Notes");
+            modelBuilder.Entity<NoteRating>().ToTable("NoteRatings");
+            modelBuilder.Entity<Collection>().ToTable("Collections");
+            modelBuilder.Entity<CollectionNote>().ToTable("CollectionNotes");
+            modelBuilder.Entity<NoteRequest>().ToTable("NoteRequests");
+            modelBuilder.Entity<NoteRequestAnswer>().ToTable("NoteRequestAnswers");
 
 			foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
 			{

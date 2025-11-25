@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "Kjb3u0cbCWI=",
+  "dgSpecHash": "B5mkP+uUM7I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\class_library.csproj",
+  "projectFilePath": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\class_library.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\class_library.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\class_library.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
