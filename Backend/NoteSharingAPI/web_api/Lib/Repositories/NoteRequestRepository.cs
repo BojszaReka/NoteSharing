@@ -12,109 +12,83 @@ using web_api.Lib.Repositories.Interfaces;
 
 namespace web_api.Lib.Repositories
 {
-    public class NoteRequestRepository : INoteRequestRepository
-    {
-        private readonly db_context _db;
+	public class NoteRequestRepository : INoteRequestRepository
+	{
+		private IServiceScopeFactory scopeFactory;
 
-        public NoteRequestRepository(db_context db)
-        {
-            _db = db;
-        }
+		public NoteRequestRepository(IServiceScopeFactory scopeFactory)
+		{
+			this.scopeFactory = scopeFactory;
+		}
 
-        public async Task<NoteRequestViewDTO> Create(NoteRequestCreateDTO dto)
-        {
-            var entity = dto.Adapt<NoteRequest>();
-            _db.NoteRequests.Add(entity);
-            await _db.SaveChangesAsync();
+		public Task<NoteRequestAnswerViewDTO> AddAnswer(NoteRequestAnswerCreateDTO dto)
+		{
+			throw new NotImplementedException();
+		}
 
-            var full = await _db.NoteRequests
-                                .AsNoTracking()
-                                .FirstAsync(x => x.ID == entity.ID);
+		public Task<bool> ChangeAnswerStatus(Guid answerId, EAnswerStatus status)
+		{
+			throw new NotImplementedException();
+		}
 
-            return full.Adapt<NoteRequestViewDTO>();
-        }
+		public Task<bool> ChangeRequestStatus(Guid requestId, ERequestStatus status)
+		{
+			throw new NotImplementedException();
+		}
 
-        public async Task<NoteRequestViewDTO?> Get(Guid id)
-        {
-            var entity = await _db.NoteRequests
-                                  .AsNoTracking()
-                                  .FirstOrDefaultAsync(x => x.ID == id);
-            return entity?.Adapt<NoteRequestViewDTO>();
-        }
+		public Task<NoteRequestViewDTO> Create(NoteRequestCreateDTO dto)
+		{
+			throw new NotImplementedException();
+		}
 
-        public async Task<IEnumerable<NoteRequestViewDTO>> GetByUser(Guid userId)
-        {
-            var list = await _db.NoteRequests
-                                .AsNoTracking()
-                                .Where(x => x.CreatorUserID == userId)
-                                .OrderByDescending(x => x.CreatedAt)
-                                .ToListAsync();
+		public Task<NoteRequestViewDTO?> Get(Guid id)
+		{
+			throw new NotImplementedException();
+		}
 
-            return list.Adapt<IEnumerable<NoteRequestViewDTO>>();
-        }
+		public Task<object?> GetByCreator(Guid userId)
+		{
+			throw new NotImplementedException();
+		}
 
-        public async Task<IEnumerable<NoteRequestViewDTO>> GetRelevantRequest(Guid userId)
-        {
-            var list = await _db.NoteRequests
-                                .AsNoTracking()
-                                .Where(x => x.CreatorUserID != userId)
-                                .OrderByDescending(x => x.CreatedAt)
-                                .ToListAsync();
+		public Task<IEnumerable<NoteRequestViewDTO>> GetByUser(Guid userId)
+		{
+			throw new NotImplementedException();
+		}
 
-            return list.Adapt<IEnumerable<NoteRequestViewDTO>>();
-        }
+		public Task<IEnumerable<NoteRequestViewDTO>> GetRelevantRequest(Guid userId)
+		{
+			throw new NotImplementedException();
+		}
 
-        public async Task<bool> ChangeRequestStatus(Guid requestId, ERequestStatus status)
-        {
-            var entity = await _db.NoteRequests.FirstOrDefaultAsync(x => x.ID == requestId);
-            if (entity == null) return false;
+		public Task<object?> GetRelevantRequestByUser(Guid userId)
+		{
+			throw new NotImplementedException();
+		}
 
-            entity.Status = status;
-            return await _db.SaveChangesAsync() > 0;
-        }
+		public Task<object?> ModifyRequest(NoteRequestViewDTO dto)
+		{
+			throw new NotImplementedException();
+		}
 
-        public async Task<NoteRequestAnswerViewDTO> AddAnswer(NoteRequestAnswerCreateDTO dto)
-        {
-            var entity = dto.Adapt<NoteRequestAnswer>();
-            _db.NoteRequestAnswers.Add(entity);
-            await _db.SaveChangesAsync();
+		public Task<object?> UpdateAnswerStatus(Guid answerId, EAnswerStatus newStatus)
+		{
+			throw new NotImplementedException();
+		}
 
-            var full = await _db.NoteRequestAnswers
-                                .AsNoTracking()
-                                .FirstAsync(x => x.ID == entity.ID);
+		public Task<object?> UpdateStatus(Guid requestId, ERequestStatus newStatus)
+		{
+			throw new NotImplementedException();
+		}
 
-            return full.Adapt<NoteRequestAnswerViewDTO>();
-        }
+		public Task<IEnumerable<NoteRequestAnswerViewDTO>> ViewAnswersByNote(Guid requestId)
+		{
+			throw new NotImplementedException();
+		}
 
-        public async Task<IEnumerable<NoteRequestAnswerViewDTO>> ViewAnswersByNote(Guid requestId)
-        {
-            var list = await _db.NoteRequestAnswers
-                                .AsNoTracking()
-                                .Where(a => a.RequestID == requestId)
-                                .OrderByDescending(a => a.CreatedAt)
-                                .ToListAsync();
-
-            return list.Adapt<IEnumerable<NoteRequestAnswerViewDTO>>();
-        }
-
-        public async Task<IEnumerable<NoteRequestAnswerViewDTO>> ViewAnswersByUser(Guid userId)
-        {
-            var list = await _db.NoteRequestAnswers
-                                .AsNoTracking()
-                                .Where(a => a.UploaderUserID == userId)
-                                .OrderByDescending(a => a.CreatedAt)
-                                .ToListAsync();
-
-            return list.Adapt<IEnumerable<NoteRequestAnswerViewDTO>>();
-        }
-
-        public async Task<bool> ChangeAnswerStatus(Guid answerId, EAnswerStatus status)
-        {
-            var entity = await _db.NoteRequestAnswers.FirstOrDefaultAsync(x => x.ID == answerId);
-            if (entity == null) return false;
-
-            entity.Status = status;
-            return await _db.SaveChangesAsync() > 0;
-        }
-    }
+		public Task<IEnumerable<NoteRequestAnswerViewDTO>> ViewAnswersByUser(Guid userId)
+		{
+			throw new NotImplementedException();
+		}
+	}
 }

@@ -17,8 +17,9 @@ namespace class_library.Models
 
 		public ICollection<Subject> Subjects { get; set; }
         public ICollection<User> Users { get; set; }
+        public ICollection<Note> Notes { get; set; }
 
-        public override string ToString()
+		public override string ToString()
         {
             var subjects = Subjects?.Count ?? 0;
             var users = Users?.Count ?? 0;

@@ -22,6 +22,51 @@ namespace web_api.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("class_library.Models.Collection", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Private")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("Collections", (string)null);
+                });
+
+            modelBuilder.Entity("class_library.Models.CollectionNote", b =>
+                {
+                    b.Property<Guid>("CollectionID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("NoteID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("CollectionID", "NoteID");
+
+                    b.HasIndex("NoteID");
+
+                    b.ToTable("CollectionNotes", (string)null);
+                });
+
             modelBuilder.Entity("class_library.Models.Institution", b =>
                 {
                     b.Property<Guid>("ID")
@@ -62,7 +107,153 @@ namespace web_api.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Logs");
+                    b.ToTable("Logs", (string)null);
+                });
+
+            modelBuilder.Entity("class_library.Models.Note", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AuthorUserID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("InstitutionID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("SubjectID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("AuthorUserID");
+
+                    b.HasIndex("InstitutionID");
+
+                    b.HasIndex("SubjectID");
+
+                    b.ToTable("Notes", (string)null);
+                });
+
+            modelBuilder.Entity("class_library.Models.NoteRating", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("NoteID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Review")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Stars")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UserID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("NoteID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("NoteRatings", (string)null);
+                });
+
+            modelBuilder.Entity("class_library.Models.NoteRequest", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("CreatorUserID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("SubjectID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Topic")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CreatorUserID");
+
+                    b.HasIndex("SubjectID");
+
+                    b.ToTable("NoteRequests", (string)null);
+                });
+
+            modelBuilder.Entity("class_library.Models.NoteRequestAnswer", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("RequestID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UploaderUserID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("RequestID");
+
+                    b.HasIndex("UploaderUserID");
+
+                    b.ToTable("NoteRequestAnswers", (string)null);
                 });
 
             modelBuilder.Entity("class_library.Models.Preference", b =>
@@ -182,12 +373,9 @@ namespace web_api.Migrations
                     b.Property<Guid>("FollowedUserID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("FollowerUserID1")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("FollowerUserID", "FollowedUserID");
 
-                    b.HasIndex("FollowerUserID1");
+                    b.HasIndex("FollowedUserID");
 
                     b.ToTable("UserFollows", (string)null);
                 });
@@ -205,6 +393,120 @@ namespace web_api.Migrations
                     b.HasIndex("SubjectID");
 
                     b.ToTable("UserSubjects", (string)null);
+                });
+
+            modelBuilder.Entity("class_library.Models.Collection", b =>
+                {
+                    b.HasOne("class_library.Models.User", "User")
+                        .WithMany("Collections")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("class_library.Models.CollectionNote", b =>
+                {
+                    b.HasOne("class_library.Models.Collection", "Collection")
+                        .WithMany("CollectionNotes")
+                        .HasForeignKey("CollectionID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("class_library.Models.Note", "Note")
+                        .WithMany("CollectionNotes")
+                        .HasForeignKey("NoteID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Collection");
+
+                    b.Navigation("Note");
+                });
+
+            modelBuilder.Entity("class_library.Models.Note", b =>
+                {
+                    b.HasOne("class_library.Models.User", "Author")
+                        .WithMany("Notes")
+                        .HasForeignKey("AuthorUserID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("class_library.Models.Institution", "Institution")
+                        .WithMany("Notes")
+                        .HasForeignKey("InstitutionID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("class_library.Models.Subject", "Subject")
+                        .WithMany("Notes")
+                        .HasForeignKey("SubjectID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+
+                    b.Navigation("Institution");
+
+                    b.Navigation("Subject");
+                });
+
+            modelBuilder.Entity("class_library.Models.NoteRating", b =>
+                {
+                    b.HasOne("class_library.Models.Note", "Note")
+                        .WithMany("Ratings")
+                        .HasForeignKey("NoteID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("class_library.Models.User", "User")
+                        .WithMany("NoteRatings")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Note");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("class_library.Models.NoteRequest", b =>
+                {
+                    b.HasOne("class_library.Models.User", "Creator")
+                        .WithMany("NoteRequests")
+                        .HasForeignKey("CreatorUserID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("class_library.Models.Subject", "Subject")
+                        .WithMany("NoteRequests")
+                        .HasForeignKey("SubjectID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Creator");
+
+                    b.Navigation("Subject");
+                });
+
+            modelBuilder.Entity("class_library.Models.NoteRequestAnswer", b =>
+                {
+                    b.HasOne("class_library.Models.NoteRequest", "Request")
+                        .WithMany("Answers")
+                        .HasForeignKey("RequestID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("class_library.Models.User", "Uploader")
+                        .WithMany("NoteRequestAnswers")
+                        .HasForeignKey("UploaderUserID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Request");
+
+                    b.Navigation("Uploader");
                 });
 
             modelBuilder.Entity("class_library.Models.Subject", b =>
@@ -247,13 +549,13 @@ namespace web_api.Migrations
                 {
                     b.HasOne("class_library.Models.User", "FollowedUser")
                         .WithMany("Followers")
-                        .HasForeignKey("FollowerUserID")
+                        .HasForeignKey("FollowedUserID")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("class_library.Models.User", "FollowerUser")
                         .WithMany("Followings")
-                        .HasForeignKey("FollowerUserID1")
+                        .HasForeignKey("FollowerUserID")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
@@ -281,23 +583,56 @@ namespace web_api.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("class_library.Models.Collection", b =>
+                {
+                    b.Navigation("CollectionNotes");
+                });
+
             modelBuilder.Entity("class_library.Models.Institution", b =>
                 {
+                    b.Navigation("Notes");
+
                     b.Navigation("Subjects");
 
                     b.Navigation("Users");
                 });
 
+            modelBuilder.Entity("class_library.Models.Note", b =>
+                {
+                    b.Navigation("CollectionNotes");
+
+                    b.Navigation("Ratings");
+                });
+
+            modelBuilder.Entity("class_library.Models.NoteRequest", b =>
+                {
+                    b.Navigation("Answers");
+                });
+
             modelBuilder.Entity("class_library.Models.Subject", b =>
                 {
+                    b.Navigation("NoteRequests");
+
+                    b.Navigation("Notes");
+
                     b.Navigation("UserSubjects");
                 });
 
             modelBuilder.Entity("class_library.Models.User", b =>
                 {
+                    b.Navigation("Collections");
+
                     b.Navigation("Followers");
 
                     b.Navigation("Followings");
+
+                    b.Navigation("NoteRatings");
+
+                    b.Navigation("NoteRequestAnswers");
+
+                    b.Navigation("NoteRequests");
+
+                    b.Navigation("Notes");
 
                     b.Navigation("UserSubjects");
                 });

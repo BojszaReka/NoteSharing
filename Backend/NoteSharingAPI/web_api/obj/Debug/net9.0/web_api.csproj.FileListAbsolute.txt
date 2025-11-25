@@ -191,7 +191,6 @@ C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\Ne
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\web_api.xml
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.xml
-C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\appsettings.json
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\web_api.staticwebassets.endpoints.json
