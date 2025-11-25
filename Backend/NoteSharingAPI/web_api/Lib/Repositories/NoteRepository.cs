@@ -13,7 +13,7 @@ namespace web_api.Lib.Repositories
 		{
 			_serviceScopeFactory = serviceScopeFactory;
 		}
-		public Task<object?> Add(NoteCreateDTO dto)
+		public async Task<object?> Add(NoteCreateDTO dto)
 		{
 			using var scope = _serviceScopeFactory.CreateScope();
 			var service = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
