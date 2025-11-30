@@ -373,3 +373,4 @@ C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\web_api\o
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.pdb
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.genruntimeconfig.cache
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\ref\web_api.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
