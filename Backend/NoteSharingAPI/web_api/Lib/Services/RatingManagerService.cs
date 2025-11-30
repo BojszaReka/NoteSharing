@@ -38,8 +38,79 @@ namespace web_api.Lib.Services
 			return dataFromDb.AsQueryable();
 		}
 
-		public Task<NoteRatingViewDTO> Add(NoteRatingCreateDTO dto) => throw new NotImplementedException();
-        public Task<IEnumerable<NoteRatingViewDTO>> GetByNote(Guid noteId) => throw new NotImplementedException();
-        public Task<bool> Delete(Guid ratingId) => throw new NotImplementedException();
+		public async Task<NoteRatingViewDTO> Add(NoteRatingCreateDTO dto) {
+			var transaction = await _dbContext.Database.BeginTransactionAsync();
+			try
+			{
+				var newRating = new NoteRating
+				{
+					NoteID = dto.NoteID,
+					UserID = dto.UserID,
+					Stars = dto.Stars,
+					Review = dto.Review,
+					CreatedAt = DateTime.UtcNow
+				};
+				_dbContext.NoteRatings.Add(newRating);
+				await _dbContext.SaveChangesAsync();
+				await transaction.CommitAsync();
+				// Invalidate cache
+				await _cache.RemoveAsync("ratings");
+				return new NoteRatingViewDTO
+				{
+					ID = newRating.ID,
+					NoteID = newRating.NoteID,
+					UserID = newRating.UserID,
+					Stars = newRating.Stars,
+					Review = newRating.Review,
+					CreatedAt = newRating.CreatedAt
+				};
+			}
+			catch (Exception e)
+			{
+				await transaction.RollbackAsync();
+				throw new Exception("Failed to add rating", e.InnerException);
+			}
+			finally { 
+				await transaction.DisposeAsync();
+			}
+		}
+
+		public async Task<IEnumerable<NoteRatingViewDTO>> GetByNote(Guid noteId) { 
+			var ratings = await querryRatings();
+			var filteredRatings = ratings.Where(r => r.NoteID == noteId);
+			if(!filteredRatings.Any())
+			{
+				throw new Exception("No ratings found for the specified note.");
+			}	
+			return filteredRatings.Adapt<List<NoteRatingViewDTO>>();
+		}
+		public async Task<bool> Delete(Guid ratingId)
+		{
+			var transaction = await _dbContext.Database.BeginTransactionAsync();
+			try
+			{
+				var ratings = await querryRatings();
+				var rating = ratings.FirstOrDefault(r => r.ID == ratingId);
+				if (rating == null)
+				{
+					throw new Exception("Rating not found.");
+				}
+				_dbContext.NoteRatings.Remove(rating);
+				await _dbContext.SaveChangesAsync();
+				await transaction.CommitAsync();
+				// Invalidate cache
+				await _cache.RemoveAsync("ratings");
+				return true;
+			}
+			catch (Exception e)
+			{
+				await transaction.RollbackAsync();
+				throw new Exception("Failed to delete rating", e.InnerException);
+			}
+			finally
+			{
+				await transaction.DisposeAsync();
+			}
+		}
     }
 }
