@@ -77,7 +77,7 @@ namespace web_api.Lib.Repositories
 			return await service.GetRelevantRequestByUser(userId);
 		}
 
-		public async Task<object?> ModifyRequest(NoteRequestCreateDTO dto)
+		public async Task<object?> ModifyRequest(NoteRequestModifyDTO dto)
 		{
 			using var scope = _serviceScopeFactory.CreateScope();
 			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();

@@ -38,7 +38,7 @@ namespace web_api.Controllers
 
         // modifyRequest
         [HttpPut("modifyRequest")]
-        public async Task<IActionResult> ModifyRequest([FromBody] NoteRequestViewDTO dto)
+        public async Task<IActionResult> ModifyRequest([FromBody] NoteRequestModifyDTO dto)
         {
             var response = new ApiResponse();
             try

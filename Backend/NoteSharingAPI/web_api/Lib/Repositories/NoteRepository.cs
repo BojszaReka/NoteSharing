@@ -17,7 +17,7 @@ namespace web_api.Lib.Repositories
 		{
 			using var scope = _serviceScopeFactory.CreateScope();
 			var service = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
-			return await service.CreateAsync(dto);
+			return await service.Create(dto);
 		}
 
 		public async Task<object?> AddReview(NoteRatingCreateDTO dto)
@@ -27,34 +27,46 @@ namespace web_api.Lib.Repositories
 			return await service.AddReview(dto);
 		}
 
-		public Task<object?> Delete(Guid id)
+		public async Task<object?> Delete(Guid id)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await service.Delete(id);
 		}
 
-		public Task<object?> Dislike(NoteLikeDTO dto)
+		public async Task<object?> Dislike(NoteLikeDTO dto)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await service.Dislike(dto);
 		}
 
-		public Task<NoteViewDTO> Get(Guid id)
+		public async Task<NoteViewDTO> Get(Guid id)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await service.Get(id);
 		}
 
-		public Task<ICollection<NoteViewDTO>> GetAll()
+		public async Task<ICollection<NoteViewDTO>> GetAll()
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await service.GetAll();
 		}
 
-		public Task<object?> Like(NoteLikeDTO dto)
+		public async Task<object?> Like(NoteLikeDTO dto)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await service.Like(dto);
 		}
 
-		public Task<object?> Update(NoteUpdateDTO dto)
+		public async Task<object?> Update(NoteUpdateDTO dto)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await service.Update(dto);
 		}
 	}
 }

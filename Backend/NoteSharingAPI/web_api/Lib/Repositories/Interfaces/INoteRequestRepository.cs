@@ -20,7 +20,7 @@ namespace web_api.Lib.Repositories.Interfaces
         Task<bool> ChangeAnswerStatus(Guid answerId, EAnswerStatus status);
 		Task<object?> UpdateStatus(Guid requestId, ERequestStatus newStatus);
 		Task<object?> GetRelevantRequestByUser(Guid userId);
-		Task<object?> ModifyRequest(NoteRequestCreateDTO dto);
+		Task<object?> ModifyRequest(NoteRequestModifyDTO dto);
 		Task<IEnumerable<NoteRequestViewDTO>> GetByCreator(Guid userId);
 		Task<bool> UpdateAnswerStatus(Guid answerId, EAnswerStatus status);
 	}

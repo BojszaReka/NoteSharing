@@ -2,6 +2,8 @@
 using class_library.Models;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
 using web_api.Lib.Database;
 using web_api.Lib.Services.Interfaces;
 
@@ -9,149 +11,219 @@ namespace web_api.Lib.Services
 {
     public class NoteManagerService : INoteManagerService
     {
-        private readonly db_context _db;
+		private readonly db_context _dbContext;
+		private readonly IDistributedCache _cache;
+		private readonly IServiceScopeFactory _scopeFactory;
+		public NoteManagerService(db_context dbContext, IDistributedCache cache, IServiceScopeFactory scopeFactory)
+		{
+			_dbContext = dbContext;
+			_cache = cache;
+			_scopeFactory = scopeFactory;
+		}
 
-        public NoteManagerService(db_context db)
-        {
-            _db = db;
-        }
+		private async Task<IQueryable<Note>> querryNotes()
+		{
+			var cachedData = await _cache.GetStringAsync("notes");
+			if (!string.IsNullOrEmpty(cachedData))
+			{
+				var data = JsonConvert.DeserializeObject<List<Note>>(cachedData);
+				return data.AsQueryable();
+			}
+			var dataFromDb = await _dbContext.Notes.OrderBy(c => c.ID).ToListAsync();
+			var cacheOptions = new DistributedCacheEntryOptions
+			{
+				AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10),
+				SlidingExpiration = TimeSpan.FromMinutes(5)
+			};
 
-        public async Task<NoteViewDTO> CreateAsync(NoteCreateDTO dto)
-        {
-            var e = dto.Adapt<Note>();
-            _db.Notes.Add(e);
-            await _db.SaveChangesAsync();
-            return (await GetAsync(e.ID))!;
-        }
+			var serializedData = JsonConvert.SerializeObject(dataFromDb);
+			await _cache.SetStringAsync("notes", serializedData, cacheOptions);
+			return dataFromDb.AsQueryable();
+		}
 
-        public async Task<bool> UpdateAsync(NoteUpdateDTO dto)
-        {
-            var e = await _db.Notes.FirstOrDefaultAsync(x => x.ID == dto.ID);
-            if (e == null) return false;
-            e.Content = dto.Content;
-            e.Title = dto.Title;
-            e.Description = dto.Description;
-            e.SubjectID = dto.SubjectID;
-            e.InstitutionID = dto.InstitutionID;
-            e.IsDeleted = dto.IsDeleted;
-            e.UpdatedAt = DateTime.UtcNow;
-            return await _db.SaveChangesAsync() > 0;
-        }
+		public async Task<object?> AddReview(NoteRatingCreateDTO dto)
+		{
+			var scope = _scopeFactory.CreateScope();
+			var noteRatingService = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await noteRatingService.AddReview(dto);
+		}
 
-        public async Task<bool> SoftDeleteAsync(Guid id)
-        {
-            var e = await _db.Notes.FirstOrDefaultAsync(x => x.ID == id);
-            if (e == null) return false;
-            e.IsDeleted = true;
-            e.UpdatedAt = DateTime.UtcNow;
-            return await _db.SaveChangesAsync() > 0;
-        }
+		public async Task<NoteViewDTO> Create(NoteCreateDTO dto)
+		{
+			var transaction = await _dbContext.Database.BeginTransactionAsync();
+			try
+			{
+				var note = dto.Adapt<Note>();
+				note.ID = Guid.NewGuid();
+				note.CreatedAt = DateTime.UtcNow;
+				note.UpdatedAt = DateTime.UtcNow;
+				note.IsDeleted = false;
+				_dbContext.Notes.Add(note);
+				await _dbContext.SaveChangesAsync();
+				await transaction.CommitAsync();
+				// Invalidate cache
+				await _cache.RemoveAsync("notes");
+				return note.Adapt<NoteViewDTO>();
+			}
+			catch (Exception e)
+			{
+				await transaction.RollbackAsync();
+				throw new Exception("Error creating note", e.InnerException);
+			}
+			finally
+			{
+				await transaction.DisposeAsync();
+			}
+		}
 
-        public async Task<NoteViewDTO> GetAsync(Guid id)
-        {
-            var e = await _db.Notes
-                .AsNoTracking()
-                .Include(n => n.Author)
-                .Include(n => n.Ratings).ThenInclude(r => r.User)
-                .FirstOrDefaultAsync(n => n.ID == id && !n.IsDeleted);
-            return e?.Adapt<NoteViewDTO>();
-        }
+		public async Task<bool> DeleteRating(Guid ratingId)
+		{
+			var scope = _scopeFactory.CreateScope();
+			var noteRatingService = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await noteRatingService.DeleteRating(ratingId);
+		}
 
-        public async Task<IEnumerable<NoteViewDTO>> GetByAuthorAsync(Guid userId)
-        {
-            var list = await _db.Notes
-                .AsNoTracking()
-                .Include(n => n.Author)
-                .Include(n => n.Ratings)
-                .Where(n => n.AuthorUserID == userId && !n.IsDeleted)
-                .ToListAsync();
-            return list.Adapt<IEnumerable<NoteViewDTO>>();
-        }
+		public async Task<object?> Dislike(NoteLikeDTO dto)
+		{
+			var scope = _scopeFactory.CreateScope();
+			var noteRatingService = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await noteRatingService.Dislike(dto);
+		}
 
-        public async Task<IEnumerable<NoteViewDTO>> GetBySubjectAsync(Guid subjectId)
-        {
-            var list = await _db.Notes
-                .AsNoTracking()
-                .Include(n => n.Author)
-                .Include(n => n.Ratings)
-                .Where(n => n.SubjectID == subjectId && !n.IsDeleted)
-                .ToListAsync();
-            return list.Adapt<IEnumerable<NoteViewDTO>>();
-        }
+		public async Task<ICollection<NoteViewDTO>> GetAll()
+		{
+			var notes = await querryNotes();
+			var undeletedNotes =  notes.Where(n => !n.IsDeleted).Adapt<ICollection<NoteViewDTO>>();
+			if(undeletedNotes == null)
+			{
+				throw new Exception("No notes found");
+			}
+			return undeletedNotes;
+		}
 
-        public async Task<IEnumerable<NoteViewDTO>> SearchAsync(Guid? institutionId, Guid? subjectId, string? text)
-        {
-            var q = _db.Notes.AsNoTracking()
-                .Include(n => n.Author)
-                .Include(n => n.Ratings)
-                .Where(n => !n.IsDeleted);
-            if (institutionId.HasValue) q = q.Where(n => n.InstitutionID == institutionId.Value);
-            if (subjectId.HasValue) q = q.Where(n => n.SubjectID == subjectId.Value);
-            if (!string.IsNullOrWhiteSpace(text))
-                q = q.Where(n => n.Title.Contains(text) || n.Description.Contains(text) || n.Content.Contains(text));
-            var list = await q.ToListAsync();
-            return list.Adapt<IEnumerable<NoteViewDTO>>();
-        }
+		public async Task<IEnumerable<NoteViewDTO>> GetByAuthor(Guid userId)
+		{
+			var notes = await querryNotes();
+			var authorNotes = notes.Where(n => n.AuthorUserID == userId && !n.IsDeleted).Adapt<IEnumerable<NoteViewDTO>>();
+			if (authorNotes == null || !authorNotes.Any())
+			{
+				throw new Exception("No notes found for this author");
+			}
+			return authorNotes;
 
-        public async Task<NoteRatingViewDTO> RateAsync(NoteRatingCreateDTO dto)
-        {
-            var existing = await _db.NoteRatings.FirstOrDefaultAsync(x => x.NoteID == dto.NoteID && x.UserID == dto.UserID);
-            if (existing == null)
-            {
-                var r = dto.Adapt<NoteRating>();
-                _db.NoteRatings.Add(r);
-                await _db.SaveChangesAsync();
-                var full = await _db.NoteRatings.AsNoTracking().Include(x => x.User).FirstAsync(x => x.ID == r.ID);
-                return full.Adapt<NoteRatingViewDTO>();
-            }
-            existing.Stars = dto.Stars;
-            existing.Review = dto.Review;
-            await _db.SaveChangesAsync();
-            var upd = await _db.NoteRatings.AsNoTracking().Include(x => x.User).FirstAsync(x => x.ID == existing.ID);
-            return upd.Adapt<NoteRatingViewDTO>();
-        }
+		}
 
-        public async Task<IEnumerable<NoteRatingViewDTO>> GetRatingsAsync(Guid noteId)
-        {
-            var list = await _db.NoteRatings.AsNoTracking()
-                .Include(x => x.User)
-                .Where(x => x.NoteID == noteId)
-                .OrderByDescending(x => x.CreatedAt)
-                .ToListAsync();
-            return list.Adapt<IEnumerable<NoteRatingViewDTO>>();
-        }
+		public async Task<NoteViewDTO> Get(Guid id)
+		{
+			var notes = await querryNotes();
+			var note = notes.FirstOrDefault(n => n.ID == id && !n.IsDeleted);
+			if (note == null)
+			{
+				throw new Exception("Note not found");
+			}
+			return note.Adapt<NoteViewDTO>();
+		}
 
-        public async Task<bool> DeleteRatingAsync(Guid ratingId)
-        {
-            var e = await _db.NoteRatings.FindAsync(ratingId);
-            if (e == null) return false;
-            _db.NoteRatings.Remove(e);
-            return await _db.SaveChangesAsync() > 0;
-        }
+		public async Task<IEnumerable<NoteViewDTO>> GetBySubject(Guid subjectId)
+		{
+			var notes = await querryNotes();
+			var subjectNotes = notes.Where(n => n.SubjectID == subjectId && !n.IsDeleted).Adapt<IEnumerable<NoteViewDTO>>();
+			if (subjectNotes == null || !subjectNotes.Any())
+			{
+				throw new Exception("No notes found for this subject");
+			}
+			return subjectNotes;
+		}
 
-		public Task<object?> AddReview(NoteRatingCreateDTO dto)
+		public async Task<IEnumerable<NoteRatingViewDTO>> GetRatings(Guid noteId)
+		{
+			var scope = _scopeFactory.CreateScope();
+			var noteRatingService = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await noteRatingService.GetRatings(noteId);
+		}
+
+		public async Task<object?> Like(NoteLikeDTO dto)
+		{
+			var scope = _scopeFactory.CreateScope();
+			var noteRatingService = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await noteRatingService.Like(dto);
+		}
+
+		public async Task<NoteRatingViewDTO> Rate(NoteRatingCreateDTO dto)
+		{
+			var scope = _scopeFactory.CreateScope();
+			var noteRatingService = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await noteRatingService.Rate(dto);
+		}
+
+		public Task<IEnumerable<NoteViewDTO>> Search(Guid? institutionId, Guid? subjectId, string? text)
 		{
 			throw new NotImplementedException();
 		}
 
-		public Task<object?> Dislike(NoteLikeDTO dto)
+		public async Task<bool> Delete(Guid id)
 		{
-			throw new NotImplementedException();
+			var transaction = await _dbContext.Database.BeginTransactionAsync();
+			try
+			{
+				var notes = await querryNotes();
+				var note = notes.FirstOrDefault(n => n.ID == id && !n.IsDeleted);
+				if (note == null)
+				{
+					throw new Exception("Note not found");
+				}
+				note.IsDeleted = true;
+				_dbContext.Notes.Update(note);
+				await _dbContext.SaveChangesAsync();
+				await transaction.CommitAsync();
+				// Invalidate cache
+				await _cache.RemoveAsync("notes");
+				return true;
+			}
+			catch (Exception e)
+			{
+				await transaction.RollbackAsync();
+				throw new Exception("Error deleting note", e.InnerException);
+			}
+			finally
+			{
+				await transaction.DisposeAsync();
+			}
 		}
 
-		public Task<NoteViewDTO> GetById(Guid id)
+		public async Task<bool> Update(NoteUpdateDTO dto)
 		{
-			throw new NotImplementedException();
-		}
-
-		public Task<ICollection<NoteViewDTO>> GetAll()
-		{
-			throw new NotImplementedException();
-		}
-
-		public Task<object?> Like(NoteLikeDTO dto)
-		{
-			throw new NotImplementedException();
-		}
+			var transaction = await _dbContext.Database.BeginTransactionAsync();
+			try
+			{
+				var notes = await querryNotes();
+				var note = notes.FirstOrDefault(n => n.ID == dto.ID && !n.IsDeleted);
+				if (note == null)
+				{
+					throw new Exception("Note not found");
+				}
+				note.Title = dto.Title;
+				note.Description = dto.Description;
+				note.Content = dto.Content;
+				note.SubjectID = dto.SubjectID;
+				note.InstitutionID = dto.InstitutionID;
+				note.UpdatedAt = DateTime.UtcNow;
+				_dbContext.Notes.Update(note);
+				await _dbContext.SaveChangesAsync();
+				await transaction.CommitAsync();
+				// Invalidate cache
+				await _cache.RemoveAsync("notes");
+				return true;
+			}
+			catch (Exception e)
+			{
+				await transaction.RollbackAsync();
+				throw new Exception("Error updating note", e.InnerException);
+			}
+			finally
+			{
+				await transaction.DisposeAsync();
+			}
+		}		
 	}
 }
