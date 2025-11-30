@@ -4,15 +4,20 @@ namespace web_api.Lib.Services.Interfaces
 {
     public interface INoteManagerService
     {
-        Task<NoteViewDTO> CreateAsync(NoteCreateDTO dto);
-        Task<bool> UpdateAsync(NoteUpdateDTO dto);
-        Task<bool> SoftDeleteAsync(Guid id);
-        Task<NoteViewDTO> GetAsync(Guid id);
-        Task<IEnumerable<NoteViewDTO>> GetByAuthorAsync(Guid userId);
-        Task<IEnumerable<NoteViewDTO>> GetBySubjectAsync(Guid subjectId);
-        Task<IEnumerable<NoteViewDTO>> SearchAsync(Guid? institutionId, Guid? subjectId, string? text);
-        Task<NoteRatingViewDTO> RateAsync(NoteRatingCreateDTO dto);
-        Task<IEnumerable<NoteRatingViewDTO>> GetRatingsAsync(Guid noteId);
-        Task<bool> DeleteRatingAsync(Guid ratingId);
-    }
+        Task<NoteViewDTO> Create(NoteCreateDTO dto);
+        Task<bool> Update(NoteUpdateDTO dto);
+        Task<bool> Delete(Guid id);
+		Task<NoteViewDTO> Get(Guid id);
+		Task<IEnumerable<NoteViewDTO>> GetByAuthor(Guid userId);
+        Task<IEnumerable<NoteViewDTO>> GetBySubject(Guid subjectId);
+        Task<IEnumerable<NoteViewDTO>> Search(Guid? institutionId, Guid? subjectId, string? text);
+        Task<NoteRatingViewDTO> Rate(NoteRatingCreateDTO dto);
+        Task<IEnumerable<NoteRatingViewDTO>> GetRatings(Guid noteId);
+        Task<bool> DeleteRating(Guid ratingId);
+		Task<object?> AddReview(NoteRatingCreateDTO dto);
+		Task<object?> Dislike(NoteLikeDTO dto);
+		
+		Task<ICollection<NoteViewDTO>> GetAll();
+		Task<object?> Like(NoteLikeDTO dto);
+	}
 }
