@@ -20,9 +20,11 @@ namespace web_api.Lib.Repositories
 			return await service.CreateAsync(dto);
 		}
 
-		public Task<object?> AddReview(NoteRatingCreateDTO dto)
+		public async Task<object?> AddReview(NoteRatingCreateDTO dto)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await service.AddReview(dto);
 		}
 
 		public Task<object?> Delete(Guid id)

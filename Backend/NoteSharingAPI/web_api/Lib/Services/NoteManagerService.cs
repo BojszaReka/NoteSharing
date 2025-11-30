@@ -128,5 +128,30 @@ namespace web_api.Lib.Services
             _db.NoteRatings.Remove(e);
             return await _db.SaveChangesAsync() > 0;
         }
-    }
+
+		public Task<object?> AddReview(NoteRatingCreateDTO dto)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task<object?> Dislike(NoteLikeDTO dto)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task<NoteViewDTO> GetById(Guid id)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task<ICollection<NoteViewDTO>> GetAll()
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task<object?> Like(NoteLikeDTO dto)
+		{
+			throw new NotImplementedException();
+		}
+	}
 }

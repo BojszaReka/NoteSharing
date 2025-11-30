@@ -1,94 +1,115 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using class_library.DTO;
-using class_library.Enums;
-using class_library.Models;
-using Mapster;
-using Microsoft.EntityFrameworkCore;
-using web_api.Lib.Database;
+﻿using Microsoft.Extensions.DependencyInjection;
 using web_api.Lib.Repositories.Interfaces;
+using web_api.Lib.Services.Interfaces;
 
 namespace web_api.Lib.Repositories
 {
 	public class NoteRequestRepository : INoteRequestRepository
 	{
-		private IServiceScopeFactory scopeFactory;
+		private IServiceScopeFactory _serviceScopeFactory;
 
 		public NoteRequestRepository(IServiceScopeFactory scopeFactory)
 		{
-			this.scopeFactory = scopeFactory;
+			this._serviceScopeFactory = scopeFactory;
 		}
 
-		public Task<NoteRequestAnswerViewDTO> AddAnswer(NoteRequestAnswerCreateDTO dto)
+		public async Task<NoteRequestAnswerViewDTO> AddAnswer(NoteRequestAnswerCreateDTO dto)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+			return await service.AddAnswerAsync(dto);
 		}
 
-		public Task<bool> ChangeAnswerStatus(Guid answerId, EAnswerStatus status)
+		public async Task<bool> ChangeAnswerStatus(Guid answerId, EAnswerStatus status)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+			return await service.ChangeAnswerStatusAsync(answerId, status);
 		}
 
-		public Task<bool> ChangeRequestStatus(Guid requestId, ERequestStatus status)
+		public async Task<bool> ChangeRequestStatus(Guid requestId, ERequestStatus status)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+			return await service.ChangeRequestStatusAsync(requestId, status);
 		}
 
-		public Task<NoteRequestViewDTO> Create(NoteRequestCreateDTO dto)
+		public async Task<NoteRequestViewDTO> Create(NoteRequestCreateDTO dto)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+			return await service.CreateAsync(dto);
 		}
 
-		public Task<NoteRequestViewDTO?> Get(Guid id)
+		public async Task<NoteRequestViewDTO?> Get(Guid id)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+			return await service.Get(id);
 		}
 
-		public Task<object?> GetByCreator(Guid userId)
+		public async Task<IEnumerable<NoteRequestViewDTO>> GetByCreator(Guid userId)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+			var result = await service.GetByCreator(userId);
+			return result as IEnumerable<NoteRequestViewDTO> ?? Enumerable.Empty<NoteRequestViewDTO>();
 		}
 
-		public Task<IEnumerable<NoteRequestViewDTO>> GetByUser(Guid userId)
+		public async Task<IEnumerable<NoteRequestViewDTO>> GetByUser(Guid userId)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+			return await service.GetByUserAsync(userId);
 		}
 
-		public Task<IEnumerable<NoteRequestViewDTO>> GetRelevantRequest(Guid userId)
+		public async Task<IEnumerable<NoteRequestViewDTO>> GetRelevantRequest(Guid userId)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+			return await service.GetRelevantRequestAsync(userId);
 		}
 
-		public Task<object?> GetRelevantRequestByUser(Guid userId)
+		public async Task<object?> GetRelevantRequestByUser(Guid userId)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+			return await service.GetRelevantRequestByUser(userId);
 		}
 
-		public Task<object?> ModifyRequest(NoteRequestViewDTO dto)
+		public async Task<object?> ModifyRequest(NoteRequestCreateDTO dto)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+			return await service.ModifyRequest(dto);
 		}
 
-		public Task<object?> UpdateAnswerStatus(Guid answerId, EAnswerStatus newStatus)
+		public async Task<bool> UpdateAnswerStatus(Guid answerId, EAnswerStatus newStatus)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+			return await service.UpdateAnswerStatus(answerId, newStatus);
 		}
 
-		public Task<object?> UpdateStatus(Guid requestId, ERequestStatus newStatus)
+		public async Task<object?> UpdateStatus(Guid requestId, ERequestStatus newStatus)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+			return await service.UpdateStatus(requestId, newStatus);
 		}
 
-		public Task<IEnumerable<NoteRequestAnswerViewDTO>> ViewAnswersByNote(Guid requestId)
+		public async Task<IEnumerable<NoteRequestAnswerViewDTO>> ViewAnswersByNote(Guid requestId)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+			return await service.ViewAnswersByNoteAsync(requestId);
 		}
 
-		public Task<IEnumerable<NoteRequestAnswerViewDTO>> ViewAnswersByUser(Guid userId)
+		public async Task<IEnumerable<NoteRequestAnswerViewDTO>> ViewAnswersByUser(Guid userId)
 		{
-			throw new NotImplementedException();
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteRequestManagerService>();
+			return await service.ViewAnswersByUserAsync(userId);
 		}
 	}
 }

@@ -34,6 +34,16 @@ namespace web_api.Lib.Services
 			throw new NotImplementedException();
 		}
 
+		public Task<NoteRequestViewDTO> Get(Guid userId)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task<object?> GetByCreator(Guid userId)
+		{
+			throw new NotImplementedException();
+		}
+
 		public Task<IEnumerable<NoteRequestViewDTO>> GetByUserAsync(Guid userId)
 		{
 			throw new NotImplementedException();
@@ -44,7 +54,27 @@ namespace web_api.Lib.Services
 			throw new NotImplementedException();
 		}
 
+		public Task<object?> GetRelevantRequestByUser(Guid userId)
+		{
+			throw new NotImplementedException();
+		}
+
 		public Task<NoteRequestViewDTO> ModifyAsync(NoteRequestCreateDTO dto)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task<object?> ModifyRequest(NoteRequestCreateDTO dto)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task<bool> UpdateAnswerStatus(Guid answerId, EAnswerStatus newStatus)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task<object?> UpdateStatus(Guid requestId, ERequestStatus newStatus)
 		{
 			throw new NotImplementedException();
 		}

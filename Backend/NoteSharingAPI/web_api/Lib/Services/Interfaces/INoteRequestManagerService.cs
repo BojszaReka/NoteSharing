@@ -15,5 +15,11 @@ namespace web_api.Lib.Services.Interfaces
         Task<IEnumerable<NoteRequestAnswerViewDTO>> ViewAnswersByNoteAsync(Guid noteId);
         Task<IEnumerable<NoteRequestAnswerViewDTO>> ViewAnswersByUserAsync(Guid userId);
         Task<bool> ChangeAnswerStatusAsync(Guid answerId, EAnswerStatus status);
-    }
+		Task<object?> GetByCreator(Guid userId);
+		Task<NoteRequestViewDTO> Get(Guid userId);
+		Task<object?> GetRelevantRequestByUser(Guid userId);
+		Task<object?> ModifyRequest(NoteRequestCreateDTO dto);
+		Task<bool> UpdateAnswerStatus(Guid answerId, EAnswerStatus newStatus);
+		Task<object?> UpdateStatus(Guid requestId, ERequestStatus newStatus);
+	}
 }
