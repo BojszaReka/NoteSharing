@@ -59,6 +59,11 @@ namespace class_library.Models
 		public ICollection<UserFollow> Followers { get; set; }
         public ICollection<UserFollow> Followings { get; set; }
         public ICollection<UserSubject> UserSubjects { get; set; }
+        public ICollection<Note> Notes { get; set; }
+        public ICollection<NoteRating> NoteRatings { get; set; }
+        public ICollection<Collection> Collections { get; set; }
+        public ICollection<NoteRequest> NoteRequests { get; set; }
+        public ICollection<NoteRequestAnswer> NoteRequestAnswers { get; set; }
 
 		public override string ToString()
         {

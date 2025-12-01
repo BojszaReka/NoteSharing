@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\web_api.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\class_library.csproj",
         "packagesPath": "C:\\Users\\fgeri\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\obj\\",
+=======
+    "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\web_api.csproj": {}
+  },
+  "projects": {
+    "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\class_library.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\class_library.csproj",
+        "projectName": "class_library",
+        "projectPath": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\class_library.csproj",
+        "packagesPath": "C:\\Users\\bojsz\\.nuget\\packages\\",
+        "outputPath": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\obj\\",
+>>>>>>> develop
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\fgeri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\bojsz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> develop
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +44,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+<<<<<<< HEAD
+=======
+          "C:\\Program Files\\dotnet\\library-packs": {},
+>>>>>>> develop
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,6 +91,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\web_api.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -77,12 +100,26 @@
         "projectPath": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\web_api.csproj",
         "packagesPath": "C:\\Users\\fgeri\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\obj\\",
+=======
+    "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\web_api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\web_api.csproj",
+        "projectName": "web_api",
+        "projectPath": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\web_api.csproj",
+        "packagesPath": "C:\\Users\\bojsz\\.nuget\\packages\\",
+        "outputPath": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\obj\\",
+>>>>>>> develop
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\fgeri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\bojsz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> develop
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -91,14 +128,23 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+<<<<<<< HEAD
+=======
+          "C:\\Program Files\\dotnet\\library-packs": {},
+>>>>>>> develop
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\class_library.csproj": {
                 "projectPath": "C:\\Users\\fgeri\\Desktop\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\class_library.csproj"
+=======
+              "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\class_library.csproj": {
+                "projectPath": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\class_library.csproj"
+>>>>>>> develop
               }
             }
           }

@@ -191,7 +191,6 @@ C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\Ne
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\web_api.xml
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.xml
-C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\appsettings.json
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\web_api.staticwebassets.endpoints.json
@@ -374,6 +373,7 @@ C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\web_api\o
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.pdb
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.genruntimeconfig.cache
 C:\Users\Kornel Hajto\RiderProjects\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\ref\web_api.dll
+<<<<<<< HEAD
 C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\appsettings.json
 C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\bin\Debug\net9.0\web_api.staticwebassets.endpoints.json
@@ -549,3 +549,6 @@ C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9
 C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.xml
 C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.genruntimeconfig.cache
 C:\Users\fgeri\Desktop\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\ref\web_api.dll
+=======
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+>>>>>>> develop

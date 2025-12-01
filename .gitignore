@@ -7,8 +7,8 @@
 .buildlog/
 .history
 
-.vs
 */v17/
+*/obj/
 
 
 # Flutter repo-specific

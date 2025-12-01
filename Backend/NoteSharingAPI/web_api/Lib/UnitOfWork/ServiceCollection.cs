@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using web_api.Lib.Repositories.Interfaces;
+using web_api.Lib.Repositories;
 using web_api.Lib.Services;
 using web_api.Lib.Services.Interfaces;
 
@@ -22,7 +24,13 @@ namespace web_api.Lib.UnitOfWork
 
             services.AddScoped<IUnitOfWork, ProductionUnitOfWork>();
 
-            return services;
+            services.AddScoped<INoteManagerService, NoteManagerService>();
+            services.AddScoped<ICollectionManagerService, CollectionManagerService>();
+            services.AddScoped<INoteRequestManagerService, NoteRequestManagerService>();
+            services.AddScoped<IAnswerManagerService, AnswerManagerService>();
+            services.AddScoped<IRatingsManagerService, RatingsManagerService>();
+
+			return services;
         }
     }
 }

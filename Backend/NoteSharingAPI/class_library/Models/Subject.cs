@@ -51,11 +51,14 @@ namespace class_library.Models
             /// </summary>
             public ICollection<UserSubject>? UserSubjects { get; set; }
 
-            /// <summary>
-            /// Returns a string representation of the subject.
-            /// </summary>
-            /// <returns>A string containing key subject properties.</returns>
-            public override string ToString()
+            public ICollection<Note>? Notes { get; set; }
+            public ICollection<NoteRequest>? NoteRequests { get; set; }
+
+		/// <summary>
+		/// Returns a string representation of the subject.
+		/// </summary>
+		/// <returns>A string containing key subject properties.</returns>
+		public override string ToString()
             {
                 return $"SubjectID:{ID}, Name:{Name}, InstitutionID:{InstitutionID}, InstructorID:{InstructorID}";
             }
