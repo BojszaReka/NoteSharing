@@ -19,8 +19,10 @@ namespace web_api.Lib.UnitOfWork
             services.AddScoped<IUserFollowManagerService, UserFollowManagerService>();
 			services.AddScoped<IAuthManagerService, AuthManagerService>();
             services.AddScoped<ILogManagerService, LogManagerService>();
+            services.AddScoped<IStudentManagerService, StudentManagerService>();
 
-			services.AddScoped<IUnitOfWork, ProductionUnitOfWork>();
+
+            services.AddScoped<IUnitOfWork, ProductionUnitOfWork>();
 
             services.AddScoped<INoteManagerService, NoteManagerService>();
             services.AddScoped<ICollectionManagerService, CollectionManagerService>();
