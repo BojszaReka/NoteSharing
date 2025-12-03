@@ -6,6 +6,7 @@ using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
 using web_api.Lib.Database;
 using web_api.Lib.Services.Interfaces;
+using web_api.Lib.UnitOfWork;
 
 namespace web_api.Lib.Services
 {
@@ -13,11 +14,14 @@ namespace web_api.Lib.Services
     {
 		private readonly db_context _dbContext;
 		private readonly IDistributedCache _cache;
+		private readonly IUnitOfWork _unitOfWork;
 		private readonly IServiceScopeFactory _scopeFactory;
-		public NoteManagerService(db_context dbContext, IDistributedCache cache, IServiceScopeFactory scopeFactory)
+
+		public NoteManagerService(db_context dbContext, IDistributedCache cache, IServiceScopeFactory scopeFactory, IUnitOfWork unitOfWork)
 		{
 			_dbContext = dbContext;
 			_cache = cache;
+			_unitOfWork = unitOfWork;
 			_scopeFactory = scopeFactory;
 		}
 
@@ -224,6 +228,96 @@ namespace web_api.Lib.Services
 			{
 				await transaction.DisposeAsync();
 			}
-		}		
+		}
+
+		public async Task<object?> Search(NoteSearchDTO dto)
+		{
+			IEnumerable<Note> notes = await querryNotes();
+
+			// Fetch user preferences
+			UserViewDTO? user = await _unitOfWork.userRepository.GetById(dto.RequestingUserID);
+			Preference preferences = await _unitOfWork.preferenceRepository.GetByUserId(dto.RequestingUserID);
+			FollowerReportDTO followedUsers = await _unitOfWork.userFollowRepository.GetFollowing(dto.RequestingUserID);
+			var institutionID = user.InstitutionID;
+
+			// BASE FILTER
+			var query = notes.Where(n => !n.IsDeleted);
+
+			// PRIVACY RULE
+			if (preferences.PrivateMyNotes)
+				query = query.Where(n => n.AuthorUserID == dto.RequestingUserID);
+
+			// FIELD FILTERS
+			if (dto.SubjectID.HasValue)
+				query = query.Where(n => n.SubjectID == dto.SubjectID);
+
+			if (dto.InstitutionID.HasValue)
+				query = query.Where(n => n.InstitutionID == dto.InstitutionID);
+
+			if (dto.AuthorUserID.HasValue)
+				query = query.Where(n => n.AuthorUserID == dto.AuthorUserID);
+
+			// FIELD-SPECIFIC SEARCH
+			if (!string.IsNullOrWhiteSpace(dto.Title))
+				query = query.Where(n => n.Title.Contains(dto.Title));
+
+			if (!string.IsNullOrWhiteSpace(dto.Description))
+				query = query.Where(n => n.Description.Contains(dto.Description));
+
+			if (!string.IsNullOrWhiteSpace(dto.Content))
+				query = query.Where(n => n.Content.Contains(dto.Content));
+
+			// UNIVERSAL SEARCH
+			if (!string.IsNullOrWhiteSpace(dto.Query))
+			{
+				var q = dto.Query.ToLower();
+
+				query = query.Where(n =>
+					n.Title.ToLower().Contains(q) ||
+					n.Description.ToLower().Contains(q) ||
+					n.Content.ToLower().Contains(q)
+				);
+			}
+
+			// PROJECTION WITH SCORING
+			var ranked = query
+				.Select(n => new
+				{
+					Note = n,
+					AvgRating = n.Ratings.Any() ? n.Ratings.Average(r => r.Stars) : 0,
+
+					RelevanceScore =
+						(dto.Query != null && n.Title.Contains(dto.Query) ? 6 : 0) +
+						(dto.Query != null && n.Description.Contains(dto.Query) ? 3 : 0) +
+						(dto.Query != null && n.Content.Contains(dto.Query) ? 1 : 0),
+
+					PreferenceScore =
+						(preferences.PrioritiseUsersFromInstitution && n.InstitutionID == institutionID ? 3 : 0) +
+						(preferences.PrioritiseFollowedUsers && followedUsers.UserNames != null && n.Author != null && followedUsers.UserNames.Contains(n.Author.UserName) ? 4 : 0) +
+						(preferences.PrioritiseInstructorNotes && n.Author.UserType == EUserType.Instructor ? 3 : 0) +
+						(preferences.PrioritiseRatedNotes && n.Ratings.Any() ? 2 : 0)
+				});
+
+			// ORDERING LOGIC
+			ranked = ranked
+				.OrderByDescending(x =>
+					(dto.OrderByRelevance ? x.RelevanceScore : 0) +
+					x.PreferenceScore)
+				.ThenByDescending(x =>
+					dto.OrderByRating ? x.AvgRating : 0)
+				.ThenByDescending(x => x.Note.CreatedAt);
+
+			// PAGINATION
+			ranked = ranked
+				.Skip((dto.Page - 1) * dto.PageSize)
+				.Take(dto.PageSize);
+
+			// MAP TO DTO
+			var results = ranked
+				.Select(x => x.Note)
+				.Adapt<IEnumerable<NoteViewDTO>>();
+
+			return results;
+		}
 	}
 }

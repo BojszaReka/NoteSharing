@@ -8,5 +8,6 @@ namespace web_api.Lib.Repositories.Interfaces
         Task<PreferenceViewDTO> Update(PreferenceViewDTO dto);
         Task<bool> Delete(Guid id);
         Task<PreferenceViewDTO?> GetById(Guid id);
-    }
+		Task<Preference> GetByUserId(Guid requestingUserID);
+	}
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace class_library.DTO
 {
-	internal class UserSubjectReport
+	public class UserSubjectReport
 	{
 	}
 }

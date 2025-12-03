@@ -20,15 +20,13 @@ namespace web_api.Lib.UnitOfWork
 			services.AddScoped<IAuthManagerService, AuthManagerService>();
             services.AddScoped<ILogManagerService, LogManagerService>();
             services.AddScoped<IStudentManagerService, StudentManagerService>();
+			services.AddScoped<INoteManagerService, NoteManagerService>();
+			services.AddScoped<ICollectionManagerService, CollectionManagerService>();
+			services.AddScoped<INoteRequestManagerService, NoteRequestManagerService>();
+			services.AddScoped<IAnswerManagerService, AnswerManagerService>();
+			services.AddScoped<IRatingsManagerService, RatingsManagerService>();
 
-
-            services.AddScoped<IUnitOfWork, ProductionUnitOfWork>();
-
-            services.AddScoped<INoteManagerService, NoteManagerService>();
-            services.AddScoped<ICollectionManagerService, CollectionManagerService>();
-            services.AddScoped<INoteRequestManagerService, NoteRequestManagerService>();
-            services.AddScoped<IAnswerManagerService, AnswerManagerService>();
-            services.AddScoped<IRatingsManagerService, RatingsManagerService>();
+			services.AddScoped<IUnitOfWork, ProductionUnitOfWork>();
 
 			return services;
         }

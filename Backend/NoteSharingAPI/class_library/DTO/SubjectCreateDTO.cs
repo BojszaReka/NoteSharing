@@ -7,8 +7,10 @@ namespace class_library.DTO
     {
         [Required]
         public string Name { get; set; }
-
         [Required]
+        public string NeptunCode { get; set; }
+
+		[Required]
         public Guid InstitutionID { get; set; }
 
         public Guid? InstructorID { get; set; }

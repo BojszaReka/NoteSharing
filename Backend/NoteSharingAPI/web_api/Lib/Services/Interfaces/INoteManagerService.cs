@@ -19,5 +19,6 @@ namespace web_api.Lib.Services.Interfaces
 		
 		Task<ICollection<NoteViewDTO>> GetAll();
 		Task<object?> Like(NoteLikeDTO dto);
+		Task<object?> Search(NoteSearchDTO dto);
 	}
 }

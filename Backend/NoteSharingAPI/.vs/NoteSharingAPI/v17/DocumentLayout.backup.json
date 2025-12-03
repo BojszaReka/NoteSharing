@@ -3,182 +3,80 @@
   "WorkspaceRootPath": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\institutionmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\institutionmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\authmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\authmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\ratingmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\ratingmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> develop
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\noterequestmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\noterequestmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\preferencemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\preferencemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\dto\\noterequestmodifydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\dto\\noterequestmodifydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\noterequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\noterequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\noterequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\noterequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\interfaces\\inoterequestmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\interfaces\\inoterequestmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\inoterequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\inoterequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\models\\noterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\noterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\notemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\notemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\interfaces\\inotemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\interfaces\\inotemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\usersubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\usersubjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\userfollowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\userfollowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\subjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\subjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\ratingsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\ratingsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\preferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\preferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\noterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\noterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\institutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\institutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\examplerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\examplerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\collectionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\collectionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\answerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\answerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\database\\db_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\database\\db_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\unitofwork\\servicecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\unitofwork\\servicecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\usermanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\usermanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\inoterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\inoterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\preferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\preferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\dto\\notelikedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\dto\\notelikedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\interfaces\\ipreferencemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\interfaces\\ipreferencemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\subjectmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\subjectmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\models\\institution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\institution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\institutioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\institutioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\controllers\\preferencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\controllers\\preferencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\profiles\\userprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\profiles\\userprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\migrations\\db_contextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\migrations\\db_contextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> develop
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\models\\userfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\userfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\models\\noterequestanswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\noterequestanswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\dto\\subjectsearchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\dto\\subjectsearchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\dto\\usersearchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\dto\\usersearchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\notemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\notemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\dto\\userviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\dto\\userviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\services\\institutionmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\services\\institutionmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\interfaces\\ipreferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\interfaces\\ipreferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\dto\\notesearchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\dto\\notesearchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\models\\noterating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\noterating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\models\\preferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\preferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\models\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\models\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\web_api\\lib\\repositories\\searchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9502F79D-CF7F-4EFF-8880-915FD644F023}|web_api\\web_api.csproj|solutionrelative:web_api\\lib\\repositories\\searchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|c:\\adatok\\egyetem\\notesharing\\backend\\notesharingapi\\class_library\\dto\\noterequestviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFACF327-F9BF-4E09-8C06-4B0602125833}|class_library\\class_library.csproj|solutionrelative:class_library\\dto\\noterequestviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -188,12 +86,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 196,
-<<<<<<< HEAD
           "SelectedChildIndex": 8,
-=======
-          "SelectedChildIndex": 1,
->>>>>>> develop
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SubjectManagerService.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\SubjectManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\SubjectManagerService.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\SubjectManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\SubjectManagerService.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAQwKgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T20:46:33.318Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IPreferenceManagerService.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IPreferenceManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\IPreferenceManagerService.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IPreferenceManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\IPreferenceManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T20:54:45.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PreferenceRepository.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\PreferenceRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\PreferenceRepository.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\PreferenceRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\PreferenceRepository.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAawC8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T20:53:32.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Subject.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Subject.cs",
+              "RelativeDocumentMoniker": "class_library\\Models\\Subject.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Subject.cs",
+              "RelativeToolTip": "class_library\\Models\\Subject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T20:49:14.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserManagerService.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\UserManagerService.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\UserManagerService.cs",
+              "ViewState": "AgIAABkBAAAAAAAAAAAUwDQBAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T20:32:20.134Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 9,
@@ -202,23 +162,100 @@
               "RelativeDocumentMoniker": "web_api\\Lib\\Services\\NoteManagerService.cs",
               "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\NoteManagerService.cs",
               "RelativeToolTip": "web_api\\Lib\\Services\\NoteManagerService.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowC0AAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAQwCcBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T13:39:42.046Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-12-02T21:31:33.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\User.cs",
+              "RelativeDocumentMoniker": "class_library\\Models\\User.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\User.cs",
+              "RelativeToolTip": "class_library\\Models\\User.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAwE4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T20:41:53.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SubjectSearchDTO.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\SubjectSearchDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\SubjectSearchDTO.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\SubjectSearchDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\SubjectSearchDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T21:28:54.704Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RatingManagerService.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\RatingManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\RatingManagerService.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\RatingManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\RatingManagerService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCQAAAAnAAAAAAAAAA==",
+              "Title": "PreferenceManagerService.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\PreferenceManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\PreferenceManagerService.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\PreferenceManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\PreferenceManagerService.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAkwKIAAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T12:36:23.811Z",
+              "WhenOpened": "2025-12-03T20:28:53.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserViewDTO.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserViewDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\UserViewDTO.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserViewDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\UserViewDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T20:34:06.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "InstitutionManagerService.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\InstitutionManagerService.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\InstitutionManagerService.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\InstitutionManagerService.cs",
+              "RelativeToolTip": "web_api\\Lib\\Services\\InstitutionManagerService.cs",
+              "ViewState": "AgIAALQAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T20:32:33.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IPreferenceRepository.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IPreferenceRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\IPreferenceRepository.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\IPreferenceRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\IPreferenceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T20:30:06.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "NoteSearchDTO.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\NoteSearchDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\NoteSearchDTO.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\NoteSearchDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\NoteSearchDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T20:23:55.142Z",
               "EditorCaption": ""
             },
             {
@@ -227,576 +264,79 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 5,
-              "Title": "LogManagerService.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\LogManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\LogManagerService.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\LogManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\LogManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T09:01:13.406Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserManagerService.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\UserManagerService.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\UserManagerService.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAArwAgBAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T22:01:29.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthManagerService.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\AuthManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\AuthManagerService.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\AuthManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\AuthManagerService.cs",
-              "ViewState": "AgIAAAsBAAAAAAAAAAAWwCQBAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T19:21:40.464Z",
-=======
-              "DocumentIndex": 1,
-              "Title": "NoteRequestManagerService.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\NoteRequestManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\NoteRequestManagerService.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\NoteRequestManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\NoteRequestManagerService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABIAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T13:39:40.684Z",
->>>>>>> develop
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 6,
-              "Title": "UserSubjectManagerService.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserSubjectManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\UserSubjectManagerService.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserSubjectManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\UserSubjectManagerService.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAIwF4AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T19:53:10.934Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "db_context.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Database\\db_context.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Database\\db_context.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Database\\db_context.cs",
-              "RelativeToolTip": "web_api\\Lib\\Database\\db_context.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAmwDMAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T13:28:27.149Z",
-=======
-              "DocumentIndex": 5,
-              "Title": "NoteRequestsController.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\NoteRequestsController.cs",
-              "RelativeDocumentMoniker": "web_api\\Controllers\\NoteRequestsController.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\NoteRequestsController.cs",
-              "RelativeToolTip": "web_api\\Controllers\\NoteRequestsController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAiwCgAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T21:08:53.877Z",
->>>>>>> develop
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-<<<<<<< HEAD
-              "Title": "IUserFollowManagerService.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IUserFollowManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\IUserFollowManagerService.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\IUserFollowManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\IUserFollowManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
+              "Title": "UserSearchDTO.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserSearchDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\UserSearchDTO.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\UserSearchDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\UserSearchDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T20:41:51.863Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\UnitOfWork\\IUnitOfWork.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\IUnitOfWork.cs",
-              "RelativeToolTip": "web_api\\Lib\\UnitOfWork\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T21:08:30.611Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InstitutionManagerService.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\InstitutionManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\InstitutionManagerService.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\InstitutionManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\InstitutionManagerService.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwIcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T22:42:08.681Z",
-=======
-              "Title": "INoteRequestRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\INoteRequestRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\INoteRequestRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\INoteRequestRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\INoteRequestRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T21:13:20.457Z",
->>>>>>> develop
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 9,
-=======
-              "DocumentIndex": 4,
-              "Title": "NoteRequestRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\NoteRequestRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\NoteRequestRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\NoteRequestRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\NoteRequestRepository.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwFMAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T00:30:15.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "INoteRequestManagerService.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\INoteRequestManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\INoteRequestManagerService.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\INoteRequestManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\INoteRequestManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T21:48:41.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
->>>>>>> develop
-              "Title": "PreferenceManagerService.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\PreferenceManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\PreferenceManagerService.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\PreferenceManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\PreferenceManagerService.cs",
-<<<<<<< HEAD
-              "ViewState": "AgIAADcAAAAAAAAAAAAgwJsAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T13:09:49.711Z"
-=======
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T11:42:48.289Z",
-              "EditorCaption": ""
->>>>>>> develop
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-<<<<<<< HEAD
-              "Title": "UserFollow.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\UserFollow.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\UserFollow.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\UserFollow.cs",
-              "RelativeToolTip": "class_library\\Models\\UserFollow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T14:43:34.939Z",
-=======
-              "Title": "NoteRequestModifyDTO.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\NoteRequestModifyDTO.cs",
-              "RelativeDocumentMoniker": "class_library\\DTO\\NoteRequestModifyDTO.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\NoteRequestModifyDTO.cs",
-              "RelativeToolTip": "class_library\\DTO\\NoteRequestModifyDTO.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAABIAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T12:28:09.436Z",
->>>>>>> develop
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-<<<<<<< HEAD
-              "Title": "SubjectManagerService.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\SubjectManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\SubjectManagerService.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\SubjectManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\SubjectManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
-=======
-              "Title": "NoteRequest.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\NoteRequest.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\NoteRequest.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\NoteRequest.cs",
-              "RelativeToolTip": "class_library\\Models\\NoteRequest.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAqwCcAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T23:56:00.341Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "INoteManagerService.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\INoteManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\Interfaces\\INoteManagerService.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\Interfaces\\INoteManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\Interfaces\\INoteManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T00:30:33.543Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserFollowRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserFollowRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\UserFollowRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserFollowRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\UserFollowRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T11:40:46.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserSubjectRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserSubjectRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\UserSubjectRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserSubjectRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\UserSubjectRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T11:40:50.972Z",
+              "WhenOpened": "2025-12-02T21:26:07.432Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "SubjectRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\SubjectRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\SubjectRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\SubjectRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\SubjectRepository.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
->>>>>>> develop
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T11:40:43.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 10,
-=======
-              "DocumentIndex": 15,
-              "Title": "RatingsRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\RatingsRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\RatingsRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\RatingsRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\RatingsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T11:38:43.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "InstitutionRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\InstitutionRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\InstitutionRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\InstitutionRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\InstitutionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T11:35:08.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "NoteRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\NoteRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\NoteRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\NoteRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\NoteRepository.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAIwEQAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T00:28:36.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T00:30:12.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ExampleRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\ExampleRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\ExampleRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\ExampleRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\ExampleRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T11:35:07.12Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "PreferenceRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\PreferenceRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\PreferenceRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\PreferenceRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\PreferenceRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T00:28:53.469Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CollectionRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\CollectionRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\CollectionRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\CollectionRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\CollectionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T11:35:04.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AuthRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\AuthRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\AuthRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\AuthRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\AuthRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T11:33:17.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AnswerRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\AnswerRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\AnswerRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\AnswerRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\AnswerRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T11:33:13.373Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
->>>>>>> develop
-              "Title": "ServiceCollection.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\ServiceCollection.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\UnitOfWork\\ServiceCollection.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\ServiceCollection.cs",
-              "RelativeToolTip": "web_api\\Lib\\UnitOfWork\\ServiceCollection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:01:31.227Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 11,
-              "Title": "ProductionUnitOfWork.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\ProductionUnitOfWork.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\UnitOfWork\\ProductionUnitOfWork.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\UnitOfWork\\ProductionUnitOfWork.cs",
-              "RelativeToolTip": "web_api\\Lib\\UnitOfWork\\ProductionUnitOfWork.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAA+wAUAAAAoAAAAAAAAAA==",
-=======
-              "DocumentIndex": 23,
-              "Title": "db_context.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Database\\db_context.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Database\\db_context.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Database\\db_context.cs",
-              "RelativeToolTip": "web_api\\Lib\\Database\\db_context.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAIwDcAAAAfAAAAAAAAAA==",
->>>>>>> develop
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T21:36:53.814Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 14,
-              "Title": "Institution.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Institution.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\Institution.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Institution.cs",
-              "RelativeToolTip": "class_library\\Models\\Institution.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
-=======
-              "DocumentIndex": 25,
-              "Title": "UserManagerService.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserManagerService.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Services\\UserManagerService.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Services\\UserManagerService.cs",
-              "RelativeToolTip": "web_api\\Lib\\Services\\UserManagerService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:02:23.368Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "NoteLikeDTO.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\NoteLikeDTO.cs",
-              "RelativeDocumentMoniker": "class_library\\DTO\\NoteLikeDTO.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\NoteLikeDTO.cs",
-              "RelativeToolTip": "class_library\\DTO\\NoteLikeDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
->>>>>>> develop
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T00:27:05.792Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 13,
-=======
-              "DocumentIndex": 26,
-              "Title": "INoteRepository.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\INoteRepository.cs",
-              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\Interfaces\\INoteRepository.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\Interfaces\\INoteRepository.cs",
-              "RelativeToolTip": "web_api\\Lib\\Repositories\\Interfaces\\INoteRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T00:20:38.422Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
->>>>>>> develop
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "web_api\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "web_api\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T00:19:26.948Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "db_contextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Migrations\\db_contextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "web_api\\Migrations\\db_contextModelSnapshot.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Migrations\\db_contextModelSnapshot.cs",
-              "RelativeToolTip": "web_api\\Migrations\\db_contextModelSnapshot.cs",
-              "ViewState": "AgIAAIQBAAAAAAAAAAAQwHcBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T00:07:40.674Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "UserFollow.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\UserFollow.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\UserFollow.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\UserFollow.cs",
-              "RelativeToolTip": "class_library\\Models\\UserFollow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T00:06:46.088Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "NoteRequestAnswer.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\NoteRequestAnswer.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\NoteRequestAnswer.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\NoteRequestAnswer.cs",
-              "RelativeToolTip": "class_library\\Models\\NoteRequestAnswer.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T23:58:26.428Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Subject.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Subject.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\Subject.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Subject.cs",
-              "RelativeToolTip": "class_library\\Models\\Subject.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwDYAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T23:57:44.397Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\User.cs",
-              "RelativeDocumentMoniker": "class_library\\Models\\User.cs",
-              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\User.cs",
-              "RelativeToolTip": "class_library\\Models\\User.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAiwEEAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T23:53:14.902Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
               "Title": "NoteRating.cs",
               "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\NoteRating.cs",
               "RelativeDocumentMoniker": "class_library\\Models\\NoteRating.cs",
               "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\NoteRating.cs",
               "RelativeToolTip": "class_library\\Models\\NoteRating.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T23:52:23.984Z"
+              "WhenOpened": "2025-12-03T20:25:20.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Preferences.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Preferences.cs",
+              "RelativeDocumentMoniker": "class_library\\Models\\Preferences.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Preferences.cs",
+              "RelativeToolTip": "class_library\\Models\\Preferences.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T20:24:49.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Note.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Note.cs",
+              "RelativeDocumentMoniker": "class_library\\Models\\Note.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\Models\\Note.cs",
+              "RelativeToolTip": "class_library\\Models\\Note.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAADwv0AAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T22:27:55.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "NoteRequestViewDTO.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\NoteRequestViewDTO.cs",
+              "RelativeDocumentMoniker": "class_library\\DTO\\NoteRequestViewDTO.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\class_library\\DTO\\NoteRequestViewDTO.cs",
+              "RelativeToolTip": "class_library\\DTO\\NoteRequestViewDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T21:19:34.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SearchRepository.cs",
+              "DocumentMoniker": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\SearchRepository.cs",
+              "RelativeDocumentMoniker": "web_api\\Lib\\Repositories\\SearchRepository.cs",
+              "ToolTip": "C:\\ADATOK\\Egyetem\\NoteSharing\\Backend\\NoteSharingAPI\\web_api\\Lib\\Repositories\\SearchRepository.cs",
+              "RelativeToolTip": "web_api\\Lib\\Repositories\\SearchRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T21:17:24.678Z"
             }
           ]
         },

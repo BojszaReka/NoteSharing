@@ -1,4 +1,5 @@
 ﻿using class_library.DTO;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
 using web_api.Lib.Database;
@@ -264,6 +265,48 @@ namespace web_api.Lib.Services
 			{
 				throw new Exception($"Couldn't log activity: '{message}'");
 			}
+		}
+
+		public async Task<object?> Search(UserSearchDTO dto)
+		{
+			var query = await querryUsers();
+
+			query = query.Where(u => u.Enabled);
+
+			if (!string.IsNullOrWhiteSpace(dto.NameField))
+			{
+				var name = dto.NameField.Trim().ToLower();
+
+				query = query
+					.Select(u => new
+					{
+						User = u,
+						Score =
+							u.Name.ToLower() == name ? 100 :
+							u.Name.ToLower().StartsWith(name) ? 50 :
+							u.Name.ToLower().Contains(name) ? 10 : 0
+					})
+					.OrderByDescending(x => x.Score)
+					.ThenBy(x => x.User.Name)
+					.Select(x => x.User);
+			}
+			else
+			{
+				query = query.OrderBy(u => u.Name);
+			}
+
+			return query.Adapt<List<UserViewDTO>>();
+		}
+
+		public async Task<Preference> GetPreference(Guid userID)
+		{
+			var users = await querryUsers();
+            var user = users.FirstOrDefault(u => u.ID == userID);
+            if (user == null)
+                throw new KeyNotFoundException($"User with ID {userID} not found.");
+            var scope = _scopeFactory.CreateScope();
+            var _preferenceManager = scope.ServiceProvider.GetRequiredService<IPreferenceManagerService>();
+            return await _preferenceManager.GetPreference(user.PreferenceID);
 		}
 	}
 }

@@ -11,5 +11,6 @@ namespace class_library.DTO
         public string Email { get; set; }
         public EUserType UserType { get; set; }
         public Guid PreferenceID { get; set; }
-    }
+        public Guid InstitutionID { get; set; }
+	}
 }

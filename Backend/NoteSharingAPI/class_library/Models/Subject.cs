@@ -23,10 +23,13 @@ namespace class_library.Models
             [Required]
             public string? Name { get; set; }
 
-            /// <summary>
-            /// Identifier of the institution to which the subject belongs.
-            /// </summary>
-            [Required]
+		    [Required]
+		    public string? NeptunCode { get; set; }
+
+		    /// <summary>
+		    /// Identifier of the institution to which the subject belongs.
+		    /// </summary>
+		    [Required]
             public Guid InstitutionID { get; set; }
 
             /// <summary>
