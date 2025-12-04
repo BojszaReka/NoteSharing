@@ -12,5 +12,7 @@ namespace web_api.Lib.Services.Interfaces
         Task<IEnumerable<UserViewDTO>> GetAllAsync();
 
         Task<bool> FollowAsync(UserFollowDTO dto);
-    }
+		Task<object?> Search(UserSearchDTO dto);
+		Task<Preference> GetPreference(Guid userID);
+	}
 }

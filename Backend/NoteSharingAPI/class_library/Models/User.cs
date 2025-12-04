@@ -64,6 +64,7 @@ namespace class_library.Models
         public ICollection<Collection> Collections { get; set; }
         public ICollection<NoteRequest> NoteRequests { get; set; }
         public ICollection<NoteRequestAnswer> NoteRequestAnswers { get; set; }
+		public ICollection<NoteHistory> NoteHistories { get; set; }
 
 		public override string ToString()
         {

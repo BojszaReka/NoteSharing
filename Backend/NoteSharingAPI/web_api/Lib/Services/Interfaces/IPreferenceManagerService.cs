@@ -8,5 +8,6 @@ namespace web_api.Lib.Services.Interfaces
         Task<PreferenceViewDTO> UpdateAsync(PreferenceViewDTO dto);
         Task<bool> DeleteAsync(Guid id);
         Task<PreferenceViewDTO?> GetByIdAsync(Guid id);
-    }
+		Task<Preference> GetPreference(Guid preferenceID);
+	}
 }

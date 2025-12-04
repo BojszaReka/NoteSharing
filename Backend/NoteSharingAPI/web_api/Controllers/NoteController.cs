@@ -28,17 +28,18 @@ namespace web_api.Controllers
             try
             {
                 response.Data = await _unitOfWork.noteRepository.Add(dto);
-                response.StatusCode = 200; 
+                response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);
             }
-            catch (Exception ex) { 
-                response.StatusCode = 400; 
-                response.Message = ex.Message; 
-                
+            catch (Exception ex)
+            {
+                response.StatusCode = 400;
+                response.Message = ex.Message;
+
             }
-			return BadRequest(response);
-		}
+            return BadRequest(response);
+        }
 
         // GetNote -> by id
         [HttpGet("{id:guid}")]
@@ -48,16 +49,17 @@ namespace web_api.Controllers
             try
             {
                 response.Data = await _unitOfWork.noteRepository.Get(id);
-                response.StatusCode = 200; 
+                response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);
             }
-            catch (Exception ex) { 
-                response.StatusCode = 400; 
-                response.Message = ex.Message; 
+            catch (Exception ex)
+            {
+                response.StatusCode = 400;
+                response.Message = ex.Message;
             }
-			return BadRequest(response);
-		}
+            return BadRequest(response);
+        }
 
         // GetAllNotes (only the public ones)
         [HttpGet]
@@ -70,12 +72,13 @@ namespace web_api.Controllers
                 response.StatusCode = 200; response.Message = "Success";
                 return Ok(response);
             }
-            catch (Exception ex) { 
-                response.StatusCode = 400; 
-                response.Message = ex.Message;  
+            catch (Exception ex)
+            {
+                response.StatusCode = 400;
+                response.Message = ex.Message;
             }
-			return BadRequest(response);
-		}
+            return BadRequest(response);
+        }
 
         // ModifyNote
         [HttpPut]
@@ -88,12 +91,13 @@ namespace web_api.Controllers
                 response.StatusCode = 200; response.Message = "Success";
                 return Ok(response);
             }
-            catch (Exception ex) { 
-                response.StatusCode = 400; 
-                response.Message = ex.Message; 
+            catch (Exception ex)
+            {
+                response.StatusCode = 400;
+                response.Message = ex.Message;
             }
-			return BadRequest(response);
-		}
+            return BadRequest(response);
+        }
 
         // deleteNote
         [HttpDelete("{id:guid}")]
@@ -103,16 +107,17 @@ namespace web_api.Controllers
             try
             {
                 response.Data = await _unitOfWork.noteRepository.Delete(id);
-                response.StatusCode = 200; 
+                response.StatusCode = 200;
                 response.Message = "Success";
                 return Ok(response);
             }
-            catch (Exception ex) { 
-                response.StatusCode = 400; 
-                response.Message = ex.Message; 
+            catch (Exception ex)
+            {
+                response.StatusCode = 400;
+                response.Message = ex.Message;
             }
-			return BadRequest(response);
-		}
+            return BadRequest(response);
+        }
 
         // addReview -> a projektedben ennek megfelelő DTO a NoteRatingCreateDTO
         [HttpPost("review")]
@@ -125,20 +130,75 @@ namespace web_api.Controllers
                 response.StatusCode = 200; response.Message = "Success";
                 return Ok(response);
             }
-            catch (Exception ex) { 
-                response.StatusCode = 400; 
-                response.Message = ex.Message; 
+            catch (Exception ex)
+            {
+                response.StatusCode = 400;
+                response.Message = ex.Message;
+            }
+            return BadRequest(response);
+        }
+
+        [HttpPost("like")]
+        public async Task<IActionResult> Like([FromBody] NoteLikeDTO dto)
+        {
+            var response = new ApiResponse();
+            try
+            {
+                response.Data = await _unitOfWork.noteRepository.Like(dto);
+                response.StatusCode = 200; response.Message = "Success";
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                response.StatusCode = 400;
+                response.Message = ex.Message;
+            }
+            return BadRequest(response);
+        }
+
+        [HttpDelete("like")]
+        public async Task<IActionResult> Dislike([FromBody] NoteLikeDTO dto)
+        {
+            var response = new ApiResponse();
+            try
+            {
+                response.Data = await _unitOfWork.noteRepository.Dislike(dto);
+                response.StatusCode = 200; response.Message = "Success";
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                response.StatusCode = 400;
+                response.Message = ex.Message;
+            }
+            return BadRequest(response);
+        }
+
+        [HttpPost("viewed")]
+        public async Task<IActionResult> AddViewed([FromBody] NoteViewedCreateDTO dto)
+        {
+            var response = new ApiResponse();
+            try
+            {
+                response.Data = await _unitOfWork.noteRepository.AddViewed(dto);
+                response.StatusCode = 200; response.Message = "Success";
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                response.StatusCode = 400;
+                response.Message = ex.Message;
             }
 			return BadRequest(response);
 		}
 
-		[HttpPost("like")]
-		public async Task<IActionResult> Like([FromBody] NoteLikeDTO dto)
+        [HttpGet("history/{userId:guid}")]
+		public async Task<IActionResult> GetViewHistory([FromBody] Guid userId)
 		{
 			var response = new ApiResponse();
 			try
 			{
-				response.Data = await _unitOfWork.noteRepository.Like(dto);
+				response.Data = await _unitOfWork.noteRepository.GetViewHistory(userId);
 				response.StatusCode = 200; response.Message = "Success";
 				return Ok(response);
 			}
@@ -150,22 +210,5 @@ namespace web_api.Controllers
 			return BadRequest(response);
 		}
 
-		[HttpDelete("like")]
-		public async Task<IActionResult> Dislike([FromBody] NoteLikeDTO dto)
-		{
-			var response = new ApiResponse();
-			try
-			{
-				response.Data = await _unitOfWork.noteRepository.Dislike(dto);
-				response.StatusCode = 200; response.Message = "Success";
-				return Ok(response);
-			}
-			catch (Exception ex)
-			{
-				response.StatusCode = 400;
-				response.Message = ex.Message;
-			}
-			return BadRequest(response);
-		}
 	}
 }

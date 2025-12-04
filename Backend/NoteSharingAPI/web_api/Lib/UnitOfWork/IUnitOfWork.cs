@@ -17,5 +17,9 @@ namespace web_api.Lib.UnitOfWork
         INoteRepository noteRepository { get; }
         ICollectionRepository collectionRepository { get; }
         INoteRequestRepository noteRequestRepository { get; }
-    }
+        IAnswerRepository answerRepository { get; }
+        IRatingsRepository ratingsRepository { get; }
+        ISearchRepository searchRepository { get; }
+		IFeedRepository feedRepository { get; }
+	}
 }

@@ -27,6 +27,13 @@ namespace web_api.Lib.Repositories
 			return await service.AddReview(dto);
 		}
 
+		public async Task<object?> AddViewed(NoteViewedCreateDTO dto)
+		{
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await service.AddViewed(dto);
+		}
+
 		public async Task<object?> Delete(Guid id)
 		{
 			using var scope = _serviceScopeFactory.CreateScope();
@@ -53,6 +60,20 @@ namespace web_api.Lib.Repositories
 			using var scope = _serviceScopeFactory.CreateScope();
 			var service = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
 			return await service.GetAll();
+		}
+
+		public async Task<IQueryable<Note>> GetAllNote()
+		{
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await service.GetAllNote();
+		}
+
+		public async Task<object?> GetViewHistory(Guid userId)
+		{
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await service.GetViewHistory(userId);
 		}
 
 		public async Task<object?> Like(NoteLikeDTO dto)

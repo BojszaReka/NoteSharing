@@ -156,5 +156,11 @@ namespace web_api.Lib.Services
 			return entity.Adapt<PreferenceViewDTO>();
 
 		}
-    }
+
+		public async Task<Preference> GetPreference(Guid preferenceID)
+		{
+			var preferences = await querryPreferences();
+			return preferences.FirstOrDefault(p => p.ID == preferenceID) ?? throw new Exception("Preference not found");
+		}
+	}
 }

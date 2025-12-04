@@ -56,7 +56,7 @@ namespace web_api.Controllers
             return BadRequest(response);
         }
 
-        [HttpGet("institution/{institutionId:guid}")]
+        [HttpGet("instituion/{institutionId:guid}")]
         public async Task<IActionResult> GetStudentsByInstitution([FromRoute] Guid institutionId)
         {
             var response = new ApiResponse();

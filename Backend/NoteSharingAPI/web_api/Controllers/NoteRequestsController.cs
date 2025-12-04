@@ -23,7 +23,7 @@ namespace web_api.Controllers
         }
 
         // createRequest
-        [HttpPost("createRequest")]
+        [HttpPost]
         public async Task<IActionResult> CreateRequest([FromBody] NoteRequestCreateDTO dto)
         {
             var response = new ApiResponse();
@@ -37,7 +37,7 @@ namespace web_api.Controllers
         }
 
         // modifyRequest
-        [HttpPut("modifyRequest")]
+        [HttpPut]
         public async Task<IActionResult> ModifyRequest([FromBody] NoteRequestModifyDTO dto)
         {
             var response = new ApiResponse();
@@ -51,7 +51,7 @@ namespace web_api.Controllers
         }
 
         // changeRequestStatus
-        [HttpPost("changeRequestStatus/{requestId:guid}/{newStatus}")]
+        [HttpPost("update/{requestId:guid}/{newStatus}")]
         // changeRequestStatus
         public async Task<IActionResult> ChangeRequestStatus(Guid requestId, ERequestStatus newStatus)
         {
@@ -67,7 +67,7 @@ namespace web_api.Controllers
 
 
         // getRequest -> by userId (request the user made)
-        [HttpGet("getRequest/{userId:guid}")]
+        [HttpGet("{userId:guid}")]
         public async Task<IActionResult> GetRequestByUser([FromRoute] Guid userId)
         {
             var response = new ApiResponse();
@@ -81,7 +81,7 @@ namespace web_api.Controllers
         }
 
         // getRelevantRequest -> by userId (requests user may answer)
-        [HttpGet("getRelevantRequest/{userId:guid}")]
+        [HttpGet("getRelevant/{userId:guid}")]
         public async Task<IActionResult> GetRelevantRequestByUser([FromRoute] Guid userId)
         {
             var response = new ApiResponse();
@@ -95,7 +95,7 @@ namespace web_api.Controllers
         }
 
         // addAnswer
-        [HttpPost("addAnswer")]
+        [HttpPost("answer")]
         public async Task<IActionResult> AddAnswer([FromBody] NoteRequestAnswerCreateDTO dto)
         {
             var response = new ApiResponse();
@@ -109,7 +109,7 @@ namespace web_api.Controllers
         }
 
         // viewAnswers -> by noteid
-        [HttpGet("viewAnswers/byNote/{noteId:guid}")]
+        [HttpGet("answer/note/{noteId:guid}")]
         public async Task<IActionResult> ViewAnswersByNote([FromRoute] Guid noteId)
         {
             var response = new ApiResponse();
@@ -123,7 +123,7 @@ namespace web_api.Controllers
         }
 
         // viewAnswers -> by userid
-        [HttpGet("viewAnswers/byUser/{userId:guid}")]
+        [HttpGet("answer/user/{userId:guid}")]
         public async Task<IActionResult> ViewAnswersByUser([FromRoute] Guid userId)
         {
             var response = new ApiResponse();
@@ -137,7 +137,7 @@ namespace web_api.Controllers
         }
 
         // changeAnswerStatus
-        [HttpPost("changeAnswerStatus/{answerId:guid}/{newStatus}")]
+        [HttpPost("answer/update/{answerId:guid}/{newStatus}")]
         // changeAnswerStatus
         public async Task<IActionResult> ChangeAnswerStatus(Guid answerId, EAnswerStatus newStatus)
         {

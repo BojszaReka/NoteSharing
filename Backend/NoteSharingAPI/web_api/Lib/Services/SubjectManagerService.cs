@@ -165,5 +165,59 @@ namespace web_api.Lib.Services
 			}
 			return subjects.Adapt<IEnumerable<SubjectViewDTO>>();
 		}
-    }
+
+		public async Task<object?> Search(SubjectSearchDTO dto)
+		{
+			var query = await querrySubjects();
+
+			var general = dto.GeneralField?.Trim().ToLower();
+			var name = dto.NameField?.Trim().ToLower();
+			var code = dto.NeptunCodeField?.Trim().ToLower();
+
+			// APPLY FILTERING
+			if (!string.IsNullOrWhiteSpace(general))
+			{
+				query = query.Where(s =>
+					s.Name.ToLower().Contains(general) ||
+					s.NeptunCode.ToLower().Contains(general));
+			}
+
+			if (!string.IsNullOrWhiteSpace(name))
+				query = query.Where(s => s.Name.ToLower().Contains(name));
+
+			if (!string.IsNullOrWhiteSpace(code))
+				query = query.Where(s => s.NeptunCode.ToLower().Contains(code));
+
+			
+				query = query
+					.Select(s => new
+					{
+						Subject = s,
+						Score =
+							(!string.IsNullOrEmpty(general) && s.Name.ToLower() == general ? 100 : 0) +
+							(!string.IsNullOrEmpty(general) && s.NeptunCode.ToLower() == general ? 100 : 0) +
+
+							(!string.IsNullOrEmpty(name) && s.Name.ToLower() == name ? 80 : 0) +
+							(!string.IsNullOrEmpty(code) && s.NeptunCode.ToLower() == code ? 80 : 0) +
+
+							(!string.IsNullOrEmpty(general) && s.Name.ToLower().StartsWith(general) ? 40 : 0) +
+							(!string.IsNullOrEmpty(general) && s.NeptunCode.ToLower().StartsWith(general) ? 40 : 0) +
+
+							(!string.IsNullOrEmpty(name) && s.Name.ToLower().StartsWith(name) ? 20 : 0) +
+							(!string.IsNullOrEmpty(code) && s.NeptunCode.ToLower().StartsWith(code) ? 20 : 0) +
+
+							(!string.IsNullOrEmpty(general) && s.Name.ToLower().Contains(general) ? 10 : 0) +
+							(!string.IsNullOrEmpty(general) && s.NeptunCode.ToLower().Contains(general) ? 10 : 0) +
+
+							(!string.IsNullOrEmpty(name) && s.Name.ToLower().Contains(name) ? 5 : 0) +
+							(!string.IsNullOrEmpty(code) && s.NeptunCode.ToLower().Contains(code) ? 5 : 0)
+					})
+					.OrderByDescending(x => x.Score)
+					.ThenBy(x => x.Subject.Name)
+					.Select(x => x.Subject);
+			
+
+			return query.Adapt<List<SubjectViewDTO>>();
+		}
+	}
 }

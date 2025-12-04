@@ -9,5 +9,6 @@ namespace web_api.Lib.Services.Interfaces
         Task<bool> DeleteAsync(Guid id);
         Task<SubjectViewDTO?> GetByIdAsync(Guid id);
         Task<IEnumerable<SubjectViewDTO>> GetAllAsync();
-    }
+		Task<object?> Search(SubjectSearchDTO dto);
+	}
 }

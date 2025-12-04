@@ -21,9 +21,10 @@ namespace web_api.Lib.Database
         public DbSet<CollectionNote> CollectionNotes { get; set; }
         public DbSet<NoteRequest> NoteRequests { get; set; }
         public DbSet<NoteRequestAnswer> NoteRequestAnswers { get; set; }
+        public DbSet<NoteHistory> NoteHistories { get; set; }
 
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
             modelBuilder.Entity<User>().HasKey(x => x.ID);
@@ -42,6 +43,7 @@ namespace web_api.Lib.Database
             modelBuilder.Entity<CollectionNote>().HasKey(x => new { x.CollectionID, x.NoteID });
             modelBuilder.Entity<NoteRequest>().HasKey(x => x.ID);
             modelBuilder.Entity<NoteRequestAnswer>().HasKey(x => x.ID);
+            modelBuilder.Entity<NoteHistory>().HasKey(x => x.ID);
 
 			modelBuilder.Entity<UserFollow>(entity =>
 			{
@@ -134,6 +136,14 @@ namespace web_api.Lib.Database
                 .WithMany(u => u.NoteRequestAnswers)
                 .HasForeignKey(nra => nra.UploaderUserID).OnDelete(DeleteBehavior.NoAction);
 
+            modelBuilder.Entity<NoteHistory>().HasOne(nh => nh.Viewer)
+                .WithMany(u => u.NoteHistories)
+                .HasForeignKey(nh => nh.UserID).OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<NoteHistory>().HasOne(nh => nh.ViewedNote)
+                .WithMany(n => n.NoteHistories)
+                .HasForeignKey(nh => nh.NoteID).OnDelete(DeleteBehavior.NoAction);
+
 			modelBuilder.Entity<User>().ToTable("Users");
             modelBuilder.Entity<Institution>().ToTable("Institutions");
             modelBuilder.Entity<Subject>().ToTable("Subjects");
@@ -147,6 +157,7 @@ namespace web_api.Lib.Database
             modelBuilder.Entity<CollectionNote>().ToTable("CollectionNotes");
             modelBuilder.Entity<NoteRequest>().ToTable("NoteRequests");
             modelBuilder.Entity<NoteRequestAnswer>().ToTable("NoteRequestAnswers");
+            modelBuilder.Entity<NoteHistory>().ToTable("NoteHistories");
 
 			foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
 			{

@@ -40,5 +40,12 @@ namespace web_api.Lib.Repositories
             var service = scope.ServiceProvider.GetRequiredService<IPreferenceManagerService>();
             return await service.GetByIdAsync(id);
         }
-    }
+
+		public async Task<Preference> GetByUserId(Guid UserID)
+		{
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<IUserManagerService>();
+			return await service.GetPreference(UserID);
+		}
+	}
 }
