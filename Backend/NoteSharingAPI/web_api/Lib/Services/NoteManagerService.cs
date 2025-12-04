@@ -180,11 +180,6 @@ namespace web_api.Lib.Services
 			return await noteRatingService.Rate(dto);
 		}
 
-		public Task<IEnumerable<NoteViewDTO>> Search(Guid? institutionId, Guid? subjectId, string? text)
-		{
-			throw new NotImplementedException();
-		}
-
 		public async Task<bool> Delete(Guid id)
 		{
 			var transaction = await _dbContext.Database.BeginTransactionAsync();
@@ -396,6 +391,11 @@ namespace web_api.Lib.Services
 				result.Add(nv);
 			}
 			return result;
+		}
+
+		public async Task<IQueryable<Note>> GetAllNote()
+		{
+			return await querryNotes();
 		}
 	}
 }

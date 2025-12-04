@@ -23,6 +23,7 @@ namespace web_api.Lib.UnitOfWork
 		public IAnswerRepository answerRepository { get; }
 		public IRatingsRepository ratingsRepository { get; }
         public ISearchRepository searchRepository { get; }
+        public IFeedRepository feedRepository { get; }
 
 		public ProductionUnitOfWork(IServiceScopeFactory scopeFactory)
         {
@@ -43,6 +44,7 @@ namespace web_api.Lib.UnitOfWork
             answerRepository = new AnswerRepository(_scopeFactory);
             ratingsRepository = new RatingsRepository(_scopeFactory);
             searchRepository = new SearchRepository(_scopeFactory);
+            feedRepository = new FeedRepository(_scopeFactory);
 		}
     }
 }

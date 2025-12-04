@@ -10,7 +10,6 @@ namespace web_api.Lib.Services.Interfaces
 		Task<NoteViewDTO> Get(Guid id);
 		Task<IEnumerable<NoteViewDTO>> GetByAuthor(Guid userId);
         Task<IEnumerable<NoteViewDTO>> GetBySubject(Guid subjectId);
-        Task<IEnumerable<NoteViewDTO>> Search(Guid? institutionId, Guid? subjectId, string? text);
         Task<NoteRatingViewDTO> Rate(NoteRatingCreateDTO dto);
         Task<IEnumerable<NoteRatingViewDTO>> GetRatings(Guid noteId);
         Task<bool> DeleteRating(Guid ratingId);
@@ -22,5 +21,6 @@ namespace web_api.Lib.Services.Interfaces
 		Task<object?> Search(NoteSearchDTO dto);
 		Task<object?> AddViewed(NoteViewedCreateDTO dto);
 		Task<object?> GetViewHistory(Guid userId);
+		Task<IQueryable<Note>> GetAllNote();
 	}
 }

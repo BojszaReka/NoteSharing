@@ -20,5 +20,6 @@ namespace web_api.Lib.UnitOfWork
         IAnswerRepository answerRepository { get; }
         IRatingsRepository ratingsRepository { get; }
         ISearchRepository searchRepository { get; }
+		IFeedRepository feedRepository { get; }
 	}
 }

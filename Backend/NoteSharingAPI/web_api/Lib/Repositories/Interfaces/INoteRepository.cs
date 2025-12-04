@@ -11,6 +11,7 @@ namespace web_api.Lib.Repositories.Interfaces
 		Task<object?> Dislike(NoteLikeDTO dto);
 		Task<NoteViewDTO> Get(Guid id);
 		Task<ICollection<NoteViewDTO>> GetAll();
+		Task<IQueryable<Note>> GetAllNote();
 		Task<object?> GetViewHistory(Guid userId);
 		Task<object?> Like(NoteLikeDTO dto);
 		Task<object?> Update(NoteUpdateDTO dto);

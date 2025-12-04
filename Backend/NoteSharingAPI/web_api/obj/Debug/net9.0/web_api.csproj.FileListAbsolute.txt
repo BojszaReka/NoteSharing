@@ -180,3 +180,4 @@ C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\we
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.pdb
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\web_api.genruntimeconfig.cache
 C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\ref\web_api.dll
+C:\ADATOK\Egyetem\NoteSharing\Backend\NoteSharingAPI\web_api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

@@ -62,6 +62,13 @@ namespace web_api.Lib.Repositories
 			return await service.GetAll();
 		}
 
+		public async Task<IQueryable<Note>> GetAllNote()
+		{
+			using var scope = _serviceScopeFactory.CreateScope();
+			var service = scope.ServiceProvider.GetRequiredService<INoteManagerService>();
+			return await service.GetAllNote();
+		}
+
 		public async Task<object?> GetViewHistory(Guid userId)
 		{
 			using var scope = _serviceScopeFactory.CreateScope();
