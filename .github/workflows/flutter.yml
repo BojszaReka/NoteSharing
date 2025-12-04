@@ -1,0 +1,136 @@
+name: Flutter CI/CD
+
+on:
+  push:
+    paths:
+      - 'NoteSharing_UI/lib/**'
+      - 'NoteSharing_UI/pubspec.yaml'
+      - 'NoteSharing_UI/pubspec.lock'
+      - 'NoteSharing_UI/analysis_options.yaml'
+      - '.github/workflows/flutter.yml'
+  pull_request:
+    paths:
+      - 'NoteSharing_UI/lib/**'
+      - 'NoteSharing_UI/pubspec.yaml'
+      - 'NoteSharing_UI/pubspec.lock'
+      - 'NoteSharing_UI/analysis_options.yaml'
+      - '.github/workflows/flutter.yml'
+
+defaults:
+  run:
+    working-directory: NoteSharing_UI
+
+jobs:
+  test:
+    name: Test Flutter App
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.35.4'
+        channel: 'stable'
+        cache: true
+
+    - name: Get dependencies
+      run: flutter pub get
+
+    - name: Analyze code
+      run: flutter analyze
+
+  build-android:
+    name: Build Android APK
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.35.4'
+        channel: 'stable'
+        cache: true
+
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'zulu'
+        java-version: '17'
+
+    - name: Get dependencies
+      run: flutter pub get
+
+    - name: Build APK
+      run: flutter build apk --release
+
+    - name: Upload APK artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: android-apk
+        path: NoteSharing_UI/build/app/outputs/flutter-apk/app-release.apk
+        retention-days: 30
+
+  build-ios:
+    name: Build iOS IPA
+    runs-on: macos-latest
+    needs: test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.35.4'
+        channel: 'stable'
+        cache: true
+
+    - name: Get dependencies
+      run: flutter pub get
+
+    - name: Build iOS (no codesign)
+      run: flutter build ios --release --no-codesign
+
+    - name: Upload iOS build artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ios-build
+        path: NoteSharing_UI/build/ios/iphoneos/
+        retention-days: 30
+
+  build-web:
+    name: Build Web App
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.35.4'
+        channel: 'stable'
+        cache: true
+
+    - name: Get dependencies
+      run: flutter pub get
+
+    - name: Build web
+      run: flutter build web --release
+
+    - name: Upload web build artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: web-build
+        path: NoteSharing_UI/build/web/
+        retention-days: 30

@@ -1,11 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:notesharing_ui/application/configs/app_colors.dart';
+import 'package:notesharing_ui/common/notifications/notification_service.dart';
+import 'package:notesharing_ui/common/notifications/app_notification.dart';
+import 'package:notesharing_ui/features/register/register_page.dart';
+import 'package:notesharing_ui/common/services/mock_auth_service.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
-  Widget _inputField({required String label, bool obscure = false}) {
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _authService = MockAuthService();
+  bool _isLoading = false;
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
+  Widget _inputField({required String label, bool obscure = false, TextEditingController? controller}) {
     return TextField(
+      controller: controller,
       obscureText: obscure,
       decoration: InputDecoration(
         labelText: label,
@@ -63,6 +85,40 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future<void> doLogin() async {
+      final svc = NotificationProvider.of(context);
+      final email = _emailController.text.trim();
+      final password = _passwordController.text;
+      if (email.isEmpty || password.isEmpty) {
+        svc.show(title: 'Hiányzó mezők', message: 'Kérem adja meg az emailt és jelszót', type: AppNotificationType.error);
+        return;
+      }
+
+      try {
+        setState(() => _isLoading = true);
+        
+        final userData = await _authService.login(email, password);
+
+        if (userData == null) {
+          if (!mounted) return;
+          svc.show(title: 'Bejelentkezés sikertelen', message: 'Helytelen email vagy jelszó', type: AppNotificationType.error);
+          setState(() => _isLoading = false);
+          return;
+        }
+
+        if (!mounted) return;
+        svc.show(title: 'Sikeres bejelentkezés', message: 'Üdvözöljük, ${userData['name'] ?? ''}', type: AppNotificationType.success);
+
+        // Navigate to home
+        Navigator.of(context).pushReplacementNamed('/');
+      } catch (e) {
+        if (!mounted) return;
+        svc.show(title: 'Hiba', message: e.toString(), type: AppNotificationType.error);
+      } finally {
+        if (mounted) setState(() => _isLoading = false);
+      }
+    }
+
     final size = MediaQuery.of(context).size;
     final boxWidth = size.width * 0.8 > 350 ? 350.0 : size.width * 0.8;
     final boxHeight = size.height * 0.5 > 600 ? 600.0 : size.height * 0.5;
@@ -110,7 +166,8 @@ class LoginPage extends StatelessWidget {
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            crossAxisAlignment:
+                                CrossAxisAlignment.stretch,
                             children: [
                               Expanded(
                                 child: Column(
@@ -121,23 +178,18 @@ class LoginPage extends StatelessWidget {
                                     const SizedBox(height: 8),
                                     _inputField(
                                      label: 'Email',
+                                     controller: _emailController,
                                     ),
                                     const SizedBox(height: 8),
                                     _inputField(
                                       label: 'Password',
                                         obscure: true,
+                                        controller: _passwordController,
                                       ),
                                     const SizedBox(height: 8),
                                     Center(
                                       child: TextButton(
                                         onPressed: () {},
-                                        child: const Text(
-                                          'Elfelejtett jelszó?',
-                                          style: TextStyle(
-                                            fontFamily: 'Candal',
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
                                         style: TextButton.styleFrom(
                                           foregroundColor:
                                               AppColors.loginMainTextColor,
@@ -145,6 +197,13 @@ class LoginPage extends StatelessWidget {
                                           minimumSize: Size.zero,
                                           tapTargetSize:
                                               MaterialTapTargetSize.shrinkWrap,
+                                        ),
+                                        child: const Text(
+                                          'Elfelejtett jelszó?',
+                                          style: TextStyle(
+                                            fontFamily: 'Candal',
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -156,11 +215,7 @@ class LoginPage extends StatelessWidget {
                                 child: SizedBox(
                                   width: 180,
                                   child: ElevatedButton(
-                                    onPressed: () {},
-                                    child: const Text(
-                                      'Bejelentkezés',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
+                                    onPressed: _isLoading ? null : () => doLogin(),
                                     style: ElevatedButton.styleFrom(
                                       padding: const EdgeInsets.symmetric(
                                         vertical: 12,
@@ -177,6 +232,19 @@ class LoginPage extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(12),
                                       ),
                                     ),
+                                    child: _isLoading
+                                        ? const SizedBox(
+                                            height: 20,
+                                            width: 20,
+                                            child: CircularProgressIndicator(
+                                              strokeWidth: 2,
+                                              valueColor: AlwaysStoppedAnimation(Colors.white),
+                                            ),
+                                          )
+                                        : const Text(
+                                            'Bejelentkezés',
+                                            style: TextStyle(color: Colors.white),
+                                          ),
                                   ),
                                 ),
                               ),
@@ -289,7 +357,19 @@ class LoginPage extends StatelessWidget {
                             ),
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (_) => const RegisterPage(),
+                                ),
+                              );
+                            },
+                            style: TextButton.styleFrom(
+                              foregroundColor: Colors.blue,
+                              padding: EdgeInsets.zero,
+                              minimumSize: Size.zero,
+                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            ),
                             child: const Text(
                               'Regisztrálj itt!',
                               style: TextStyle(
@@ -299,12 +379,6 @@ class LoginPage extends StatelessWidget {
                                 color: Colors.blue,
                                 decoration: TextDecoration.underline,
                               ),
-                            ),
-                            style: TextButton.styleFrom(
-                              foregroundColor: Colors.blue,
-                              padding: EdgeInsets.zero,
-                              minimumSize: Size.zero,
-                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             ),
                           ),
                         ],
