@@ -1,12 +1,22 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openapi/api.dart';
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
 
 
 /// tests for AuthApi
 void main() {
-  final instance = Openapi().getAuthApi();
+  // final instance = AuthApi();
 
-  group(AuthApi, () {
+  group('tests for AuthApi', () {
     // Authenticates a user using their email and password.      Required fields in class_library.DTO.LoginDTO:<list type=\"bullet\"><item><description><b>Email</b>: string, must be a valid email address (required)</description></item><item><description><b>Password</b>: string (required)</description></item></list>
     //
     //Future apiAuthLoginPost({ LoginDTO loginDTO }) async

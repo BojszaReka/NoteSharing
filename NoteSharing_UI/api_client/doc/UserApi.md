@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**apiUserFollowPost**](UserApi.md#apiuserfollowpost) | **POST** /api/User/follow | Adds a one sided following relationship between two users.
 [**apiUserIdDelete**](UserApi.md#apiuseriddelete) | **DELETE** /api/User/{id} | Deletes a user by their unique identifier.
 [**apiUserIdIdGet**](UserApi.md#apiuserididget) | **GET** /api/User/id/{id} | Retrieves a user by their unique identifier.
-[**apiUserPut**](UserApi.md#apiuserput) | **PUT** /api/User | This endpoint is for adding additional user information or modifying the existing one.  Only the fields in class_library.DTO.UserUpdateDTO that are provided (not null) will be updated; all others will remain unchanged.  The &#x60;ID&#x60; field is required to identify the user to update.
+[**apiUserPut**](UserApi.md#apiuserput) | **PUT** /api/User | This endpoint is for adding additional user information or modifying the existing one.  Only the fields in class_library.DTO.UserUpdateDTO that are provided (not null) will be updated; all others will remain unchanged.  The `ID` field is required to identify the user to update.
 [**apiUserUsernameUserNameGet**](UserApi.md#apiuserusernameusernameget) | **GET** /api/User/username/{userName} | Retrieves a user by their username.
 
 
@@ -25,12 +25,12 @@ Adds a one sided following relationship between two users.
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getUserApi();
-final UserFollowDTO userFollowDTO = ; // UserFollowDTO | The user follow data transfer object.    <b>Properties of class_library.DTO.UserFollowDTO:</b><list type=\"bullet\"><item><description>`FollowerUserID` (System.Guid): The unique identifier of the user who is following.</description></item><item><description>`FollowingUserID` (System.Guid): The unique identifier of the user being followed.</description></item></list>
+final api_instance = UserApi();
+final userFollowDTO = UserFollowDTO(); // UserFollowDTO | The user follow data transfer object.    <b>Properties of class_library.DTO.UserFollowDTO:</b><list type=\"bullet\"><item><description>`FollowerUserID` (System.Guid): The unique identifier of the user who is following.</description></item><item><description>`FollowingUserID` (System.Guid): The unique identifier of the user being followed.</description></item></list>
 
 try {
-    api.apiUserFollowPost(userFollowDTO);
-} catch on DioException (e) {
+    api_instance.apiUserFollowPost(userFollowDTO);
+} catch (e) {
     print('Exception when calling UserApi->apiUserFollowPost: $e\n');
 }
 ```
@@ -65,12 +65,12 @@ Deletes a user by their unique identifier.
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getUserApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | The unique identifier of the user to delete.
+final api_instance = UserApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | The unique identifier of the user to delete.
 
 try {
-    api.apiUserIdDelete(id);
-} catch on DioException (e) {
+    api_instance.apiUserIdDelete(id);
+} catch (e) {
     print('Exception when calling UserApi->apiUserIdDelete: $e\n');
 }
 ```
@@ -105,12 +105,12 @@ Retrieves a user by their unique identifier.
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getUserApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | The unique identifier of the user.
+final api_instance = UserApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | The unique identifier of the user.
 
 try {
-    api.apiUserIdIdGet(id);
-} catch on DioException (e) {
+    api_instance.apiUserIdIdGet(id);
+} catch (e) {
     print('Exception when calling UserApi->apiUserIdIdGet: $e\n');
 }
 ```
@@ -145,12 +145,12 @@ This endpoint is for adding additional user information or modifying the existin
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getUserApi();
-final UserUpdateDTO userUpdateDTO = ; // UserUpdateDTO | The user update data transfer object. Except for `ID`, all properties should be null unless they are to be changed.
+final api_instance = UserApi();
+final userUpdateDTO = UserUpdateDTO(); // UserUpdateDTO | The user update data transfer object. Except for `ID`, all properties should be null unless they are to be changed.
 
 try {
-    api.apiUserPut(userUpdateDTO);
-} catch on DioException (e) {
+    api_instance.apiUserPut(userUpdateDTO);
+} catch (e) {
     print('Exception when calling UserApi->apiUserPut: $e\n');
 }
 ```
@@ -185,12 +185,12 @@ Retrieves a user by their username.
 ```dart
 import 'package:openapi/api.dart';
 
-final api = Openapi().getUserApi();
-final String userName = userName_example; // String | The username of the user.
+final api_instance = UserApi();
+final userName = userName_example; // String | The username of the user.
 
 try {
-    api.apiUserUsernameUserNameGet(userName);
-} catch on DioException (e) {
+    api_instance.apiUserUsernameUserNameGet(userName);
+} catch (e) {
     print('Exception when calling UserApi->apiUserUsernameUserNameGet: $e\n');
 }
 ```
