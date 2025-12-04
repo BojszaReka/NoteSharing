@@ -45,6 +45,26 @@ namespace web_api.Lib.Services
 			return dataFromDb.AsQueryable();
 		}
 
+		private async Task<IQueryable<NoteHistory>> querryNoteHistories()
+		{
+			var cachedData = await _cache.GetStringAsync("history");
+			if (!string.IsNullOrEmpty(cachedData))
+			{
+				var data = JsonConvert.DeserializeObject<List<NoteHistory>>(cachedData);
+				return data.AsQueryable();
+			}
+			var dataFromDb = await _dbContext.NoteHistories.OrderBy(c => c.ID).ToListAsync();
+			var cacheOptions = new DistributedCacheEntryOptions
+			{
+				AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10),
+				SlidingExpiration = TimeSpan.FromMinutes(5)
+			};
+
+			var serializedData = JsonConvert.SerializeObject(dataFromDb);
+			await _cache.SetStringAsync("history", serializedData, cacheOptions);
+			return dataFromDb.AsQueryable();
+		}
+
 		public async Task<object?> AddReview(NoteRatingCreateDTO dto)
 		{
 			var scope = _scopeFactory.CreateScope();
@@ -318,6 +338,64 @@ namespace web_api.Lib.Services
 				.Adapt<IEnumerable<NoteViewDTO>>();
 
 			return results;
+		}
+
+		public async  Task<object?> AddViewed(NoteViewedCreateDTO dto)
+		{
+			var transaction = await _dbContext.Database.BeginTransactionAsync();
+			try {
+				var noteHistory = new NoteHistory
+				{
+					ID = Guid.NewGuid(),
+					NoteID = Guid.Parse(dto.NoteID),
+					UserID = Guid.Parse(dto.UserID),
+					ViewedAt = DateTime.UtcNow
+				};
+				_dbContext.NoteHistories.Add(noteHistory);
+				await _dbContext.SaveChangesAsync();
+				await transaction.CommitAsync();
+				// Invalidate cache
+				await _cache.RemoveAsync("history");
+				return null;
+			}
+			catch (Exception e)
+			{
+				await transaction.RollbackAsync();
+				throw new Exception("Error adding viewed note", e.InnerException);
+			}
+			finally
+			{
+				await transaction.DisposeAsync();
+			}
+		}
+
+		public async Task<object?> GetViewHistory(Guid userId)
+		{
+			var history = await querryNoteHistories();
+			if (history == null)
+			{
+				throw new Exception("No history found");
+			}
+			var userHistory = history.Where(h => h.UserID == userId).OrderByDescending(n => n.ViewedAt);
+			if (userHistory == null)
+			{
+				throw new Exception("No history found for this user");
+			}
+			var notes = await querryNotes();
+			notes = notes.Where(n => n.IsDeleted == false);
+			if (notes == null)
+			{
+				throw new Exception("No notes found");
+			}
+			var result = new List<NoteViewedDTO>();
+			foreach(var uh in userHistory)
+			{
+				NoteViewedDTO nv = new NoteViewedDTO();
+				nv.viewedAt = uh.ViewedAt;
+				nv.note = await Get(uh.NoteID);
+				result.Add(nv);
+			}
+			return result;
 		}
 	}
 }

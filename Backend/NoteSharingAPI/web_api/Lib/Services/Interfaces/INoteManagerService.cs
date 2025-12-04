@@ -20,5 +20,7 @@ namespace web_api.Lib.Services.Interfaces
 		Task<ICollection<NoteViewDTO>> GetAll();
 		Task<object?> Like(NoteLikeDTO dto);
 		Task<object?> Search(NoteSearchDTO dto);
+		Task<object?> AddViewed(NoteViewedCreateDTO dto);
+		Task<object?> GetViewHistory(Guid userId);
 	}
 }

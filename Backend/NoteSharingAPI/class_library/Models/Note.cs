@@ -12,7 +12,8 @@ namespace class_library.Models
     [Table("Notes")]
     public class Note
     {
-        [Key, Required]
+
+		[Key, Required]
         public Guid ID { get; set; } = Guid.NewGuid();
 
         [Required]
@@ -53,8 +54,9 @@ namespace class_library.Models
 
         public ICollection<NoteRating> Ratings { get; set; }
         public ICollection<CollectionNote> CollectionNotes { get; set; }
+		public ICollection<NoteHistory> NoteHistories;
 
-        public override string ToString()
+		public override string ToString()
         {
             var ratings = Ratings?.Count ?? 0;
             var inCollections = CollectionNotes?.Count ?? 0;

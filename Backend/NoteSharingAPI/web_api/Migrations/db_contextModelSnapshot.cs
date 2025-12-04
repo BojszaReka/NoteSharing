@@ -157,6 +157,30 @@ namespace web_api.Migrations
                     b.ToTable("Notes", (string)null);
                 });
 
+            modelBuilder.Entity("class_library.Models.NoteHistory", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("NoteID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("UserID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("ViewedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("NoteID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("NoteHistories", (string)null);
+                });
+
             modelBuilder.Entity("class_library.Models.NoteRating", b =>
                 {
                     b.Property<Guid>("ID")
@@ -456,6 +480,25 @@ namespace web_api.Migrations
                     b.Navigation("Subject");
                 });
 
+            modelBuilder.Entity("class_library.Models.NoteHistory", b =>
+                {
+                    b.HasOne("class_library.Models.Note", "ViewedNote")
+                        .WithMany("NoteHistories")
+                        .HasForeignKey("NoteID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("class_library.Models.User", "Viewer")
+                        .WithMany("NoteHistories")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("ViewedNote");
+
+                    b.Navigation("Viewer");
+                });
+
             modelBuilder.Entity("class_library.Models.NoteRating", b =>
                 {
                     b.HasOne("class_library.Models.Note", "Note")
@@ -605,6 +648,8 @@ namespace web_api.Migrations
                 {
                     b.Navigation("CollectionNotes");
 
+                    b.Navigation("NoteHistories");
+
                     b.Navigation("Ratings");
                 });
 
@@ -629,6 +674,8 @@ namespace web_api.Migrations
                     b.Navigation("Followers");
 
                     b.Navigation("Followings");
+
+                    b.Navigation("NoteHistories");
 
                     b.Navigation("NoteRatings");
 
